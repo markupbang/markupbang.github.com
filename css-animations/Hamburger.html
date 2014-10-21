@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+		body {background:#ddd}
+        .rco-menu-icon {position: fixed;top: 0;left: 3.6%;width: 55px;height: 9.2%;z-index: 2;}
+		.rco-color-bg{background:#00cfb5 !important}
+        .rco-menu-icon:hover .burger:before{top:-10px}
+        .rco-menu-icon:hover .burger:after{bottom:-10px}
+        .rco-menu-icon .burger {position: absolute;left: 50%;margin-left: -12.5px;bottom: 39%; width: 25px;height: 3px;transform: rotate(0deg);backface-visibility: hidden;transition: all 0.5s ease;}
+        .rco-menu-icon .burger:before {content: ' ';width: 25px;height: 3px;background: inherit;position: absolute;top: -7px;transform: rotate(0deg);transition: top 0.1s ease;}
+        .rco-menu-icon .burger:after {content: ' ';width: 25px; height: 3px;background: inherit;position: absolute;bottom: -7px;transition: bottom 0.1s ease;}
+        .rco-menu-icon.closing .burger:before{transition:top .2s ease .3s,-webkit-transform .3s ease}
+        .rco-menu-icon.closing .burger:after{transition:bottom .2s ease .3s,-webkit-transform .3s ease}
+		.rco-menu-icon.crossed .burger {background-color: #fff !important;transform: rotate(-45deg);transition: transform .5s ease;}
+		.rco-menu-icon.crossed .burger:before {transform: rotate(90deg);top: 0;backface-visibility: hidden;transition: top .5s ease,transform .3s ease .3s;}
+		.rco-menu-icon.crossed .burger:after {bottom: 0;opacity: 0;filter: alpha(opacity=0);transition: all 0.5s ease;	}
+
+    </style>
+	<!--<script type="text/javascript" src="http://www.randco.com/skin/frontend/enterprise/rco/js/jquery.home.min.js"></script>-->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript">
+       $(function(){
+           var buger_icon = true;
+           $('.rco-menu-icon').click(function(){
+               if(buger_icon == true){
+                   buger_icon = false;
+                   $(this).addClass('crossed');
+               }else{
+                   buger_icon = true;
+                   $(this).removeClass('crossed').addClass('closing');
+               }
+           });
+
+       });
+    </script>
+</head>
+<body>
+<div class="wrap">
+	<header>
+		<a href="javascript:void(0);" class="rco-menu-icon">
+			<div class="burger rco-color-bg"></div>
+		</a>
+	</header>
+</div>
+</body>
+</html>
