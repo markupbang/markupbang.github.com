@@ -8,12 +8,12 @@
 <style type="text/css">
     body{background:#2691c9}
     .blind{display:block;overflow:hidden;position:absolute;left:-9999px;width:1px;height:1px;font-size:0;line-height:0;text-indent:-9999px}
-    .sheepMessage{position:relative;display:block;width:164px;height:116px;border:0;background:url(sheep-ani.png) no-repeat 0 0;-webkit-animation: navBirdAnim .3s steps(7) infinite}
+    .sheepMessage{position:relative;display:block;width:164px;height:116px;border:0;background:url(sheep-ani.png) no-repeat 0 0;-webkit-animation: sheepAf .3s steps(7) infinite}
     .sheepRun{position:relative;display:block;width:164px;height:116px;border:0;background:url(sheep-ani.png) no-repeat 0 0;-webkit-animation: sheepRuner .3s steps(7) infinite}
     .hand-pick{cursor:url(hand-pick.cur), move}
 
     /* Animation Frames */
-    @-webkit-keyframes navBirdAnim {
+    @-webkit-keyframes sheepAf {
         from {background-position:0px -128px}
         to {background-position:-1148px -128px}
     }
@@ -22,6 +22,70 @@
         to {background-position:-1148px 0}
     }
 </style>
+    <script>
+
+
+        window.onload = function() {
+
+            var _startX = 0;
+            var _startY = 0;
+            var _offsetX = 0;
+            var _offsetY = 0;
+            var _dragElement;
+            var _isDrag = false;
+
+
+
+            document.addEventListener('mousedown', onMouseDown, false);
+
+            document.addEventListener('mouseup', onMouseUp, false);
+
+
+
+            function onMouseDown(e) {
+                var target = e.target
+
+                _startX = e.clientX;
+                _startY = e.clientY;
+
+                // grab the clicked element's position
+                _offsetX = ExtractNumber(target.style.left);
+                _offsetY = ExtractNumber(target.style.top);
+
+
+                // we need to access the element in OnMouseMove
+                _dragElement = target;
+
+                // tell our code to start moving the element with the mouse
+                document.addEventListener('mousemove', onMouseMove, false);
+
+                _isDrag = true;
+                return false;
+            }
+
+            function onMouseMove(event) {
+                if (!_isDrag) return;
+                _dragElement.style.left = (_offsetX + event.clientX - _startX) + 'px';
+                _dragElement.style.top = (_offsetY + event.clientY - _startY) + 'px';
+                console.log('move');
+            }
+
+            function onMouseUp(event) {
+                _isDrag = false;
+            }
+
+            function ExtractNumber(value)
+            {
+                var n = parseInt(value);
+                return n == null || isNaN(n) ? 0 : n;
+            }
+
+        }
+
+
+
+
+    </script>
 </head>
 
  <body>
