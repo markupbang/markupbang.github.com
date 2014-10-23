@@ -80,7 +80,14 @@
             return n == null || isNaN(n) ? 0 : n;
         }
 
+
+        document.addEventListener('touchstart', onTouchStart, false);
+        document.addEventListener('touchdown', onTouchMove, false);
+        document.addEventListener('touchmove', onTouchEnd, false);
+
     }
+
+
 
 
 
