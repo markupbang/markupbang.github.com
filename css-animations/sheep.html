@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width-device-width,initial-scale=1,user-scalable=no">
+<title>sheep</title>
+<style type="text/css">
+    body{background:#2691c9}
+    .blind{display:block;overflow:hidden;position:absolute;left:-9999px;width:1px;height:1px;font-size:0;line-height:0;text-indent:-9999px}
+    .sheepMessage{position:relative;display:block;width:164px;height:116px;border:0;background:url(sheep-ani.png) no-repeat 0 0;-webkit-animation: navBirdAnim .3s steps(7) infinite}
+    .sheepRun{position:relative;display:block;width:164px;height:116px;border:0;background:url(sheep-ani.png) no-repeat 0 0;-webkit-animation: sheepRuner .3s steps(7) infinite}
+
+    /* Animation Frames */
+    @-webkit-keyframes navBirdAnim {
+        from {background-position:0px -128px}
+        to {background-position:-1148px -128px}
+    }
+    @-webkit-keyframes sheepRuner{
+        from {background-position:0 0}
+        to {background-position:-1148px 0}
+    }
+</style>
+</head>
+
+ <body>
+    <div class="sheepMessage"><span class="blind">양이 무서워서</span></div>
+    <div class="sheepRun"><span class="blind">양이 달려</span></div>
+ </body>
+</html>
