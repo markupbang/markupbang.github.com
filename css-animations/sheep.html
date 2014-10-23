@@ -21,76 +21,6 @@
         from {background-position:0 0}
         to {background-position:-1148px 0}
     }
-
-    #container {
-        height:801px;
-        overflow:visible;
-        padding:0;
-        position:relative;
-    }
-
-    .box {
-        background-color: #91e600;
-        text-align: center;
-        font-family: Asap, Avenir, Arial, sans-serif;
-        width: 196px;
-        height: 100px;
-        line-height: 100px;
-        color: black;
-        position: absolute;
-        top:0;
-        -webkit-border-radius: 10px;
-        -moz-border-radius: 10px;
-        border-radius: 10px;
-    }
-    #container {
-        height:801px;
-        overflow:visible;
-        padding:0;
-        position:relative;
-    }
-
-    .box {
-        background-color: #91e600;
-        text-align: center;
-        font-family: Asap, Avenir, Arial, sans-serif;
-        width: 196px;
-        height: 100px;
-        line-height: 100px;
-        color: black;
-        position: absolute;
-        top:0;
-        -webkit-border-radius: 10px;
-        -moz-border-radius: 10px;
-        border-radius: 10px;
-    }
-
-    .controls {
-        background-color: #222;
-        border: 1px solid #555;
-        color: #bbb;
-        font-size: 18px;
-        margin: 20px 0;
-    }
-    .controls ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
-    .controls li {
-        display: inline-block;
-        padding: 8px 0 8px 10px;
-        margin:0;
-    }
-    .controls input {
-        vertical-align:middle;
-        cursor: pointer;
-    }
-    .controls .controlsTitle {
-        border-right:1px solid #555;
-        border-bottom:none;
-        padding-right:10px;
-    }
 </style>
 <script>
 
@@ -152,97 +82,14 @@
 
     }
 
-    /*
-     See http://www.greensock.com/draggable/ for details.
-     This demo uses ThrowPropsPlugin which is a membership benefit of Club GreenSock, http://www.greensock.com/club/
-     */
 
-    var $snap = $("#snap"),
-            $liveSnap = $("#liveSnap"),
-            $container = $("#container"),
-            gridWidth = 196,
-            gridHeight = 100,
-            gridRows = 6,
-            gridColumns = 5,
-            i, x, y;
 
-    //loop through and create the grid (a div for each cell). Feel free to tweak the variables above
-    for (i = 0; i < gridRows * gridColumns; i++) {
-        y = Math.floor(i / gridColumns) * gridHeight;
-        x = (i * gridWidth) % (gridColumns * gridWidth);
-        $("<div/>").css({position:"absolute", border:"1px solid #454545", width:gridWidth-1, height:gridHeight-1, top:y, left:x}).prependTo($container);
-    }
 
-    //set the container's size to match the grid, and ensure that the box widths/heights reflect the variables above
-    TweenLite.set($container, {height: gridRows * gridHeight + 1, width: gridColumns * gridWidth + 1});
-    TweenLite.set(".box", {width:gridWidth, height:gridHeight, lineHeight:gridHeight + "px"});
-
-    //the update() function is what creates the Draggable according to the options selected (snapping).
-    function update() {
-        var snap = $snap.prop("checked"),
-                liveSnap = $liveSnap.prop("checked");
-        Draggable.create(".box", {
-            bounds:$container,
-            edgeResistance:0.65,
-            type:"x,y",
-            throwProps:true,
-            liveSnap:liveSnap,
-            snap:{
-                x: function(endValue) {
-                    return (snap || liveSnap) ? Math.round(endValue / gridWidth) * gridWidth : endValue;
-                },
-                y: function(endValue) {
-                    return (snap || liveSnap) ? Math.round(endValue / gridHeight) * gridHeight : endValue;
-                }
-            }
-        });
-    }
-
-    //when the user toggles one of the "snap" modes, make the necessary updates...
-    $snap.on("change", applySnap);
-    $liveSnap.on("change", applySnap);
-
-    function applySnap() {
-        if ($snap.prop("checked") || $liveSnap.prop("checked")) {
-            $(".box").each(function(index, element) {
-                TweenLite.to(element, 0.5, {
-                    x:Math.round(element._gsTransform.x / gridWidth) * gridWidth,
-                    y:Math.round(element._gsTransform.y / gridHeight) * gridHeight,
-                    delay:0.1,
-                    ease:Power2.easeInOut
-                });
-            });
-        }
-        update();
-    }
-
-    update();
 </script>
 </head>
 
  <body>
     <div class="hand-pick sheepMessage"><span class="blind">양 덜덜덜</span></div>
     <div class="hand-pick sheepRun"><span class="blind">양 달림</span></div>
-
-    <div id="container">
-        <div class="box" id="box1">Drag and throw me</div>
-        <div class="box" id="box2" style="left:392px; background-color:red;">Drag and throw me too</div>
-    </div>
-
-    <div id="container">
-        <div class="box" id="box1">Drag and throw me</div>
-        <div class="box" id="box2" style="left:392px; background-color:red;">Drag and throw me too</div>
-    </div>
-    <div class="controls">
-        <ul>
-            <li class="controlsTitle">Options</li>
-            <li>
-                <label><input type="checkbox" name="snap" id="snap" value="1" /> Snap end position to grid</label>
-            </li>
-            <li>
-                <label><input type="checkbox" name="liveSnap" id="liveSnap" value="1" /> Live snap</label>
-            </li>
-        </ul>
-    </div>
  </body>
 </html>
