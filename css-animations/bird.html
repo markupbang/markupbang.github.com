@@ -6,13 +6,13 @@
 <meta name="viewport" content="width-device-width,initial-scale=1,user-scalable=no">
 <title>birdfly</title>
 <style type="text/css">
-.blind{display:block;overflow:hidden;position:absolute;left:-9999px;width:1px;height:1px;font-size:0;line-height:0;text-indent:-9999px}
-.birdMessage{position:relative;display:block;width:62px;height:70px;border:0;background:url(ico_news.png) no-repeat 0 0;animation: navBirdAnim .6s steps(4) infinite;}
+    .blind{display:block;overflow:hidden;position:absolute;left:-9999px;width:1px;height:1px;font-size:0;line-height:0;text-indent:-9999px}
+    .birdMessage{position:relative;display:block;width:62px;height:70px;border:0;background:url(ico_news.png) no-repeat 0 0;-webkit-animation: navBirdAnim .6s steps(4) infinite;}
 
-/* Animation Frames */
-@keyframes navBirdAnim {
-	from {background-position:0px 0}
-	to {background-position:-248px 0}
+    /* Animation Frames */
+    @-webkit-keyframes navBirdAnim {
+        from {background-position:0px 0}
+        to {background-position:-248px 0}
 }
 </style>
 </head>
