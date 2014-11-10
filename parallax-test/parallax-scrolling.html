@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>parallax test</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,target-densitydpi=medium-dpi">
+	<link rel="stylesheet" type="text/css" href="css/layout-parallax.css">
+</head>
+<body>
+	<div id="wrap" style="padding-left:0">
+		<div id="header">
+			<div class="header-bg"></div>
+			<div class="header-wrap">
+				<div class="header-content">
+					<h1 class="header-logo"><a href="#">markupbang</a></h1>
+					<!-- gnb -->
+					<div class="gnb-wrap"><a href="#">icon</a></div>
+					<!-- //gnb -->
+				</div>
+			</div>
+		</div>
+		<div id="aside" style="left:-222px">
+			<a href="#" class="btn_folding close">button</a>
+			<div class="menu_top">
+	            <ul>
+	                <li><a href="#">추천 방소현</a></li>
+	                <li><a href="#">추천 방소현</a></li>
+	                <li><a href="#">추천 방소현</a></li>
+	                <li><a href="#">추천 방소현</a></li>
+	                <li><a href="#">추천 방소현</a></li>
+	                <li><a href="#">추천 방소현</a></li>
+	                <li><a href="#">추천 방소현</a></li>
+	                <li><a href="#">추천 방소현</a></li>
+	            </ul>
+	        </div>
+		</div>
+		<div id="container">
+			<div class="content-grid">
+				<div class="box con1">
+					gg
+				</div>
+				<div class="box con2">
+					gg
+				</div>
+				<div class="box con3">
+					gg
+				</div>
+				<div class="box con4">
+					gg
+				</div>
+				<div class="box con5">
+					gg
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="footer" style="padding-left:0">
+		<ul>
+		    <li><a href="#">이용약관</a></li>
+		    <li><a href="#">이용약관</a></li>
+		    <li><a href="#">이용약관</a></li>
+		</ul>
+		<p class="info">본 콘텐츠의 저작권은 저작권자에 있으며, 이를 무단으로 이용하는 경우 저작권법 등에 따라 법적 책임을 질 수 있습니다.</p>
+		<address>
+		    <em>Copyright ©</em>
+		    <a href="#">markupbang Corp.</a>
+		    <span>All Rights Reserved.</span>
+		</address>
+	</div>
+</body>
+ <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+ <script type="text/javascript">
+       $(function(){
+           var asice_btn = true;
+           $('#aside').click(function(){
+               if(asice_btn == true){
+                   asice_btn = false;
+                   $('#wrap').css("padding-left","222px");
+                   $('#aside').css("left","0");
+                   $('#footer').css("padding-left","222px")
+               }else{
+                   asice_btn = true;
+                   $('#wrap').css("padding-left","0");
+                   $('#aside').css("left","-222px");
+                   $('#footer').css("padding-left","0")
+               }
+           });
+
+       });
+    </script>
+</html>
