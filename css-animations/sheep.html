@@ -9,7 +9,7 @@
     body{background:#2691c9}
     .blind{display:block;overflow:hidden;position:absolute;left:-9999px;width:1px;height:1px;font-size:0;line-height:0;text-indent:-9999px}
     .sheepMessage{position:relative;display:block;width:164px;height:116px;border:0;background:url(images/sheep-ani.png) no-repeat 0 0;-webkit-animation: sheepAf .3s steps(7) infinite}
-    .sheepRun{position:relative;display:block;width:164px;height:116px;border:0;background:url(images/sheep-ani.png) no-repeat 0 0;-webkit-animation: sheepRuner .3s steps(7) infinite}
+    .sheepRun{position:absolute;top:140px;right:0;display:block;width:164px;height:116px;border:0;background:url(images/sheep-ani.png) no-repeat 0 0;-webkit-animation: sheepRuner .3s steps(7) infinite}
     .hand-pick{cursor:url(hand-pick.cur), move}
 
     /* Animation Frames */
@@ -22,11 +22,13 @@
         to {background-position:-1148px 0}
     }
 </style>
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 <script>
 
-
+    
     window.onload = function() {
 
+        //dragNdrop
         var _startX = 0;
         var _startY = 0;
         var _offsetX = 0;
@@ -67,7 +69,6 @@
             if (!_isDrag) return;
             _dragElement.style.left = (_offsetX + event.clientX - _startX) + 'px';
             _dragElement.style.top = (_offsetY + event.clientY - _startY) + 'px';
-            console.log('move');
         }
 
         function onMouseUp(event) {
@@ -80,12 +81,32 @@
             return n == null || isNaN(n) ? 0 : n;
         }
 
+        // speedMove
+        var sheepMove = document.getElementById('sheepMove');
+        var speed = 0;
+        var random = Math.ceil(Math.random() * 2);
+        var win_w = $(window).width(); 
+        $(window).resize(function(){
+           win_w = $(window).width();
+        })
+
+        var timer = setInterval(function(){
+           speed = speed + random;
+
+           if(speed > win_w){
+               speed = 0; 
+               random = Math.ceil(Math.random() * 2);
+           }
+
+           sheepMove.style.right = speed + 'px';
+        })
+
     }
 </script>
 </head>
 
  <body>
     <div class="hand-pick sheepMessage"><span class="blind">양 덜덜덜</span></div>
-    <div class="hand-pick sheepRun"><span class="blind">양 달림</span></div>
+    <div id="sheepMove" class="hand-pick sheepRun"><span class="blind">양 달림</span></div>
  </body>
 </html>
