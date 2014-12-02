@@ -26,7 +26,7 @@ caption{overflow:hidden;width:0;height:0;font-size:0;line-height:0}
 .txtColor-v2{color:#676767}
 .txtColor-v3{color:#999}
 .txtColor-v4{color:#05a54d}
-.user-photo{border-radius:50px;vertical-align:middle}
+.user-photo{width:44px;height:44px;border-radius:50px;vertical-align:middle}
 .after{display:block;clear:both;content:''}
 
 .mt5{margin-top:5px}
@@ -108,6 +108,7 @@ html{overflow-y:scroll}
 #header .user-info{float:left;margin-left:10px}
 #header .user-detail{position:absolute;top:46px;right:0;padding:10px 30px 15px 30px;color:#676767;font-size:14px;border:1px solid #999;background:#fff;z-index:1000}
 #header .user-detail .user-photoBig{float:left;margin-right:30px;line-height:109px}
+#header .user-detail .user-photoBig img{width:88px;height:88px}
 #header .user-detail .user-account{float:left}
 #header .user-detail .user-account p{padding-bottom:1px}
 #header .user-detail button{margin-top:16px}
@@ -116,7 +117,9 @@ html{overflow-y:scroll}
 #header .group-detail{position:absolute;top:39px;left:89px;width:213px;padding:9px 20px 15px 15px;font-size:14px;border:1px solid #999;background:#fff;z-index:1000}
 #header .detail-title{padding-bottom:9px}
 #header .group-name{padding-bottom:13px}
-#header .group-name li{margin-bottom:9px;padding-left:11px;color:#676767;overflow:hidden}
+#header .group-name li{margin-bottom:9px;padding-left:11px;overflow:hidden}
+#header .group-name li a{color:#676767}
+#header .group-name li a:hover{color:#333}
 #header .group-name .number{float:right;margin-top:3px;padding:4px 6px 7px 7px;color:#fff;font-size:13px;line-height:9px;border-radius:10px;background:#b8b8b8}
 .nav-menu{margin-left:442px;padding:25px 0 0 50px;overflow:hidden}
 .nav-menu li{float:left;margin-right:30px;height:23px;background:url("../images/img-sprite.png") no-repeat}
@@ -141,7 +144,7 @@ html{overflow-y:scroll}
 .boxArea{width:394px;padding:13px 0 10px 15px;border:4px solid #eaebeb}
 .boxArea.boxFocus{border-color:#3ebb6b}
 .boxArea textarea{width:100%;height:60px;color:#999;border:none}
-.btnZone{margin-top:5px;overflow:hidden}
+.btnZone{margin-top:5px;height:29px;overflow:hidden}
 .btnZone button.fileUpload{margin-right:15px}
 .btnZone .btnRight{float:right;margin-right:15px}
 .boxArea .fileZone{margin:0 15px 0 0;padding:15px 0 6px;color:#676767;letter-spacing:-.4px;border-top:1px solid #eaebeb;border-bottom:1px solid #eaebeb}
