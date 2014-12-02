@@ -28,9 +28,6 @@ $(function() {
 	$('.group-detail').click(function(event) {
          event.stopPropagation();
     });
-	$(window).click(function(event) {
-		$('.group-detail').slideUp();
-	});
 
 	$('.userbtn').click(function(){
 		event.stopPropagation();
@@ -39,7 +36,9 @@ $(function() {
 	$('.user-detail').click(function(event) {
          event.stopPropagation();
     });
+
 	$(window).click(function(event) {
+		$('.group-detail').slideUp();
 		$('.user-detail').slideUp();
 	});
 	
