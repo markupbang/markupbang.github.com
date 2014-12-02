@@ -24,22 +24,24 @@ $(function() {
 	$('.groupSet').click(function(event){
 		event.stopPropagation();
 		$('.group-detail').slideToggle();
-	});
-		
+	});		
 	$('.group-detail').click(function(event) {
          event.stopPropagation();
     });
-
 	$(window).click(function(event) {
 		$('.group-detail').slideUp();
 	});
 
 	$('.userbtn').click(function(){
+		event.stopPropagation();
 		$('.user-detail').slideToggle();
 	});
-	$('.userbtn').focusout(function(){
-        $('.user-detail').css('display','none');
+	$('.user-detail').click(function(event) {
+         event.stopPropagation();
     });
+	$(window).click(function(event) {
+		$('.user-detail').slideUp();
+	});
 	
 
   
