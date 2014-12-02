@@ -86,7 +86,7 @@ button.small.accent:hover,button.big.accent:hover{background:#05a54d}
 
 /* layout */
 html{overflow-y:scroll}
-#wrap{position:absolute;top:0;right:0;bottom:0;left:0;overflow:hidden}
+#wrap{position:absolute;top:0;right:0;bottom:0;left:0;overflow:hidden;min-width:1080px}
 #header{margin:0 25px;height:76px}
 #container{position:absolute;top:76px;right:0;bottom:0;left:25px;overflow:hidden}
 #noticeArea{position:absolute;width:442px;height:100%}
