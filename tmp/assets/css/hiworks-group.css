@@ -47,7 +47,7 @@ caption{overflow:hidden;width:0;height:0;font-size:0;line-height:0}
 .spr-image{background:url("../images/img-sprite.png") no-repeat}
 
 /* button */
-button.small,button.big{color:#fff}
+button.small,button.big{color:#fff;transition-duration:.5s}
 button.small{padding:3px 16px 5px 15px;background:#b8b8b8}
 button.small.accent{background:#3ebb6b}
 button.big{padding:5px 20px 8px 19px;background:#b8b8b8}
