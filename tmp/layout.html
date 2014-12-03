@@ -60,10 +60,10 @@
 			</div>
 			<nav>
 				<ul class="nav-menu">
-					<li class="file active"><a class="active" href="#" title="파일"></a></li><!-- 활성화 class추가 active -->
-					<li class="work"><a href="#" title="작업"></a></li>
-					<li class="calendar"><a href="#" title="달력"></a></li>
-					<li class="help"><a href="#" title="도움말"></a></li>
+					<li class="file active spr-image"><a class="active" href="#" title="파일"></a></li><!-- 활성화 class추가 active -->
+					<li class="work spr-image"><a href="#" title="작업"></a></li>
+					<li class="calendar spr-image"><a href="#" title="달력"></a></li>
+					<li class="help spr-image"><a href="#" title="도움말"></a></li>
 				</ul>
 			</nav>
 		</div>
@@ -71,8 +71,9 @@
 		<div id="container">
 			<section>
 			<div id="noticeArea"><!-- leftArea -->
+				<form>
 				<div class="boxArea"><!-- basicArea -->
-					<label><textarea placeholder="멤버들에게 새로운 소식을 전하세요." title="소식 입력"></textarea></label>
+					<label><textarea id="newsTarea" placeholder="멤버들에게 새로운 소식을 전하세요." title="소식 입력"></textarea></label>
 					<ul class="fileZone">
 						<li>
 							<span class="spr-image ico-ppt"><em class="blind">파워포인트</em></span>
@@ -105,9 +106,10 @@
 					<div class="btnZone">
 						<button class="spr-image fileUpload" title="파일 첨부"><em class="blind">파일 첨부</em></button><!-- 활성시 active 클래스 추가 -->
 						<button class="spr-image userSearch" title="알림 추가"><em class="blind">알림 추가</em></button>
-						<div class="btnRight hide"><button class="small">취소</button> <button class="small accent">등록하기</button></div>
+						<div class="btnRight"><button type="reset" id="btnCc" class="small hide">취소</button> <button id="btnReg" class="small">등록하기</button></div>
 					</div>
 				</div><!-- //basicArea -->
+				</form>
 
 				<div class="news-view"><!-- section1 -->
 					<div class="writer">

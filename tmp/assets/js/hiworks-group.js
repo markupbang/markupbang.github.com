@@ -5,12 +5,27 @@ $(function() {
 
 	$('.boxArea textarea').focus(function(){
         $(this).parent().parent('.boxArea').addClass('boxFocus');
-		$('.btnRight').removeClass('hide');
     });
 	$('.boxArea textarea').blur(function(){
         $('.boxArea').removeClass('boxFocus');
-		$('.btnRight').addClass('hide');
     });
+
+	$("#newsTarea").keyup(function(){
+		var txtPre = $(this).val();
+		if(txtPre === ''){
+			$('#btnReg').removeClass('accent');
+			$('.btnRight #btnCc').addClass('hide');
+		} else {
+			$('#btnReg').addClass('accent');
+			$('.btnRight #btnCc').removeClass('hide');
+		}
+	});
+
+	$("#btnCc").click(function(){
+		$('#btnReg').removeClass('accent');
+		$('.btnRight #btnCc').addClass('hide');
+	});
+
 
 	//search focus in-out
 	$('.group-search input[type="text"]').focus(function(){

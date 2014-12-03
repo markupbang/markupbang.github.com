@@ -85,7 +85,6 @@ button.small.accent:hover,button.big.accent:hover{background:#05a54d}
 .spr-image.ico-groupOn{width:6px;height:6px;vertical-align:middle;background-position:-38px -194px}
 
 /* layout */
-html{overflow-y:scroll}
 #wrap{position:absolute;top:0;right:0;bottom:0;left:0;overflow:hidden;min-width:1280px}
 #header{margin:0 25px;height:76px}
 #container{position:absolute;top:76px;right:0;bottom:0;left:25px;overflow:hidden}
@@ -122,7 +121,7 @@ html{overflow-y:scroll}
 #header .group-name li a:hover{color:#333}
 #header .group-name .number{float:right;margin-top:3px;padding:4px 6px 7px 7px;color:#fff;font-size:13px;line-height:9px;border-radius:10px;background:#b8b8b8}
 .nav-menu{margin-left:442px;padding:25px 0 0 50px;overflow:hidden}
-.nav-menu li{float:left;margin-right:30px;height:23px;background:url("../images/img-sprite.png") no-repeat}
+.nav-menu li{float:left;margin-right:30px;height:23px}
 .nav-menu li.active{height:51px}
 .nav-menu li a{display:inline-block;width:26px;height:23px;}
 .nav-menu li.file{background-position:-22px -27px}
