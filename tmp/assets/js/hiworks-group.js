@@ -26,12 +26,21 @@ $(function() {
 		$('.btnRight #btnCc').addClass('hide');
 	});
 
+	$('.reTarea').bind('keyup keydown',function(){
+		var txtRe = $(this).val();
+		if(txtRe == ''){
+			$(this).parent().parent().find('.btnRight .small').removeClass('accent');
+		} else {
+			$(this).parent().parent().find('.btnRight .small').addClass('accent');
+		}
+	});
+
 	/*$('.reTarea').bind('keyup keydown',function(){
 		var txtRe = $(this).val();
 		if(txtRe == ''){
-			$('.small').removeClass('accent');
+			$(this).parents('.boxArea').children('.small').removeClass('accent');
 		} else {
-			$('.small').addClass('accent');
+			$(this).parents('.boxArea').children('.small').addClass('accent');
 		}
 	});*/
 
