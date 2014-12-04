@@ -10,7 +10,7 @@ $(function() {
         $('.boxArea').removeClass('boxFocus');
     });
 
-	$("#newsTarea").keyup(function(){
+	$("#newsTarea").bind('keyup keydown',function(){
 		var txtPre = $(this).val();
 		if(txtPre === ''){
 			$('#btnReg').removeClass('accent');
@@ -25,6 +25,15 @@ $(function() {
 		$('#btnReg').removeClass('accent');
 		$('.btnRight #btnCc').addClass('hide');
 	});
+
+	/*$('.reTarea').bind('keyup keydown',function(){
+		var txtRe = $(this).val();
+		if(txtRe == ''){
+			$('.small').removeClass('accent');
+		} else {
+			$('.small').addClass('accent');
+		}
+	});*/
 
 
 	//search focus in-out

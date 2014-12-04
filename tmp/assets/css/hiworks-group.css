@@ -47,7 +47,7 @@ caption{overflow:hidden;width:0;height:0;font-size:0;line-height:0}
 .spr-image{background:url("../images/img-sprite.png") no-repeat}
 
 /* button */
-button.small,button.big{color:#fff;transition-duration:.5s}
+button.small,button.big{color:#fff;transition: .2s ease-in-out}
 button.small{padding:3px 16px 5px 15px;background:#b8b8b8}
 button.small.accent{background:#3ebb6b}
 button.big{padding:5px 20px 8px 19px;background:#b8b8b8}
@@ -62,10 +62,6 @@ button.small.accent:hover,button.big.accent:hover{background:#05a54d}
 .spr-image.userSearch:hover{background-position:-37px -288px}
 .spr-image.fileUpload{width:13px;height:23px;background-position:-23px -227px}
 .spr-image.fileUpload:hover{background-position:-23px -288px}
-.spr-image.ico-ppt{width:24px;height:24px;background-position:-1px -129px}
-.spr-image.ico-word{width:24px;height:24px;background-position:-1px -154px}
-.spr-image.ico-excel{width:24px;height:24px;background-position:-1px -179px}
-.spr-image.ico-folder{width:24px;height:24px;background-position:-1px -204px}
 .spr-image.fileDel{width:7px;height:7px;background-position:-26px -194px}
 .spr-image.ico-soon{width:17px;height:17px;background-position:-62px -209px}
 .spr-image.ico-calendar{width:26px;height:23px;background-position:-78px -77px}
@@ -83,6 +79,7 @@ button.small.accent:hover,button.big.accent:hover{background:#05a54d}
 .spr-image.ico-album{width:12px;height:12px;background-position:-39px -155px}
 .spr-image.ico-filter{width:14px;height:12px;background-position:-52px -155px}
 .spr-image.ico-groupOn{width:6px;height:6px;vertical-align:middle;background-position:-38px -194px}
+.spr-image.ico-fileUp{width:33px;height:6px;background-position:-43px -194px}
 
 /* layout */
 #wrap{position:absolute;top:0;right:0;bottom:0;left:0;overflow:hidden;min-width:1280px}
@@ -150,7 +147,7 @@ button.small.accent:hover,button.big.accent:hover{background:#05a54d}
 .boxArea .fileZone li{margin-bottom:9px}
 .boxArea .fileZone li .spr-image{vertical-align:middle}
 .boxArea .fileZone li span:first-child{margin-right:2px}
-.boxArea .fileDel{margin-left:1px}
+.boxArea .fileDel,.boxArea  .ico-fileUp{margin-left:1px}
 .boxArea .newAlarm{padding:7px 0 21px}
 .boxArea .newAlarm span{margin-right:6px;font-size:12px}
 .boxArea .newAlarm .fileDel{margin:0 4px}
