@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1280">
+<link rel="shortcut icon" href="assets/images/favicon.ico">
+<link rel="stylesheet" type="text/css" href="assets/css/ui.css">
+<link rel="stylesheet" type="text/css" href="assets/css/layer.css">
+<script type="text/javascript" src="assets/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery.nicescroll.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery.masonry.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery.placeholder.js"></script>
+<script type="text/javascript" src="assets/js/TweenMax.min.js"></script>
+<title>하이웍스 그룹</title>
+</head>
+<style type="text/css">
+
+</style>
+</head>
+
+<body>
+
+<h1>하이웍스 그룹 레이어</h1>
+
+<!-- p.6 멤버 초대 -->
+<div id="hg-member-invite" class="ly_pop ly-case2 hide">
+    <div class="ly_title">멤버 초대</div>
+    <div class="ly_body">
+        <div class="add_email mt5">
+            이메일을 통해 그룹에 다른 사람을 초대하세요. <!-- a href="javascript:void(0);" class="txtColor-v4 ml5">파일 선택</a -->
+            <label><input type="text" placeholder="이메일 주소" class="tf_email" title="이메일 주소를 입력하세요."></label>
+            <a href="javascript:void(0);" class="txtColor-v4 ml5">초대하기</a>
+        </div>
+        <ul class="lst_mail">
+            <li><span></span>kdt@gabia.com</li>
+            <li><span></span>rkqldkgkdldnjrtm@gmail.com</li>
+            <li><span></span>%이메일 주소%</li>
+        </ul>
+    </div>
+    <div class="ly_footer">
+        <button class="big" onclick="GabiaUI.hideModal();">취소</button>
+        <button class="big accent">확인</button>
+    </div>
+    <button class="ly_close spr-image" title="레이어 닫기" onclick="GabiaUI.hideModal();"><span class="blind">레이어 닫기</span></button>
+</div>
+
+<!-- p.7 그룹 가입 -->
+<div id="hg-join" class="ly_pop hide">
+    <div class="ly_title">그룹 가입</div>
+    <div class="ly_body">홍길동님이 <strong>UI 2팀</strong> 그룹에 초대했습니다.<br>그룹에 가입하시겠습니까?</div>
+    <div class="ly_footer">
+        <button class="big" onclick="GabiaUI.hideModal();">취소</button>
+        <button class="big accent">확인</button>
+    </div>
+    <button class="ly_close spr-image" title="레이어 닫기" onclick="GabiaUI.hideModal();"><span class="blind">레이어 닫기</span></button>
+</div>
+
+<h2 style="margin-top:25px;">그룹 메인 리스트</h2>
+<ol>
+    <li><button onclick="GabiaUI.Modal($('#hg-member-invite'))">멤버 초대</button></li>
+    <li><button onclick="GabiaUI.Modal($('#hg-join'))">그룹가입</button></li>   
+</ol>
+<div class="dim" id="dim"></div>
+<script type="text/javascript" src="assets/js/ui.js"></script>
+</body>
+</html>

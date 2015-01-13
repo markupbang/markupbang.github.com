@@ -1,0 +1,487 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=1280">
+	<link rel="stylesheet" type="text/css" href="assets/css/ui.css">
+	<script type="text/javascript" src="assets/js/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="assets/js/ui.js"></script>
+	<script type="text/javascript" src="assets/js/jquery.nicescroll.min.js"></script>
+	<script type="text/javascript" src="assets/js/jquery.placeholder.js"></script>
+	<title>하이웍스 그룹</title>
+</head>
+<body>
+	<div id="wrap">
+		<header>
+		<div id="header">
+			<h1>
+				<a href="#" class="spr-image logo"><em class="blind">Hiworks</em></a>
+				<a href="javascript:void(0);" class="groupSet">하이웍스 그룹<span class="spr-image"><em class="blind">그룹 설정</em></span></a>	
+				<div class="group-detail hide">
+					<!-- <p class="detail-title"><span class="spr-image ico-groupOn mr4"></span>하이웍스 그룹</p> -->
+					<div class="triangle spr-image"></div>
+					<ul class="group-name">
+						<li><a href="#"><img class="group-photo" src="assets/images/photo03.jpg" alt="group-photo">%그룹이름%</a><span class="number">5</span></li>
+						<li><a href="#"><img class="group-photo" src="assets/images/photo03.jpg" alt="group-photo">%그룹이름%</a><span class="number">12</span></li>
+						<li><a href="#"><img class="group-photo" src="assets/images/photo03.jpg" alt="group-photo">%그룹이름%</a><span class="number">5</span></li>
+						<li><a href="#"><img class="group-photo" src="assets/images/photo03.jpg" alt="group-photo">%그룹이름%</a></li>
+					</ul>
+					<p class="ta-c"><button class="small accent ml4">그룹 만들기</button></p>
+				</div>
+			</h1>
+			<div class="userBox">
+				<div class="group-search">
+					<div class="search">
+						<form>
+							<fieldset>
+								<legend>그룹 검색</legend>
+								<label class="blind" for="groupSearch">그룹 검색하기</label>
+								<label><input id="groupSearch" type="text" placeholder="Search" value=""></label>
+								<a class="btn-search" href="#"><span class="spr-image ico-search"><em class="blind">검색</em></span></a>
+							</fieldset>
+						</form>
+					</div>
+				</div>
+				<div class="user-info">
+					<a class="userbtn" href="javascript:void(0)">
+						<img class="user-photo vt-m" src="assets/images/user-photo.jpg" alt="사용자 사진">
+						<span class="name">Kim sujin</span>
+						<span class="userinfo-view spr-image"><em class="blind">사용자 정보 열기</em></span>
+					</a>
+					<div class="user-detail hide">	
+						<div class="triangle spr-image"></div>
+						<div class="user-photoBig"><img class="user-photo" src="assets/images/user-photo.jpg" alt="사용자 사진"></div>
+						<div class="user-account">
+							<p>%이름%</p>
+							<p>lsy@gabia.com</p>
+							<p><a href="#" class="txtPoint">계정설정</a></p>
+							<button class="small">로그아웃</button> 
+						</div>
+					</div>
+				</div>
+			</div>
+			<nav>
+				<ul class="nav-menu">
+					<li class="file spr-image"><a href="#" title="파일"><em class="blind">파일</em></a></li>
+					<li class="work active spr-image"><a href="#" title="작업"><em class="blind">작업</em></a></li><!-- 활성화 class추가 active -->
+					<li class="calendar spr-image"><a href="#" title="달력"><em class="blind">달력</em></a></li>
+					<li class="help spr-image"><a href="#" title="설정"><em class="blind">설정</em></a></li>
+				</ul>
+			</nav>
+		</div>
+		</header>
+		<section>
+		<div id="container">
+			<aside>
+			<div id="noticeArea"><!-- leftArea -->
+				<form>
+					<fieldset>
+					<legend>소식입력</legend>
+					<div class="boxArea"><!-- basicArea -->
+						<label><textarea id="newsTarea" placeholder="멤버들에게 새로운 소식을 전하세요." title="소식 입력"></textarea></label>
+						<ul class="fileZone">
+							<li>
+								<img class="va-m mr3" src="assets/images/icon/ppt.png" alt="ppt">팀_프로젝트_모바일앱_시안_김두태_v.1.0_140423.ppt
+								<button class="spr-image fileDel" title="파일 삭제"><em class="blind">파일 삭제</em></button>
+							</li>
+							<li>
+								<img class="va-m mr3" src="assets/images/icon/doc.png" alt="doc">팀_프로젝트_서비스개요.doc
+								<button class="spr-image fileDel" title="파일 삭제"><em class="blind">파일 삭제</em></button>
+							</li>
+							<li>
+								<img class="va-m mr3" src="assets/images/icon/jpg.png" alt="jpg">팀_프로젝트_AI.jpg
+								<button class="spr-image fileDel" title="파일 삭제"><em class="blind">파일 삭제</em></button>
+							</li>
+							<li>
+								<img class="va-m mr3" src="assets/images/icon/xls.png" alt="xls">남극자이언트펭귄.jpg
+								<span class="fileUp-grf">
+									<!-- [D]width:값을 %로 움직여줍니다. -->
+									<span class="grf-bar" style="width:61%"></span>
+								</span>
+							</li>
+						</ul>
+						<div class="newAlarm after">
+							<span class="txtColor-v4 title">새 글 알림:</span>
+							<ul class="nameBox">
+								<li>James Dean<button class="spr-image fileDel" title="파일 삭제"><em class="blind">파일 삭제</em></button></li>
+								<li>박세레나<button class="spr-image fileDel" title="파일 삭제"><em class="blind">파일 삭제</em></button></li>
+								<li>류현진<button class="spr-image fileDel" title="파일 삭제"><em class="blind">파일 삭제</em></button></li>
+								<li>홍길동<button class="spr-image fileDel" title="파일 삭제"><em class="blind">파일 삭제</em></button></li>
+							</ul>
+						</div>
+						<div class="btnZone">
+							<div class="fl">
+								<button class="spr-image fileUpload" title="파일 첨부"><em class="blind">파일 첨부</em></button><!-- 활성시 active 클래스 추가 -->
+								<button class="spr-image userSearch" title="알림 추가"><em class="blind">알림 추가</em></button>
+							</div>
+							<div class="btnRight"><button type="reset" id="btnCc" class="small hide">취소</button> <button id="btnReg" class="small">등록하기</button></div>
+						</div>
+					</div><!-- //basicArea -->
+					</fieldset>
+				</form>
+
+				<div class="news-view"><!-- section1 -->
+					<div class="writer">
+						<img class="user-photo" src="assets/images/user-photo.jpg" alt="사용자 사진">
+						<span class="name">홍길동</span><span class="dateTime">4시간 전</span>
+					</div>
+					<div class="title"><img class="va-m mr9" src="assets/images/icon/icon-progress.png" alt="ppt">메신저 모바일 앱 기획<span class="deadline">마감일 2014-08-01</span></div><!-- 마감일title -->
+					<div class="news-con">
+						주간회의는 1:30분에 할께요. 각자 주간 보고서 작성해서 3부씩 출력하여 참석하세요. 회의할 때 팀 프로젝트 설명을 하려고 합니다. 각자 미리 자료를 읽어보고 참석하시면 좋겠어요. 길동씨는 회의실 1시간 예약 부탁해요.<button>더 보기</button>
+					</div>
+					<ul class="fileAppend">
+						<li>
+							<img class="va-m mr3" src="assets/images/icon/ppt.png" alt="ppt">팀_프로젝트_모바일앱_시안_김두태_v.1.0_140423.ppt
+							<button class="spr-image fileMoreview" title="첨부파일 더 보기"><em class="blind">첨부파일 더 보기</em></button>
+						</li>
+						<li>
+							<img class="va-m mr3" src="assets/images/icon/doc.png" alt="doc">팀_프로젝트_서비스개요.doc
+							<button class="spr-image fileMoreview" title="첨부파일 더 보기"><em class="blind">첨부파일 더 보기</em></button>
+						</li>
+						<li>
+							<img class="va-m mr3" src="assets/images/icon/jpg.png" alt="jpg">팀_프로젝트_AI.jpg
+							<button class="spr-image fileMoreview" title="첨부파일 더 보기"><em class="blind">첨부파일 더 보기</em></button>
+						</li>
+					</ul>
+					<p class="btn_fileview"><button class="txtPoint">+ 1개의 파일</button></p>
+					<p class="fileMenu">
+						<button class="spr-image ico-check" title="체크"><em class="blind">체크</em></button>
+						<button class="spr-image ico-share" title="공유"><em class="blind">공유</em></button>
+						<button class="spr-image ico-viewMore" title="더보기"><em class="blind">더보기</em></button>
+					</p>
+
+					<div class="comment"><!-- commentArea -->
+						<p class="confirmNum"><span class="spr-image ico-check active"></span> <span class="txtPoint ml2">5명</span>이 확인했습니다.</p>
+						<p class="com-more"><button><span class="spr-image ico-comment"></span>2개의 댓글 더 보기</button></p>
+						<div class="com-list">
+							<img class="user-photo" src="assets/images/user-photo.jpg" alt="사용자 사진">
+							<span class="name">홍길동</span><span class="dateTime">2014-04-35 오후 4:30</span>
+							<p>상태 값이 ‘시작 안 함’에서 ‘진행 중’으로 변경되었습니다.</p>
+						</div>
+						<div class="com-list">
+							<img class="user-photo" src="assets/images/user-photo.jpg" alt="사용자 사진">
+							<span class="name">홍길동</span><span class="dateTime">2014-04-35 오후 4:30</span> <span class="ml5 spr-image ico-check active"></span><span class="txtPoint ml4">5</span>
+							<p>상태 값이 ‘시작 안 함’에서 ‘진행 중’으로 변경되었습니다.</p>
+						</div>
+					</div>
+					<form>
+						<fieldset>
+						<legend>댓글 입력</legend>
+						<div class="boxArea">
+							<label><textarea class="reTarea" placeholder="댓글을 입력하세요." title="댓글 입력"></textarea></label>
+							<ul class="fileZone">
+								<li>
+									<img class="va-m mr3" src="assets/images/icon/ppt.png" alt="ppt">팀_프로젝트_모바일앱_시안_김두태_v.1.0_140423.ppt
+									<button class="spr-image fileDel" title="파일 삭제"><em class="blind">파일 삭제</em></button>
+								</li>
+								<li>
+									<img class="va-m mr3" src="assets/images/icon/doc.png" alt="doc">팀_프로젝트_서비스개요.doc
+									<button class="spr-image fileDel" title="파일 삭제"><em class="blind">파일 삭제</em></button>
+								</li>
+								<li>
+									<img class="va-m mr3" src="assets/images/icon/xls.png" alt="xls">팀_프로젝트_AI.jpg
+									<button class="spr-image fileDel" title="파일 삭제"><em class="blind">파일 삭제</em></button>
+								</li>
+								<li>
+									<img class="va-m mr3" src="assets/images/icon/jpg.png" alt="jpg">남극자이언트펭귄.jpg
+									<button class="spr-image fileDel" title="파일 삭제"><em class="blind">파일 삭제</em></button>
+								</li>
+							</ul>
+							<div class="newAlarm after">
+								<span class="txtColor-v4 title">새 글 알림:</span>
+								<ul class="nameBox">
+									<li>James Dean<button class="spr-image fileDel" title="파일 삭제"><em class="blind">파일 삭제</em></button></li>
+									<li>박세레나<button class="spr-image fileDel" title="파일 삭제"><em class="blind">파일 삭제</em></button></li>
+									<li>류현진<button class="spr-image fileDel" title="파일 삭제"><em class="blind">파일 삭제</em></button></li>
+									<li>홍길동<button class="spr-image fileDel" title="파일 삭제"><em class="blind">파일 삭제</em></button></li>
+								</ul>
+							</div>
+							<div class="btnZone">
+								<button class="spr-image fileUpload active" title="파일 첨부"><em class="blind">파일 첨부</em></button>
+								<button class="spr-image userSearch active" title="알림 추가"><em class="blind">알림 추가</em></button>
+								<div class="btnRight"><button class="small">등록하기</button></div>
+							</div>
+						</div>
+						</fieldset>
+					</form><!-- //commentArea -->
+
+				</div><!-- //section1 -->
+
+				<div class="news-view"><!-- section2 -->
+					<div class="writer">
+						<img class="user-photo" src="assets/images/user-photo.jpg" alt="사용자 사진">
+						<span class="name">홍길동</span><span class="dateTime">4시간 전</span>
+					</div>
+					<div class="title-calendar"><img class="va-m mr9" src="assets/images/icon/icon-calendar.png" alt="일정">메신저 모바일 앱 기획<br><span class="dateinfo">2014-07-10 / 오전 11시 30분 / 참석자 <span class="txtPoint">4</span></span></div><!-- 일정title -->
+					<div class="news-con">
+						주간회의는 1:30분에 할께요. 각자 주간 보고서 작성해서 3부씩 출력하여 참석하세요. 회의할 때 팀 프로젝트 설명을 하려고 합니다. 각자 미리 자료를 읽어보고 참석하시면 좋겠어요. 길동씨는 회의실 1시간 예약 부탁해요.<button>더 보기</button>
+					</div>
+					<ul class="fileAppend">
+						<li>
+							<img class="va-m mr3" src="assets/images/icon/ppt.png" alt="ppt">팀_프로젝트_모바일앱_시안_김두태_v.1.0_140423.ppt
+							<button class="spr-image fileMoreview" title="첨부파일 더 보기"><em class="blind">첨부파일 더 보기</em></button>
+						</li>
+						<li>
+							<img class="va-m mr3" src="assets/images/icon/doc.png" alt="doc">팀_프로젝트_서비스개요.doc
+							<button class="spr-image fileMoreview" title="첨부파일 더 보기"><em class="blind">첨부파일 더 보기</em></button>
+						</li>
+						<li>
+							<img class="va-m mr3" src="assets/images/icon/xls.png" alt="xls">팀_프로젝트_AI.jpg
+							<button class="spr-image fileMoreview" title="첨부파일 더 보기"><em class="blind">첨부파일 더 보기</em></button>
+						</li>
+					</ul>
+					<p class="btn_fileview"><button class="txtPoint">+ 1개의 파일</button></p>
+					<p class="fileMenu">
+						<button class="spr-image ico-check" title="체크"><em class="blind">체크</em></button>
+						<button class="spr-image ico-share" title="공유"><em class="blind">공유</em></button>
+						<button class="spr-image ico-viewMore" title="더보기"><em class="blind">더보기</em></button>
+					</p>
+					<div class="comment"><!-- commentArea -->
+						<p class="confirmNum"><span class="spr-image ico-check active"></span> <span class="txtPoint ml2">5명</span>이 확인했습니다.</p>
+						<p class="com-more"><button><span class="spr-image ico-comment"></span>2개의 댓글 더 보기</button></p>
+						<div class="com-list">
+							<img class="user-photo" src="assets/images/user-photo.jpg" alt="사용자 사진">
+							<span class="name">홍길동</span><span class="dateTime">2014-04-35 오후 4:30</span> <span class="ml5 spr-image ico-check active"></span><span class="txtPoint ml4">5</span>
+							<p>상태 값이 ‘시작 안 함’에서 ‘진행 중’으로 변경되었습니다.</p>
+						</div>
+						<div class="com-list">
+							<img class="user-photo" src="assets/images/user-photo.jpg" alt="사용자 사진">
+							<span class="name">홍길동</span><span class="dateTime">2014-04-35 오후 4:30</span>
+							<p>상태 값이 ‘시작 안 함’에서 ‘진행 중’으로 변경되었습니다.</p>
+						</div>
+					</div>
+					<form>
+						<fieldset>
+						<legend>댓글 입력</legend>
+						<div class="boxArea">
+							<label><textarea placeholder="댓글을 입력하세요." title="댓글 입력"></textarea></label>
+							<ul class="fileZone">
+								<li>
+									<img class="va-m mr3" src="assets/images/icon/ppt.png" alt="ppt">팀_프로젝트_모바일앱_시안_김두태_v.1.0_140423.ppt
+									<button class="spr-image fileDel" title="파일 삭제"><em class="blind">파일 삭제</em></button>
+								</li>
+								<li>
+									<img class="va-m mr3" src="assets/images/icon/doc.png" alt="doc">팀_프로젝트_서비스개요.doc
+									<button class="spr-image fileDel" title="파일 삭제"><em class="blind">파일 삭제</em></button>
+								</li>
+								<li>
+									<img class="va-m mr3" src="assets/images/icon/xls.png" alt="xls">팀_프로젝트_AI.jpg
+									<button class="spr-image fileDel" title="파일 삭제"><em class="blind">파일 삭제</em></button>
+								</li>
+								<li>
+									<img class="va-m mr3" src="assets/images/icon/jpg.png" alt="jpg">남극자이언트펭귄.jpg
+									<button class="spr-image fileDel" title="파일 삭제"><em class="blind">파일 삭제</em></button>
+								</li>
+							</ul>
+							<div class="newAlarm after">
+								<span class="txtColor-v4 title">새 글 알림:</span>
+								<ul class="nameBox">
+									<li>James Dean<button class="spr-image fileDel" title="파일 삭제"><em class="blind">파일 삭제</em></button></li>
+									<li>박세레나<button class="spr-image fileDel" title="파일 삭제"><em class="blind">파일 삭제</em></button></li>
+									<li>류현진<button class="spr-image fileDel" title="파일 삭제"><em class="blind">파일 삭제</em></button></li>
+									<li>홍길동<button class="spr-image fileDel" title="파일 삭제"><em class="blind">파일 삭제</em></button></li>
+								</ul>
+							</div>
+							<div class="btnZone">
+								<button class="spr-image fileUpload active" title="파일 첨부"><em class="blind">파일 첨부</em></button>
+								<button class="spr-image userSearch active" title="알림 추가"><em class="blind">알림 추가</em></button>
+								<div class="btnRight"><button class="small">등록하기</button></div>
+							</div>
+						</div>
+						</fieldset>
+					</form><!-- //commentArea -->
+				</div><!-- //section2 -->
+			</div><!-- //leftArea -->
+			</aside>
+			
+			<section>
+			<div id="contents"><!-- rightArea -->
+				<div class="menu-work">
+					<ul class="work-category">
+						<li><button><span class="spr-image ico-mfolder"></span>폴더별</button></li>
+						<li><button><span class="spr-image ico-state"></span>상태별</button></li>
+						<li><button class="active"><span class="spr-image ico-deadline"></span>마감일별</button></li>
+						<li><button><span class="spr-image ico-filter"></span>필터</button></li>
+						<li><label><input type="checkbox"> 완료된 작업 보기</label></li>
+					</ul>
+					<p class="btn-add"><button class="small accent">폴더 추가</button> <button class="small accent">작업 추가</button></p>
+				</div>
+				<div id="wContent" class="workList after">
+					<div class="workBox">
+						<div class="w-title">
+							지연
+							<div class="fr">
+								<button class="spr-image ico-expand" title="접기"><em class="blind">접기</em></button>
+							</div>
+						</div>
+						<table class="work-list" cellpadding="0" cellspacing="0">
+							<caption>작업</caption>
+							<colgroup><col><col width="180"><col width="42"><col></colgroup>
+							<tbody>
+								<tr>
+									<td class="iconArea"><img class="va-m" src="assets/images/icon/icon-delay.png" alt="지연"></td>
+									<td>디버깅 수정 및 적용 작업 적용 작업</td>
+									<td class="dDay"><span class="plus">D+2</span></td>
+									<td class="date delay">2014-07-13</td>
+								</tr>
+								<tr>
+									<td class="iconArea"><img class="va-m" src="assets/images/icon/icon-delay.png" alt="지연"></td>
+									<td>디버깅 수정 및 적용 작업</td>
+									<td class="dDay"><span class="plus">D+2</span></td>
+									<td class="date delay">2014-07-13</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="workBox">
+						<div class="w-title">
+							오늘
+							<div class="fr">
+								<button class="spr-image ico-expand" title="접기"><em class="blind">접기</em></button>
+							</div>
+						</div>
+						<table class="work-list" cellpadding="0" cellspacing="0">
+							<caption>작업</caption>
+							<colgroup><col><col width="180"><col width="42"><col></colgroup>
+							<tbody>
+								<tr>
+									<td class="iconArea"><img class="va-m" src="assets/images/icon/icon-progress.png" alt="진행 중"></td>
+									<td>디버깅 수정 및 적용 작업 적용 작업</td>
+									<td class="dDay"><span class="minus">D-1</span></td>
+									<td class="date">2014-07-13</td>
+								</tr>
+								<tr>
+									<td class="iconArea"><img class="va-m" src="assets/images/icon/icon-progress.png" alt="진행 중"></td>
+									<td>디버깅 수정 및 적용 작업 적용 작업</td>
+									<td class="dDay"><span class="minus">D-1</span></td>
+									<td class="date">2014-07-13</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="workBox">
+						<div class="w-title">
+							이번 주
+							<div class="fr">
+								<button class="spr-image ico-expand" title="접기"><em class="blind">접기</em></button>
+							</div>
+						</div>
+						<table class="work-list" cellpadding="0" cellspacing="0">
+							<caption>작업</caption>
+							<colgroup><col><col width="180"><col width="42"><col></colgroup>
+							<tbody>
+								<tr>
+									<td class="iconArea"><img class="va-m" src="assets/images/icon/icon-progress.png" alt="진행 중"></td>
+									<td>디버깅 수정 및 적용 작업 적용 작업</td>
+									<td class="dDay"></td>
+									<td class="date">2014-07-13</td>
+								</tr>
+								<tr>
+									<td class="iconArea"><img class="va-m" src="assets/images/icon/icon-progress.png" alt="진행 중"></td>
+									<td>디버깅 수정 및 적용 작업 적용 작업</td>
+									<td class="dDay"></td>
+									<td class="date">2014-07-13</td>
+								</tr>
+								<tr>
+									<td class="iconArea"><img class="va-m" src="assets/images/icon/icon-tight.png" alt="마감 임박"></td>
+									<td>디버깅 수정 및 적용 작업 적용 작업</td>
+									<td class="dDay"><span class="minus">D-2</span></td>
+									<td class="date">2014-07-13</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="workBox">
+						<div class="w-title">
+							이번 달
+							<div class="fr">
+								<button class="spr-image ico-expand" title="접기"><em class="blind">접기</em></button>
+							</div>
+						</div>
+						<table class="work-list" cellpadding="0" cellspacing="0">
+							<caption>작업</caption>
+							<colgroup><col><col width="180"><col width="42"><col></colgroup>
+							<tbody>
+								<tr>
+									<td class="iconArea"><img class="va-m" src="assets/images/icon/icon-tight.png" alt="마감 임박"></td>
+									<td>디버깅 수정 및 적용 작업 적용 작업</td>
+									<td class="dDay"></td>
+									<td class="date">2014-07-13</td>
+								</tr>
+								<tr>
+									<td class="iconArea"><img class="va-m" src="assets/images/icon/icon-new.png" alt="시작 안 함"></td>
+									<td>디버깅 수정 및 적용 작업 적용 작업</td>
+									<td class="dDay"></td>
+									<td class="date">2014-07-13</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="workBox">
+						<div class="w-title">
+							그 외
+							<div class="fr">
+								<button class="spr-image ico-expand" title="접기"><em class="blind">접기</em></button>
+							</div>
+						</div>
+						<table class="work-list" cellpadding="0" cellspacing="0">
+							<caption>작업</caption>
+							<colgroup><col><col width="180"><col width="42"><col></colgroup>
+							<tbody>
+								<tr>
+									<td class="iconArea"><img class="va-m" src="assets/images/icon/icon-new.png" alt="시작 안 함"></td>
+									<td>디버깅 수정 및 적용 작업 적용 작업</td>
+									<td class="dDay"></td>
+									<td class="date">2014-07-13</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="workBox">
+						<div class="w-title">
+							미지정
+							<div class="fr">
+								<button class="spr-image ico-expand" title="접기"><em class="blind">접기</em></button>
+							</div>
+						</div>
+						<table class="work-list" cellpadding="0" cellspacing="0">
+							<caption>작업</caption>
+							<colgroup><col><col width="180"><col width="42"><col></colgroup>
+							<tbody>
+								<tr>
+									<td class="iconArea"><img class="va-m" src="assets/images/icon/icon-tight.png" alt="마감 임박"></td>
+									<td>디버깅 수정 및 적용 작업 적용 작업</td>
+									<td class="dDay"></td>
+									<td class="date">2014-07-13</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>				
+			</div><!-- //rightArea -->
+			</section>			
+		</div>
+		</section>
+	</div>
+	<script type="text/javascript" src="assets/js/jquery.masonry.min.js"></script>
+	<script>
+	  $(function(){
+		
+		$('#wContent').masonry({
+			itemSelector: '.workBox',
+			columnWidth: 350,
+			isAnimated: true
+		});
+		var reMasonry = function() {
+	   	 	$('#wContent').masonry();
+		 };
+		 $('.folder-arrow').click(function(){
+			var size = $(this).parent().parent().parent().outerHeight();
+			$('#wContent').animate( size, reMasonry );
+		  });
+
+	  });
+	</script>
+</body>
+</html>
