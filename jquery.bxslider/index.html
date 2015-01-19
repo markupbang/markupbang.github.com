@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width-device-width,initial-scale=1,user-scalable=no">
+<title>draggable</title>
+<!-- jQuery library (served from Google) -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<!-- bxSlider CSS file -->
+<link href="jquery.bxslider.css" rel="stylesheet" />
+<!-- bxSlider Javascript file -->
+<script src="jquery.bxslider.min.js"></script>
+</head>
+<body>
+	<ul class="bxslider">
+		 <li><img src="images/pic1.jpg" width="100%"/></li>
+		 <li><img src="images/pic2.jpg" width="100%"/></li>
+		 <li><img src="images/pic3.jpg" width="100%"/></li>
+		 <li><img src="images/pic4.jpg" width="100%"/></li>
+	</ul>
+	<script >
+	$(document).ready(function(){
+		$('.bxslider').bxSlider();
+	});
+	</script>
+</body>
+</html>
