@@ -11,19 +11,25 @@
 <link href="jquery.bxslider.css" rel="stylesheet" />
 <!-- bxSlider Javascript file -->
 <script src="jquery.bxslider.min.js"></script>
+<style type="text/css">
+.bxslider img{width:100%;}
+</style>
 </head>
 <body>
 	<ul class="bxslider">
-		 <li><img src="images/pic1.jpg" width="100%"/></li>
-		 <li><img src="images/pic2.jpg" width="100%"/></li>
-		 <li><img src="images/pic3.jpg" width="100%"/></li>
-		 <li><img src="images/pic4.jpg" width="100%"/></li>
+		 <li><img src="images/pic1.jpg" title="caption value pic1"/></li>
+		 <li><img src="images/pic2.jpg" title="caption value pic2"/></li>
+		 <li><img src="images/pic3.jpg" title="caption value pic3"/></li>
+		 <li><img src="images/pic4.jpg" title="caption value pic4"/></li>
 	</ul>
 	<script >
 	$(document).ready(function(){
 		$('.bxslider').bxSlider({
-			 auto: true,
-			 autoControls: true
+			
+			speed:1000,     // 이미지변환 속도 기본 500
+			auto: true,     //자동시작
+			captions: true,  //캡션
+			autoControls:true, //정지,시작 콘트롤 보이기 안보이기
 		});
 	});
 	</script>
