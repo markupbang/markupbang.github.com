@@ -1,0 +1,237 @@
+﻿@charset "utf-8";
+
+@font-face{font-family:'Nanum Gothic'; src:url('../font/NanumGothic.woff')}
+@font-face{font-family:'Nanum Gothic'; src:url('../font/NanumGothic.eot')}
+
+/**
+ * author: Bang Sohyun
+ * date: 2015. 2
+ */
+
+/* reset */
+html{overflow-x:hidden}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,textarea,button{margin:0;padding:0}
+fieldset,img{border:0 none}
+dl,ul,ol,menu,li{list-style:none}
+blockquote, q{quotes: none}
+blockquote:before, blockquote:after,q:before, q:after{content:'';content:none}
+input,select,textarea,button{vertical-align:middle}
+button{border:0 none;background-color:transparent;cursor:pointer}
+body{background:#fff}
+body,th,td,input,select,textarea,button{font-size:14px;line-height:1.5;font-family:'Nanum Gothic','나눔고딕','Helvetica Neue','돋움',dotum,Helvetica,'Apple SD Gothic Neo',Sans-serif;color:#34383c}
+a{color:#34383c;text-decoration:none}
+address,caption,cite,code,dfn,em,var{font-style:normal;font-weight:normal}
+legend{position:absolute;left:-9999px;top:0}
+caption{overflow:hidden;width:0;height:0;font-size:0;line-height:0}
+table{border-collapse:collapse}
+
+/* common */
+.hide{display:none!important}
+.show{display:block}
+.after:after{display:block;clear:both;content:''}
+.clear{clear:both}
+.ellipsis{text-overflow:ellipsis;overflow:hidden;white-space:nowrap}
+.btnCommon{padding:7px 33px;border-radius:2px}
+.btnCommon.red{color:#fff;background:#ed2c4a}
+.btnCommon.redV2{color:#fff;background:#db7560}
+.btnCommon.redV3{color:#fff;background:#89584c}
+.btnCommon.normal{color:#fff;background:#b8b8b8}
+.va-t{vertical-align:top}
+.va-m{vertical-align:middle}
+.ta-r{text-align:right}
+.ta-c{text-align:center}
+.ta-l{text-align:left}
+.fl{float:left}
+.fr{float:right}
+.sprImg{display:inline-block;vertical-align:middle;background:url(../images/spr-images.png) no-repeat}
+
+/* sprite */
+.sprImg.login{width:16px;height:16px;margin-right:10px;background-position:-1px -67px}
+.sprImg.musicCupon{width:16px;height:16px;margin-right:10px;background-position:-1px -84px}
+.sprImg.chargShop{width:16px;height:16px;margin-right:10px;background-position:-1px -101px}
+.sprImg.arrowR{width:4px;height:6px;margin-left:6px;background-position:-20px -60px}
+.sprImg.btnPlay{width:20px;height:20px;margin-bottom:5px;background-position:-1px -181px}
+.sprImg.btnGood{width:20px;height:20px;background-position:-1px -118px}
+.sprImg.btnTwiter{width:20px;height:20px;background-position:-1px -139px}
+.sprImg.btnDownload{width:20px;height:20px;background-position:-1px -160px}
+.sprImg.btnPlay:hover{background-position:-43px -181px}
+.sprImg.btnGood:hover{background-position:-43px -118px}
+.sprImg.btnTwiter:hover{background-position:-43px -139px}
+.sprImg.btnDownload:hover{background-position:-43px -160px}
+.sprImg.btnPlay.disabled{background-position:-22px -181px}
+.sprImg.btnGood.disabled{background-position:-22px -118px}
+.sprImg.btnTwiter.disabled{background-position:-22px -139px}
+.sprImg.btnDownload.disabled{background-position:-22px -160px}
+.sprImg.deal{width:90px;height:32px;background-position:-50px -48px}
+.sprImg.btnBack{width:6px;height:10px;margin-right:8px;background-position:-19px -67px}
+.sprImg.btnNext{width:6px;height:10px;margin-left:9px;background-position:-19px -78px}
+.sprImg.btnBacks{width:12px;height:10px;margin-right:8px;background-position:-19px -67px}
+.sprImg.btnNexts{width:12px;height:10px;margin-left:9px;background-position:-19px -78px}
+.sprImg.up{width:12px;height:10px;background-position:-19px -89px}
+.sprImg.down{width:12px;height:10px;background-position:-19px -100px}
+
+/* layout */
+#wrap{width:100%}
+#header{background:#2c3e50}
+#container{width:1220px;margin:0 auto;padding:0 30px}
+#gnb{width:1220px;height:40px;margin:40px 0}
+#content{overflow:hidden}
+#footer {clear:both;width:1220px;height:200px;margin:60px auto 0;padding:0 30px;color:#869296}
+
+/* header */
+.headerContent{width:1220px;height:80px;margin:0 auto;padding:0 30px}
+.headerContent .logo{float:left;margin:17px 212px 17px 0}
+.headerContent .logo a{width:199px;height:45px;background-position:-1px -1px}
+.headerContent .contentSearch{position:relative;float:left;width:360px;height:20px;margin:20px 0;padding:10px 20px 10px 17px;letter-spacing:-1px;border-radius:20px;background:#fff}
+.headerContent .contentSearch span{display:inline-block;width:80px;overflow:hidden;background:url(../images/bg-select.png) no-repeat right 8px}
+.headerContent .contentSearch select{width:99px;color:#869296;font-size:16px;border:none;background:transparent}
+.headerContent .contentSearch select:focus,.contentSearch input[type=text]:focus{outline:none}
+.headerContent .contentSearch input[type=text]{position:absolute;left:110px;top:10px;width:250px;height:20px;font-size:16px;border:none}
+.headerContent .sprImg.btn-search{position:absolute;top:11px;right:20px;width:18px;height:18px;vertical-align:middle;background-position:-1px -48px}
+.headerContent .menu-shortcuts{float:left;overflow:hidden;width:308px;margin:32px 0 0 104px}
+.headerContent .menu-shortcuts li{float:left;color:#cfd3d7}
+.headerContent .menu-shortcuts li a{display:inline-block;color:#cfd3d7;font-size:14px;padding:0 14px 0 15px}
+.headerContent .menu-shortcuts li:first-child a{padding:0 14px 0 0}
+
+#gnb li{position:relative;float:left;margin-left:-2px}
+#gnb li:first-child{margin-left:0}
+#gnb li .sprImg.deal{z-index:200;position:absolute;top:-30px;left:58px;padding-top:5px;color:#fff;text-align:center}
+#gnb li a{display:inline-block;width:201px;color:#777;font-size:18px;text-align:center;letter-spacing:-1px;line-height:36px;border:2px solid #c6c6c6;background:#eaeced}
+#gnb li a:first-child{border-radius:2px 0 0 2px}
+#gnb li a.end{border-radius:0 2px 2px 0}
+#gnb li a:hover,#gnb li.on a{position:relative;z-index:100;color:#34383c;border:2px solid #767676;background:#fff}
+
+/* mainContents */
+.contentL{float:left;width:590px;}
+.contentL .contentTitle{position:relative;margin-bottom:20px;padding:0 19px;color:#34383c;font-weight:bold;font-size:16px;line-height:38px;border:2px solid #767676;border-radius:2px}
+.contentL .contentTitle .btnMore,.contentR .contentTitle .btnMore{position:absolute;right:15px;top:0;color:#646d75;font-weight:normal;font-size:14px}
+.contentL .contentTitle .btnMore:hover,.contentR .contentTitle .btnMore:hover{color:#34383c}
+.contentL .newAlbum li{position:relative;float:left;width:140px;height:140px;margin:0 0 20px 10px;background:#000}
+.contentL .newAlbum li:first-child{margin-left:0}
+.contentL .newAlbum li img:hover{opacity:.6}
+.contentL .newAlbum li .title{position:absolute;left:0;bottom:0;width:130px;line-height:30px;padding-left:10px;color:#fff;opacity:.6;background:#000}
+.contentL .banner{clear:both;width:590px;height:180px;margin:20px 0 40px}
+.contentL .musicJockey li{position:relative;padding:10px 0 4px;border-top:1px solid #ccc}
+.contentL .musicJockey li:first-child{padding-top:0;border-top:none}
+.contentL .musicJockey li .jacket{display:inline-block;width:60px;height:60px;background:#000}
+.contentL .musicJockey li .jacket img:hover{opacity:.6;}
+.contentL .musicJockey li .title{display:inline-block;width:430px;padding-left:16px;line-height:60px;vertical-align:top}
+.contentL .musicJockey li .title:hover{text-decoration:underline}
+.contentL .musicJockey li .number{position:absolute;right:30px;top:30px}
+.contentL .musicJockey li:first-child .number{top:20px}
+
+.contentR{float:right;width:590px}
+.contentR .contentTitle{position:relative;margin-bottom:8px;padding:0 19px;color:#34383c;font-weight:bold;font-size:16px;line-height:38px;border:2px solid #767676;border-radius:2px}
+.contentR .top100 table{width:100%}
+.contentR .top100 table td{padding:10px 0 4px;text-align:center;letter-spacing:-1px;border-top:1px solid #ccc}
+.contentR .top100 table tr:first-child td{border-top:none}
+.contentR .top100 table td:first-child{color:#434a54;font-size:16px;font-style:italic;font-weight:bold}
+.contentR .top100 table td.title{text-align:left}
+.contentR .top100 table td.title a{display:inline-block;width:245px}
+.contentR .top100 table td.title a:hover{text-decoration:underline}
+.contentR .top100 table td.name span{display:inline-block;width:120px;color:#869296;text-align:left}
+
+/* contents */
+#content .pageTitle{margin-bottom:8px;padding:0 19px;color:#34383c;font-weight:bold;font-size:16px;line-height:38px;border:2px solid #767676;border-radius:2px}
+.musicJockey .jockeyList li{position:relative;float:left;width:590px;padding:10px 0 4px;border-bottom:1px solid #ccc}
+.musicJockey .jockeyList li .jacket{display:inline-block;width:60px;height:60px;background:#000}
+.musicJockey .jockeyList li .jacket img:hover{opacity:.6;}
+.musicJockey .jockeyList li .title{display:inline-block;width:430px;padding-left:16px;line-height:60px;vertical-align:top}
+.musicJockey .jockeyList li .title:hover{text-decoration:underline}
+.musicJockey .jockeyList li .number{position:absolute;right:30px;top:30px}
+.musicJockey .jockeyList li.nth2n{margin-left:40px}
+
+#content .albumInfo .pageTitle{margin-bottom:20px}
+.albumInfo .albumImg{float:left;width:310px}
+.albumInfo .albumImg img{border-radius:2px}
+.albumInfo .albumContent{position:relative;float:left;width:910px}
+.albumInfo .moreAlbum{position:absolute;right:0;top:0;width:330px}
+.albumInfo .moreAlbum li{float:left;margin:0 0 5px 5px;width:60px;height:60px;background:#000}
+.albumInfo .moreAlbum li img:hover{opacity:.6}
+.albumInfo .moreAlbum li.btnMore{clear:both;width:60px;height:20px;margin:5px 0 0 0;background:#fff}
+.albumInfo .moreAlbum li.btnMore a{color:#869296}
+.albumInfo .moreAlbum li.btnMore a:hover{color:#646d75}
+.albumInfo p{padding-top:10px;color:#34383c;font-size:18px}
+.albumInfo dt{padding:12px 0 3px;color:#34383c;font-size:14px}
+.albumInfo dd{color:#869296}
+.albumInfo .musicList{clear:both}
+.albumInfo .musicList table{width:100%}
+.albumInfo .musicList .btnArea{padding:14px 0 10px}
+.albumInfo .musicList table th{padding:10px 0 6px;color:#646d75;font-weight:normal;letter-spacing:-1px;border-top:1px solid #aaa;border-bottom:1px solid #ccc}
+.albumInfo .musicList table td{padding:10px 0 4px;text-align:center;letter-spacing:-1px;border-bottom:1px solid #eee}
+.albumInfo .musicList table td.ranking{color:#434a54;font-size:20px;font-style:italic;font-weight:bold}
+.albumInfo .musicList table td.title{text-align:left}
+.albumInfo .musicList table td.title a{display:inline-block;width:620px}
+.albumInfo .musicList table td.title a:hover{text-decoration:underline}
+.albumInfo .musicList table td.name span{display:inline-block;width:230px;color:#869296}
+.albumInfo .chartMenu{clear:both;width:100%;margin-top:34px;border-top:1px solid #d6d6d6}
+
+.musicCharts .chartMenu{width:100%;border-top:1px solid #d6d6d6}
+.musicCharts .chartMenu ul{width:555px;height:60px;margin:0 auto}
+.musicCharts .chartMenu.v2 ul{width:100%;height:60px}
+.musicCharts .chartMenu.v3{margin-top:40px}
+.musicCharts .chartMenu.v3 ul,.albumInfo .chartMenu ul{width:100%;height:46px}
+.musicCharts .chartMenu.v4 ul{width:100%;height:46px}
+.musicCharts .chartMenu li,.albumInfo .chartMenu li{float:left}
+.musicCharts .chartMenu li a,.albumInfo .chartMenu li a{display:inline-block;height:25px;margin:0 30px;padding-top:10px;color:#869296}
+.musicCharts .chartMenu li a:hover,.albumInfo .chartMenu li a:hover{color:#646d75}
+.musicCharts .chartMenu li.on a,.albumInfo .chartMenu li.on a{margin-top:-1px;color:#646d75;border-top:1px solid #666}
+.musicCharts .musicList{clear:both}
+.musicCharts .musicList table{width:100%}
+.musicCharts .musicList .btnArea{padding:14px 0 10px}
+.musicCharts .musicList table th{padding:10px 0 6px;color:#646d75;font-weight:normal;letter-spacing:-1px;border-top:1px solid #aaa;border-bottom:1px solid #ccc}
+.musicCharts .musicList table td{padding:10px 0 4px;text-align:center;letter-spacing:-1px;border-bottom:1px solid #eee}
+.musicCharts .musicList table td.ranking{color:#434a54;font-size:20px;font-style:italic;font-weight:bold}
+.musicCharts .musicList table td.title{text-align:left}
+.musicCharts .musicList table td.title a{display:inline-block;width:400px}
+.musicCharts .musicList table td.title.v2 a{display:inline-block;width:620px}
+.musicCharts .musicList table td.title a:hover{text-decoration:underline}
+.musicCharts .musicList table td.name span{display:inline-block;width:180px;color:#869296}
+.musicCharts .musicList table td.albumName span{display:inline-block;width:170px;color:#869296}
+.musicCharts .musicList table td .number{display:inline-block;width:15px;margin-left:4px}
+.musicCharts .musicList .btnArea-bt{width:245px;margin:20px auto}
+.musicCharts .musicList .btnRank{width:120px;height:30px;color:#869296;font-style:italic}
+.musicCharts .musicList .btnRank:hover{border-radius:15px;background:#eaeced}
+.musicCharts .musicList .btnRank.active{color:#4e5663;border:2px solid #c7cdd3;border-radius:15px;background:#fff}
+.musicCharts .albumList{width:100%;height:140px;margin-bottom:26px;padding: 0 15px 15px;border-bottom:1px solid #ebeaea}
+.musicCharts .albumList li{position:relative;float:left;width:140px;height:140px;margin:0 0 20px 10px;background:#000}
+.musicCharts .albumList li:first-child{margin-left:0}
+.musicCharts .albumList li img:hover{opacity:.6}
+.musicCharts .albumList li .title{position:absolute;left:0;bottom:0;width:130px;line-height:30px;padding-left:10px;color:#fff;opacity:.6;background:#000}
+
+.pageNavigation{clear:both;padding-top:30px;text-align:center}
+.pageNavigation a{display:inline-block;height:36px;color:#646d75;line-height:36px}
+.pageNavigation ul,.pageNavigation ul li{display:inline-block}
+.pageNavigation ul li a{width:36px}
+.pageNavigation ul li a:hover{color:#555;border-radius:36px;background:#d4dae0}
+.pageNavigation ul li a.on{color:#fff;border-radius:36px;background:#869296}
+.pageNavigation .backArea{display:inline-block;width:60px;margin-right:25px}
+.pageNavigation .nextArea{display:inline-block;width:60px;margin-left:25px}
+
+/* footer */
+#footer .policy{margin-bottom:34px;color:#869296;text-align:center;border-top:1px solid #c6c6c6;border-bottom:1px solid #c6c6c6;background:#f2f5f8}
+#footer .policy a{margin:0 5px;color:#869296;line-height:39px;}
+#footer .policy a:hover,.policy a.on{color:#646d75}
+#footer li{float:left;height:110px;padding:0 40px;border-left:1px solid #ccc}
+#footer li:first-child{padding:0 40px 0 0;border-left:none}
+#footer li.addressArea{padding:28px 0 0 60px;border-left:none}
+#footer li dt{padding-bottom:6px;color:#34383c;font-size:15px}
+#footer li dd{padding-bottom:3px;color:#869296;font-size:12px}
+#footer .cellPhone,#footer .fax{padding-right:10px;color:#34383c;font-weight:bold}
+#footer .eMail{color:#8c6239}
+
+/* popup */
+.popup_player{width:400px;padding:20px}
+.popup_player h2{margin-bottom:20px;padding:0 19px;line-height:38px;border:2px solid #767676;border-radius:2px}
+.popup_player .pop_con .img_area{display:inline-block;float:left;width:140px;height:140px;padding:1px;border:1px solid #b8b8b8;border-radius:2px}
+.popup_player .pop_con .img_area img{border-radius:2px}
+.popup_player .pop_con .album_info{float:left;width:200px;padding-left:20px}
+.popup_player .pop_con  dt{color:#34383c;font-size:16px}
+.popup_player .pop_con  dd{padding-bottom:6px;color:#869296}
+.player_bar{clear:both;padding-top:20px}
+.popup_player .pop_con .lyrics{height:250px;margin:20px 0 30px;overflow-y:scroll}
+.btn_lyricsClose{text-align:center;padding-top:20px;border-top:1px solid #c6c6c6}
+
+
+
+
