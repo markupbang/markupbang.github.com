@@ -29,7 +29,7 @@
     <div class="ly_body">
         <div class="add_email mt5">
             이메일을 통해 그룹에 다른 사람을 초대하세요. <!-- a href="javascript:void(0);" class="txtColor-v4 ml5">파일 선택</a -->
-            <label><input type="text" placeholder="이메일 주소" class="tf_email" title="이메일 주소를 입력하세요."></label>
+            <input type="text" placeholder="이메일 주소" class="tf_email">
             <a href="javascript:void(0);" class="txtColor-v4 ml5">초대하기</a>
         </div>
         <ul class="lst_mail">
@@ -56,10 +56,469 @@
     <button class="ly_close spr-image" title="레이어 닫기" onclick="GabiaUI.hideModal();"><span class="blind">레이어 닫기</span></button>
 </div>
 
+<!-- p.34 파일 업로드 -->
+<div id="hg-file-upload" class="ly_pop ly-case2 hide">
+    <div class="ly_title">파일 업로드</div>
+    <div class="ly_body">
+        <div class="add_email mt5">
+            <strong>웹 솔루션 시안 제작</strong> 폴더에 올릴 파일을 선택하세요. <a href="javascript:void(0);" class="txtColor-v4 ml5">파일 선택</a>
+        </div>
+    </div>
+    <!--div class="ly_footer">
+        <button class="big accent">올리기</button>
+    </div -->
+    <button class="ly_close spr-image" title="레이어 닫기" onclick="GabiaUI.hideModal();"><span class="blind">레이어 닫기</span></button>
+</div>
+
+<!-- p.34 파일 업로드 리스트 -->
+<div id="hg-file-uploadlist" class="ly_pop ly-case2 hide">
+    <div class="ly_title">파일 업로드</div>
+    <div class="ly_body">
+        <div class="mt5">
+            <strong>웹 솔루션 시안 제작</strong> 폴더에 올릴 파일을 선택하세요. <a href="javascript:void(0);" class="txtColor-v4 ml5">파일 선택</a>
+        </div>
+        <div class="box-line">
+            <table>
+                <colgroup>
+                    <col width="*">
+                    <col width="10%">
+                    <col width="10%">
+                </colgroup>
+                <tr>
+                    <td><p><img alt="ppt" src="assets/images/icon/ppt.png" class="va-m"> 회의관련_솔루션_시안(작성완료).pptx</p></td>
+                    <td class="ta-r">문서</td>
+                    <td class="ta-r">1.2MB</td>
+                </tr>
+                <tr>
+                    <td><p><img alt="jpg" src="assets/images/icon/png.png" class="va-m"> 테스트 이미지.png</p></td>
+                    <td class="ta-r">이미지</td>
+                    <td class="ta-r">402kb</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="ly_footer">
+        <button class="big accent">올리기</button>
+    </div>
+    <button class="ly_close spr-image" title="레이어 닫기" onclick="GabiaUI.hideModal();"><span class="blind">레이어 닫기</span></button>
+</div>
+
+<!-- p.35 파일 상세 정보 -->
+<div id="hg-file-detail" class="ly_pop ly-case3 hide">
+    <div class="ly_title">파일 상세 정보</div>
+    <div class="ly_body">
+        <div class="box-line">
+            <table>
+                <colgroup>
+                    <col width="*">
+                    <col width="12%">
+                    <col width="12%">
+                </colgroup>
+                <tr>
+                    <td><p><img alt="ppt" src="assets/images/icon/ppt.png" class="va-m"> 회의관련_솔루션_시안(작성완료).pptx <span class="ml7"><button title="파일 삭제" class="spr-image fileMoreview"><em class="blind">첨부파일 더 보기</em></button></span>
+                        <ul class="ly-dropdown" id="" style="display:none;">
+                            <li>다운로드</li>
+                            <li>최신 버전 업로드</li>
+                            <li>공유하기</li>
+                            <li>삭제하기</li>
+                        </ul>
+                    </p>
+                    
+                    </td>
+                    <td>김두태</td>
+                    <td class="ta-c">2014-10-20</td>
+                </tr>
+            </table>
+        </div>
+        <ul class="file-info">
+            <li>pptx</li>
+            <li>문서</li>
+            <li>402KB</li>
+            <li><img alt="folder" src="assets/images/icon/folder.png" class="va-m"> 웹 솔루션 시안 제작</li>
+        </ul>
+        <p class="ly-subtitle"><a href="javascript:void(0)" class="txtColor-v4">변경 내역 보기</a></p>
+        <div class="box-line undertext">
+            <table>
+                <colgroup>
+                    <col width="*">
+                    <col width="10%">
+                    <col width="25%">
+                    <col width="12%">
+                </colgroup>
+                <tr>
+                    <td>버전 3 (현재)</td>
+                    <td>김두태</td>
+                    <td class="ta-c">2014-10-20 오후 2:34</td>
+                    <td>402KB</td>
+                </tr>
+                <tr>
+                    <td>버전 2</td>
+                    <td>김두태</td>
+                    <td class="ta-c">2014-10-20 오후 2:34</td>
+                    <td>402KB <span class="ml7"><button title="파일 삭제" class="spr-image fileMoreview"><em class="blind">첨부파일 더 보기</em></button></span>
+                        <ul class="ly-dropdown" id="" style="display:none;">
+                            <li>다운로드</li>
+                            <li>이 버전으로 복원</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>버전 1</td>
+                    <td>김두태</td>
+                    <td class="ta-c">2014-10-20 오후 2:34</td>
+                    <td>402KB <span class="ml7"><button title="파일 삭제" class="spr-image fileMoreview"><em class="blind">첨부파일 더 보기</em></button></span>
+                        <ul class="ly-dropdown" id="" style="display:none;">
+                            <li>다운로드</li>
+                            <li>이 버전으로 복원</li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <ul>
+    </div>
+    <button class="ly_close spr-image" title="레이어 닫기" onclick="GabiaUI.hideModal();"><span class="blind">레이어 닫기</span></button>
+</div>
+
+<!-- p.36 최신 버전 업로드 (파일선택 전) -->
+<div id="hg-new-upload" class="ly_pop ly-case3 hide">
+    <div class="ly_title">최신 버전 업로드</div>
+    <div class="ly_body">
+        <div class="box-line">
+            <table>
+                <colgroup>
+                    <col width="*">
+                    <col width="64">
+                    <col width="78">
+                    <col width="76">
+                    <col width="100">
+                </colgroup>
+                <tr>
+                    <td><p><img alt="ppt" src="assets/images/icon/ppt.png" class="va-m"> 회의관련_솔루션_시안(작성완료).pptx</p></td>
+                    <td>문서</td>
+                    <td class="ta-c">402KB</td>
+                    <td>김두태</td>
+                    <td class="ta-c">04-30 오후 2:34</td>
+                </tr>
+            </table>
+        </div>
+        <p class="ly-subtitle">최신 버전 파일을 선택하세요. <a href="javascript:void(0)" class="txtColor-v4">파일 선택</a></p>
+
+    </div>
+    <button class="ly_close spr-image" title="레이어 닫기" onclick="GabiaUI.hideModal();"><span class="blind">레이어 닫기</span></button>
+</div>
+
+<!-- p.36 최신 버전 업로드 (파일선택 후) -->
+<div id="hg-new-uploadlist" class="ly_pop ly-case3 hide">
+    <div class="ly_title">최신 버전 업로드</div>
+    <div class="ly_body">
+        <div class="box-line">
+            <table>
+                <colgroup>
+                    <col width="*">
+                    <col width="64">
+                    <col width="78">
+                    <col width="76">
+                    <col width="100">
+                </colgroup>
+                <tr>
+                    <td><p><img alt="ppt" src="assets/images/icon/ppt.png" class="va-m"> 회의관련_솔루션_시안(작성완료).pptx</p></td>
+                    <td>문서</td>
+                    <td class="ta-c">402KB</td>
+                    <td>김두태</td>
+                    <td class="ta-c">04-30 오후 2:34</td>
+                </tr>
+            </table>
+        </div>
+        <p class="ly-subtitle">최신 버전 파일을 선택하세요. <a href="javascript:void(0)" class="txtColor-v4">파일 선택</a></p>
+        <div class="box-line undertext">
+            <table>
+                <colgroup>
+                    <col width="*">
+                    <col width="64">
+                    <col width="78">
+                    <col width="76">
+                    <col width="100">
+                </colgroup>
+                <tr>
+                    <td><p><img alt="ppt" src="assets/images/icon/ppt.png" class="va-m"> 회의관련_솔루션_시안(작성완료).pptx</p></td>
+                    <td>문서</td>
+                    <td class="ta-c">402KB</td>
+                    <td>김두태</td>
+                    <td class="ta-c">04-30 오후 2:34</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="ly_footer">
+        <button class="big accent">올리기</button>
+    </div>
+    <button class="ly_close spr-image" title="레이어 닫기" onclick="GabiaUI.hideModal();"><span class="blind">레이어 닫기</span></button>
+</div>
+
+<!-- p.38 파일/폴더 이동 -->
+<div id="hg-file-move" class="ly_pop hide">
+    <div class="ly_title">파일 이동</div>
+    <div class="ly_body">
+        <div class="box-line move-copy">
+            <div class="scroll">
+                <ul>
+                    <li>
+                        <span class="spr-image ico-addWork va-m"></span>
+                        <span class="spr-image ico-folder va-m"><em class="blind">폴더</em></span>%폴더이름%
+                    </li>
+                    <li>
+                        <span class="ico-blank"></span>
+                        <span class="spr-image ico-folder va-m"><em class="blind">폴더</em></span>%폴더이름%
+                    </li>
+                    <li>
+                        <span class="spr-image ico-addWork va-m"></span>
+                        <span class="spr-image ico-folder va-m"><em class="blind">폴더</em></span>%폴더이름%
+                    </li>
+                    <li>
+                        <span class="ico-blank"></span>
+                        <span class="spr-image ico-folder va-m"><em class="blind">폴더</em></span>%폴더이름%
+                    </li>
+                    <li>
+                        <span class="ico-blank"></span>
+                        <span class="spr-image ico-folder va-m"><em class="blind">폴더</em></span>%폴더이름%
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="ly_footer">
+        <button class="big accent">이동</button>
+        <button class="big" onclick="GabiaUI.hideModal();">취소</button>
+    </div>
+    <button class="ly_close spr-image" title="레이어 닫기" onclick="GabiaUI.hideModal();"><span class="blind">레이어 닫기</span></button>
+</div>
+
+<!-- p.38 파일/폴더  복사 -->
+<div id="hg-file-copy" class="ly_pop hide">
+    <div class="ly_title">파일 복사</div>
+    <div class="ly_body">
+        <div class="box-line move-copy">
+            <div class="scroll">
+                <ul>
+                    <li>
+                        <span class="spr-image ico-addWork va-m"></span>
+                        <span class="spr-image ico-folder va-m"><em class="blind">폴더</em></span>%폴더이름%
+                    </li>
+                    <li>
+                        <span class="ico-blank"></span>
+                        <span class="spr-image ico-folder va-m"><em class="blind">폴더</em></span>%폴더이름%
+                    </li>
+                    <li>
+                        <span class="spr-image ico-addWork va-m"></span>
+                        <span class="spr-image ico-folder va-m"><em class="blind">폴더</em></span>%폴더이름%
+                    </li>
+                    <li>
+                        <span class="ico-blank"></span>
+                        <span class="spr-image ico-folder va-m"><em class="blind">폴더</em></span>%폴더이름%
+                    </li>
+                    <li>
+                        <span class="ico-blank"></span>
+                        <span class="spr-image ico-folder va-m"><em class="blind">폴더</em></span>%폴더이름%
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="ly_footer">
+        <button class="big accent">복사</button>
+        <button class="big" onclick="GabiaUI.hideModal();">취소</button>
+    </div>
+    <button class="ly_close spr-image" title="레이어 닫기" onclick="GabiaUI.hideModal();"><span class="blind">레이어 닫기</span></button>
+</div>
+
+<!-- p.41 파일 / 폴더 삭제 -->
+<div id="hg-file-del" class="ly_pop hide">
+    <div class="ly_title">파일 삭제</div>
+    <div class="ly_body">
+    <!-- <strong>작업 영역과 연동된 폴더에 있는 파일입니다.</strong> <br> -->
+    <strong>10주년 할인 이벤트.pptx</strong> 파일을 삭제하시겠습니까?</div>
+    <div class="ly_footer">
+        <button class="big" onclick="GabiaUI.hideModal();">취소</button>
+        <button class="big accent">확인</button>
+    </div>
+    <button class="ly_close spr-image" title="레이어 닫기" onclick="GabiaUI.hideModal();"><span class="blind">레이어 닫기</span></button>
+</div>
+
+<div id="hg-folder-del" class="ly_pop hide">
+    <div class="ly_title">폴더 삭제</div>
+    <div class="ly_body">
+    <!-- <strong>작업 영역과 연동된 폴더입니다.</strong> <br> -->
+    <strong>웹 솔루션 시안 제작하기</strong> 폴더를 삭제하시겠습니까?</div>
+    <div class="ly_footer">
+        <button class="big" onclick="GabiaUI.hideModal();">취소</button>
+        <button class="big accent">확인</button>
+    </div>
+    <button class="ly_close spr-image" title="레이어 닫기" onclick="GabiaUI.hideModal();"><span class="blind">레이어 닫기</span></button>
+</div>
+
+<!-- p.84 그룹 탈퇴 -->
+<div id="hg-out" class="ly_pop hide">
+    <div class="ly_title">그룹 탈퇴</div>
+    <div class="ly_body">
+        <strong>UI 2팀 그룹에서 정말 탈퇴하시겠습니까?</strong>
+        <ul class="list">
+            <li><span></span> 탈퇴 후 홍길동님이 올린 모든 콘텐츠는 삭제되지 않고 그룹에 남아있게 됩니다.</li>
+        </ul>
+    </div>
+    <div class="ly_footer">
+        <button class="big" onclick="GabiaUI.hideModal();">취소</button>
+        <button class="big accent">확인</button>
+    </div>
+    <button class="ly_close spr-image" title="레이어 닫기" onclick="GabiaUI.hideModal();"><span class="blind">레이어 닫기</span></button>
+</div>
+
+<!-- p.85 소유권 이전 확인 -->
+<div id="hg-ownership" class="ly_pop hide">
+    <div class="ly_title">소유권 이전</div>
+    <div class="ly_body">
+        <strong>정말 %그룹이름%의 소유권을 %멤버이름%님께 이전하시겠습니까?</strong>
+        <ul class="list">
+            <li><span></span> 탈퇴 후 홍길동님이 올린 모든 콘텐츠는 삭제되지 않고 그룹에 남아있게 됩니다.</li>
+        </ul>
+    </div>
+    <div class="ly_footer">
+        <button class="big" onclick="GabiaUI.hideModal();">취소</button>
+        <button class="big accent">확인</button>
+    </div>
+    <button class="ly_close spr-image" title="레이어 닫기" onclick="GabiaUI.hideModal();"><span class="blind">레이어 닫기</span></button>
+</div>
+
+<!-- p.86 관리자 지정 -->
+<div id="hg-admin-set" class="ly_pop hide">
+    <div class="ly_title">관리자 지정</div>
+    <div class="ly_body">
+        <strong>%멤버이름%님을 %그룹이름%의 관리자로 지정하시겠습니까?</strong>
+        <ul class="list">
+            <li><span></span> 관리자로 지정하면 해당 멤버는 그룹 소유자가 지정한대로 권한을 행사할 수 있습니다.</li>
+        </ul>
+    </div>
+    <div class="ly_footer">
+        <button class="big" onclick="GabiaUI.hideModal();">취소</button>
+        <button class="big accent">확인</button>
+    </div>
+    <button class="ly_close spr-image" title="레이어 닫기" onclick="GabiaUI.hideModal();"><span class="blind">레이어 닫기</span></button>
+</div>
+
+<!-- p.86 관리자 해제 -->
+<div id="hg-admin-reset" class="ly_pop hide">
+    <div class="ly_title">관리자 해제</div>
+    <div class="ly_body">
+        <strong>%멤버이름%님의 %그룹이름% 관리자 권한을 해제하시겠습니까?</strong>
+        <ul class="list">
+            <li><span></span> 관리자 권한을 해제하면 해당 멤버는 일반 멤버로 돌아갑니다.
+</li>
+        </ul>
+    </div>
+    <div class="ly_footer">
+        <button class="big" onclick="GabiaUI.hideModal();">취소</button>
+        <button class="big accent">확인</button>
+    </div>
+    <button class="ly_close spr-image" title="레이어 닫기" onclick="GabiaUI.hideModal();"><span class="blind">레이어 닫기</span></button>
+</div>
+
+<!-- p.87 멤버 삭제 -->
+<div id="hg-member-del" class="ly_pop hide">
+    <div class="ly_title">멤버 삭제</div>
+    <div class="ly_body">
+        <strong>두루미님을 UI 2팀 그룹에서 삭제하시겠습니까?</strong>
+        <ul class="list">
+            <li><span></span> 삭제 후 두루미님이 올린 모든 콘텐츠는 삭제되지 않고 그룹에 남아있게 됩니다.</li>
+        </ul>
+    </div>
+    <div class="ly_footer">
+        <button class="big" onclick="GabiaUI.hideModal();">취소</button>
+        <button class="big accent">확인</button>
+    </div>
+    <button class="ly_close spr-image" title="레이어 닫기" onclick="GabiaUI.hideModal();"><span class="blind">레이어 닫기</span></button>
+</div>
+
+<!-- p.88 그룹 비활성화 -->
+<div id="hg-rest" class="ly_pop hide">
+    <div class="ly_title">그룹 비활성화</div>
+    <div class="ly_body">
+        <strong>정말 UI 2팀 그룹을 비활성화 하시겠습니까?</strong>
+        <ul class="list">
+            <li><span></span> 그룹에 새로운 콘텐츠를 올리거나 수정, 삭제할 수 없게 됩니다.</li>
+            <li><span></span> 기존 콘텐츠는 보존되고 멤버는 모두 열람할 수 있습니다.</li>
+            <li><span></span> [그룹 활성화]로 다시 이용할 수 있습니다.</li>
+            <li><span></span> 비활성화 후 그룹을 삭제하면 복구할 수 없으며 모든 콘텐츠가 삭제됩니다.</li>
+        </ul>
+    </div>
+    <div class="ly_footer">
+        <button class="big" onclick="GabiaUI.hideModal();">취소</button>
+        <button class="big accent">확인</button>
+    </div>
+    <button class="ly_close spr-image" title="레이어 닫기" onclick="GabiaUI.hideModal();"><span class="blind">레이어 닫기</span></button>
+</div>
+
+<!-- p.102 공유 취소 -->
+<div id="hg-share-cancel" class="ly_pop hide">
+    <div class="ly_title">공유 취소하기</div>
+    <div class="ly_body">2014-04-30 오후 8:00에 공유한 글입니다. 링크는 공유한 때로부터 <br>%지정한 날짜%까지 유효합니다. 공유를 취소하시겠습니까?
+</div>
+    <div class="ly_footer">
+        <button class="big" onclick="GabiaUI.hideModal();">취소</button>
+        <button class="big accent">확인</button>
+    </div>
+    <button class="ly_close spr-image" title="레이어 닫기" onclick="GabiaUI.hideModal();"><span class="blind">레이어 닫기</span></button>
+</div>
+
 <h2 style="margin-top:25px;">그룹 메인 리스트</h2>
 <ol>
     <li><button onclick="GabiaUI.Modal($('#hg-member-invite'))">멤버 초대</button></li>
-    <li><button onclick="GabiaUI.Modal($('#hg-join'))">그룹가입</button></li>   
+    <li><button onclick="GabiaUI.Modal($('#hg-join'))">그룹가입</button></li>
+     
+    
+</ol>
+<h2 style="margin-top:25px;">파일 영역</h2>
+<ol>
+    <li><button onclick="GabiaUI.Modal($('#hg-file-upload'))">파일 업로드</button></li>
+    <li><button onclick="GabiaUI.Modal($('#hg-file-uploadlist'))">파일 업로드 파일 선택 후</button></li>
+    <li><button onclick="GabiaUI.Modal($('#hg-file-detail'))">파일 상세 정보</button></li>
+    <li><button onclick="GabiaUI.Modal($('#hg-new-upload'))">최신 버전 업로드</button></li>
+    <li><button onclick="GabiaUI.Modal($('#hg-new-uploadlist'))">최신 버전 업로드 파일 선택 후</button></li>
+    <li><button onclick="GabiaUI.Modal($('#hg-file-move'))">파일(폴더) 이동</button></li>
+    <li><button onclick="GabiaUI.Modal($('#hg-file-copy'))">파일(폴더) 복사</button></li>
+    <li><button onclick="GabiaUI.Modal($('#hg-file-del'))">파일 삭제</button> (메시지 주석 처리)</li>
+    <li><button onclick="GabiaUI.Modal($('#hg-folder-del'))">폴더 삭제</button> (메시지 주석 처리)</li>
+    <li></li>
+</ol>
+<h2 style="margin-top:25px;">작업 영역</h2>
+<ol>
+    <li></li>
+    <li></li>
+</ol>
+<h2 style="margin-top:25px;">달력 영역</h2>
+<ol>
+    <li></li>
+    <li></li>
+</ol>
+<h2 style="margin-top:25px;">설정 영역</h2>
+<ol>
+    <li><button onclick="GabiaUI.Modal($('#hg-out'))">그룹 탈퇴</button></li>
+    <li><button onclick="GabiaUI.Modal($('#hg-ownership'))">소유권 이전</button></li>
+    <li><button onclick="GabiaUI.Modal($('#hg-admin-set'))">관리자 지정</button></li>
+    <li><button onclick="GabiaUI.Modal($('#hg-admin-reset'))">관리자 해제</button></li>
+    <li><button onclick="GabiaUI.Modal($('#hg-member-del'))">멤버 삭제</button></li>
+    <li><button onclick="GabiaUI.Modal($('#hg-rest'))">그룹 비활성화</button></li>
+    <li></li>
+</ol>
+<h2 style="margin-top:25px;">공유 기능</h2>
+<ol>
+    <li><button onclick="GabiaUI.Modal($('#hg-share-cancel'))">공유 취소하기</button></li>
+    <li></li>
+    <li></li>
+</ol>
+<h2 style="margin-top:25px;">활동 로그</h2>
+<ol>
+    <li></li>
+    <li></li>
 </ol>
 <div class="dim" id="dim"></div>
 <script type="text/javascript" src="assets/js/ui.js"></script>

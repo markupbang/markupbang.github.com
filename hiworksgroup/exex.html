@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=1280">
+	<script type="text/javascript" src="assets/js/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="assets/js/jquery.masonry.min.js"></script>
+	<title>하이웍스 그룹</title>
+	<style>
+	.box {
+	  width: 90px;
+	  height: 90px;
+	  margin: 5px;
+	  background: #6AD;
+	  float: left;
+	}
+
+	.box:hover {
+	  background: red;
+	  cursor: pointer;
+	}
+
+	.box.large {
+	  background: #084;
+	  z-index: 2;
+	}
+	</style>
+</head>
+<body>
+	<div id="container">
+	  <div class="box"></div>
+	  <div class="box"></div>
+	  <div class="box"></div>
+	  <div class="box"></div>
+	  <div class="box"></div>
+	  <div class="box"></div>
+	  <div class="box"></div>
+	  <div class="box"></div>
+	  <div class="box"></div>
+	  <div class="box"></div>
+	  <div class="box"></div>
+	  <div class="box"></div>
+	  <div class="box"></div>
+	  <div class="box"></div>
+	  <div class="box"></div>
+	  <div class="box"></div>
+	  <div class="box"></div>
+	  <div class="box"></div>
+	  <div class="box"></div>
+	</div>
+	<script>
+	 $(function(){
+
+	  var $container = $('#container');
+
+	  var reMasonry = function() {
+	    $container.masonry();
+	  };
+
+	  // trigger masonry
+	  $container.masonry({
+	    columnWidth: 100,
+	    animate: true
+	  });
+
+	  $('.box').click(function(){
+	    var $this = $(this),
+	        size = $this.hasClass('large') ?
+	          { width: 90, height: 90 } :
+	          { width: 190, height: 190 };
+	    $this.toggleClass('large').animate( size, reMasonry );
+	  });
+	});
+	</script>
+</body>
+</html>

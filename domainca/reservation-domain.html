@@ -1,0 +1,344 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1100">
+<link rel="stylesheet" type="text/css" href="assets/css/common.css">
+<link rel="stylesheet" type="text/css" href="assets/css/ui.css">
+<link rel="shortcut icon" href="assets/images/favicon.ico">
+<script type="text/javascript" src="assets/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="assets/js/placeholder.min.js"></script>
+<title>도메인 예약</title>
+</head>
+<body>
+	<!-- accessibility -->
+    <div id="accessibility">
+        <a href="#container">본문내용 바로가기</a>
+    </div>
+    <!-- //accessibility -->
+	
+	<!-- wrap -->
+	<div id="wrap">
+		<!-- header -->
+		<header>
+		<div id="header">
+
+			<!-- login -->
+			<div class="login-wrap">
+				<div class="login-box">
+					<button type="button" id="login" title="로그인" onclick="d_common.loadModalLayer('/login/login_form/layer')">로그인</button>
+					<a href="/member/member_register" class="on">회원가입</a><!-- 활성상태의 경우 class="on" 추가 -->
+					<a href="">고객센터</a>	
+				</div>
+			</div>
+			<!-- //login -->
+			
+			<div class="header-wrap">
+				<h1 id="logo">
+					<a href="#"><img src="assets/images/g-logo.png" alt="Domainca"></a>
+				</h1>		
+
+				<div class="gnb">
+					<ul>
+						<li><a href="register.html">도메인 등록</a></li>
+						<li><a href="transfer-domain.html">기관 이전</a></li>
+						<li><a class="active">도메인 예약</a></li>
+						<li><a href="manage.html">도메인 관리</a></li>
+						<li class="end"><a href="account-management.html">계정 관리</a></li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+		</header>
+		<!-- //header -->
+		
+		<!-- content -->
+		<div id="container">
+			<div id="location" class="location-domain">
+				<div class="location-wrap">
+					<p><strong>도메인 예약</strong>타인이 소유한 도메인을 검색하여 예약을 신청할 수 있습니다.</p>
+					<button class="help" title="도움말">&#63;<span class="hide">도움말</span></button>
+				</div>
+			</div>
+			
+			<section>
+			<form>
+				<fieldset>
+					<div class="domain-reservation">
+
+						<div class="search-area reservation" id="searchReduction">
+							<p class="txt-ment">원하는 도메인을 미리 선점할 수 있는 기회</p>
+							<div class="clear_fix">
+								<div class="choice-domain">
+									<p>도메인 선택</p>
+									<ul>
+										<li>
+											<div class="tt-wrapper">
+												<label class="tt-link noline"><input type="radio" title="예약 도메인 전체"> <span>예약 도메인 전체</span></label>
+												<div class="tt-content" style="width:620px;left:0px;top:50px">
+													타인이 소유한 도메인 중 원하는 도메인을 검색하여 예약을 신청하는 서비스입니다.<br>
+													.com/ .net/ .org/ .info/ .kr(.co.kr/ .or.kr/ .ne.kr/ .re.kr/ .pe.kr),.한국 도메인만 검색이 가능합니다.
+												</div>
+											</div>
+										</li>
+										<li><label><input type="radio" title=".com"> .com</label></li>
+										<li><label><input type="radio" title=".net"> .net</label></li>
+										<li><label><input type="radio" title=".org"> .org</label></li>
+										<li><label><input type="radio" title=".KR / 한국 도메인"> .KR / .한국 도메인</label></li>
+									</ul>
+								</div>
+								<div class="choice-domain second">
+									<p>삭제 예정일</p>
+									<ul>
+										<li class="all"><label><input type="radio" title="삭제예정일"> 00월 00일</label></li>
+										<li><label><input type="radio" title="삭제예정일"> 00월 00일</label></li>
+										<li><label><input type="radio" title="삭제예정일"> 00월 00일</label></li>
+										<li class="lst"><label><input type="radio" title="삭제예정일"> 00월 00일</label></li>
+										<li class="all"><label><input type="radio" title="삭제예정일"> 00월 00일</label></li>
+									</ul>
+								</div>
+							</div>
+							<div class="btn-bench">
+								<span class="txt-www">www.</span>
+								<label>
+								<input id="singleSearch" type="text" placeholder="원하는 도메인을 입력하세요. 예)domainca.com, domainca">
+								<textarea id="multiSearch" class="hide" title="도메인명을 입력하세요." onfocus="if(this.value==this.defaultValue) {this.value=''; this.className='focus'}" onblur="if(this.value=='') {this.value=this.defaultValue; this.className=''}">
+※ 1줄에 1개씩, 한번에 최대 20개까지 검색 가능
+예) domainca.com
+      domaincalove.com
+      domainone.com</textarea>
+								</label>
+								<a href="javascript:void(0);" class="input-change toggle-search-btn">복수 검색 ▼</a>
+								<button class="btn-color big">검색</button>
+							</div>
+						</div>
+						
+					</div>
+				</fieldset>
+			</form>
+			</section>
+
+			<!-- contents -->
+			<section>
+			<div class="contents">	
+				<div class="dSearch-result">
+					<h2 class="con_title">검색 결과</h2>
+					<div class="tableStyle-v1">
+						<div class="tableTop-area clear_fix">
+							<button class="btn-color normal d-reservation">도메인 예약</button>
+							<div class="select-wrap" style="width:80px">
+								<label>
+									<select name="select_email_domain" title="갯수선택" style="width:100px">
+										<option value="">20개</option>
+									</select>
+								</label>
+							</div>
+							<div class="select-wrap" style="width:140px">
+								<label>
+									<select name="select_email_domain" title="다른 정렬 기준" style="width:160px">
+										<option value="">다른 정렬 기준</option>
+									</select>
+								</label>
+							</div>
+						</div>
+						<table class="tableTop-area">
+							<caption>신청 정보 입력</caption>
+							<colgroup>
+								<col style="width:6%"/><col style="width:30%"/><col/><col/><col/><col/><col style="width:6%"/>
+							</colgroup>
+							<thead>
+								<tr>
+									<th><label><input type="checkbox"/></label></th>
+									<th>도메인 <button class="arrow">▼</button></th>
+									<th>최근 월 접속 통계 <button class="arrow">▼</button></th>
+									<th>최근 4주 직접 접속 <button class="arrow">▼</button></th>
+									<th>등록일 <button class="arrow">▼</button></th>
+									<th>삭제 예정일 <button class="arrow">▼</button></th>
+									<th></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="selected">
+									<td><label><input type="checkbox"/></label></td>
+									<td>domain.com <button class="sprImg search-info f_r"><span class="blind">도메인 정보 조회</span></button></td>
+									<td>103247</td>
+									<td>9.3</td>
+									<td>2013-06-10</td>
+									<td>2014-08-30</td>
+									<td><a href="#" title="예약 해제" class="sp_icon reserved"></a></td>
+								</tr>
+								<tr class="selected">
+									<td><label><input type="checkbox"/></label></td>
+									<td>domain.com <button class="sprImg search-info f_r"><span class="blind">도메인 정보 조회</span></button></td>
+									<td>103247</td>
+									<td>9.3</td>
+									<td>2013-06-10</td>
+									<td>2014-08-30</td>
+									<td><a href="#" title="예약 해제" class="sp_icon reserved"></a></td>
+								</tr>
+								<tr>
+									<td><label><input type="checkbox"/></label></td>
+									<td>domain.com <button class="sprImg search-info f_r"><span class="blind">도메인 정보 조회</span></button></td>
+									<td>103247</td>
+									<td>9.3</td>
+									<td>2013-06-10</td>
+									<td>2014-08-30</td>
+									<td><a href="#" title="도메인 예약하기" class="sp_icon reservation"></a></td>
+								</tr>
+								<tr>
+									<td><label><input type="checkbox"/></label></td>
+									<td>domain.com <button class="sprImg search-info f_r"><span class="blind">도메인 정보 조회</span></button></td>
+									<td>103247</td>
+									<td>9.3</td>
+									<td>2013-06-10</td>
+									<td>2014-08-30</td>
+									<td><a href="#" title="도메인 예약하기" class="sp_icon reservation"></a></td>
+								</tr>
+								<tr>
+									<td><label><input type="checkbox"/></label></td>
+									<td>domain.com <button class="sprImg search-info f_r"><span class="blind">도메인 정보 조회</span></button></td>
+									<td>103247</td>
+									<td>9.3</td>
+									<td>2013-06-10</td>
+									<td>2014-08-30</td>
+									<td><a href="#" title="도메인 예약하기" class="sp_icon reservation"></a></td>
+								</tr>
+								<tr class="inactive last">
+									<td><label><input type="checkbox"/></label></td>
+									<td>domain.com <button class="sprImg search-info f_r"><span class="blind">도메인 정보 조회</span></button></td>
+									<td>103247</td>
+									<td>9.3</td>
+									<td>2013-06-10</td>
+									<td>2014-08-30</td>
+									<td><a href="javascript:void(0);" title="등록 불가"><div class="sp_icon"></div></a></td>
+								</tr>
+							</tbody>
+						</table>
+						<button class="btn-color normal">도메인 예약</button>
+						<div class="paging">
+							<span class="inner_paging">
+								<button class="btn_paging btn_first" title="맨 앞으로 가기"><span class="sp_paging">맨 앞</span></button>
+								<button class="btn_paging btn_prev" title="이전"><span class="sp_paging">이전</span></button>
+								<em class="link_page"><span class="blind">현제 페이지</span>1</em>
+								<button title="2페이지 이동" class="link_page">2</button>
+								<button title="3페이지 이동" class="link_page">3</button>
+								<button title="4페이지 이동" class="link_page">4</button>
+								<button title="5페이지 이동" class="link_page">5</button>
+								<button title="6페이지 이동" class="link_page">6</button>
+								<button title="7페이지 이동" class="link_page">7</button>
+								<button title="8페이지 이동" class="link_page">8</button>
+								<button title="9페이지 이동" class="link_page">9</button>
+								<button title="10페이지 이동" class="link_page">10</button>
+								<button class="btn_paging btn_next" title="다음"><span class="sp_paging">다음</span></button>
+								<button class="btn_paging btn_last" title="맨 뒤로 가기"><span class="sp_paging">맨 뒤</span></button>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			</section>
+			<!-- //contents -->
+
+		</div>
+		<!-- //content -->
+
+		<!-- help content -->
+		<div id="help-area" class="hide">
+			<!-- content -->
+			<div id="container">
+				<div id="location" class="location-domain">
+					<div class="location-wrap">
+						<p><strong>도메인 예약</strong> &gt; 도움말</p>
+						<button class="help" title="도움말 닫기">&#63;<span class="hide">도움말 닫기</span></button>
+					</div>
+				</div>
+
+				<!-- contents -->
+				<section>
+				<div class="contents">	
+					<div class="help-reserv">
+						<div class="help-cnt-wrap">
+							<h3 class="help-title">도메인 예약 서비스 종류</h3>
+							<div>
+								<p><span class="font_bold">주요 도메인 예약</span> : 만기 삭제 예정인 낙장 도메인 리스트에서 예약 등록 신청을 받아, 신규 등록 가능일에 자동 등록을 시도합니다.</p>
+								<p>com / .net / .org / .kr(.co.kr / .or.kr / .ne.kr / .re.kr / .pe.kr) / .한국 도메인만 검색이 가능합니다.</p>
+								<p>※ 자회사의 레지스트라 획득을 통해 낙장 등록 세션을 추가하여, 예약 등록 성공률이 높습니다.</p>
+							</div>
+							<div class="margin-top25">
+								<p><span class="font_bold">KR, 한국 도메인 예약 :</span> 기존 소유자가 연장하지 않은 도메인을 예약 신청 받아, 신규 등록 가능일에 자동 등록을 시도합니다.</p>
+								<p>※ 신규 등록 가능일에 예약 등록 결과를 통보하며, 예약 등록 후에는 기존 소유자가 만기일을 연장하더라도 별도 안내를 하지 않습니다</p>
+							</div>
+						</div>
+						<div class="help-cnt-wrap">
+							<h3 class="help-title">예약 등록 비용 및 환불</h3>
+							<ul class="help-list">
+								<li>&ndash; 결제는 예치금으로만 할 수 있습니다. 단, 보유 예치금이 부족할 경우, 실시간 결제를 통해 예약 등록을 할 수 있습니다.</li>
+								<li>&ndash; 예약 등록에 실패하면 비용은 예치금으로 자동 반환되며, 반환된 예치금은 서비스 신청에 사용하거나 환불을 요청할 수 있습니다.</li>
+							</ul>
+							<div class="tableStyle-v1 margin-top25">
+								<table>
+									<caption>신청 정보 입력</caption>
+									<colgroup><col width="33%"><col width="33%"><col></colgroup>
+									<thead>
+									<tr>
+										<th scope="col">구분</th>
+										<th scope="col">예약 등록가능 기간</th>
+										<th scope="col">예약 등록 비용(VAT 별도)  </th>
+									</tr>
+									</thead>
+									<tbody>
+									<tr>
+										<td>주요 도메인 : .com / .net / .org</td>
+										<td>1 ~ 10년</td>
+										<td>12,000원 / 1년</td>
+									</tr>
+									<tr>
+										<td>KR, 한국 도메인</td>
+										<td>1 ~ 10년</td>
+										<td>12,000원 / 1년</td>
+									</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="help-cnt-wrap">
+							<h3 class="help-title">주요 도메인 예약 정보 안내</h3>
+							<ul class="help-list">
+								<li>※ 주요 도메인 예약 리스트에 관한 정보는 낙장 도메인 리스트를 제공하는 시행사가 수집 및 제공 합니다. </li>
+								<li><span class="font_bold">최근 월 접속 통계 :</span> 도메인 만기 전 한 달간 해당 도메인으로 발생한 트래픽 수치(직접 접속 및 링크 연결 포함)</li>
+								<li><span class="font_bold">최근 4주 직접 접속 :</span> 도메인 만기 전 4주간 직접 접속을 통한 트래픽 수치</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				</section>
+				<!-- //contents -->
+
+			</div>
+			<!-- //content -->	
+		</div>
+		<!-- //help content -->
+
+		<!-- footer -->
+		<footer>
+		<div id="footer">
+			<ul>
+				<li><a href="">회사소개</a>|</li>
+				<li><a href="">약관</a>|</li>
+				<li><a href="">개인정보 취급방침</a>|</li>
+				<li><a href="">이메일주소무단수집거부</a>|</li>
+				<li><a href="">분쟁해결정책</a></li>
+			</ul>
+			<p class="info">㈜가비아<span>|</span>대표이사: 김홍국<span>|</span>소재지: 경기도 성남시 분당구 대왕판교로 660(삼평동) 유스페이스1 B동 4층<br>사업자등록번호: 214-86-39239<span>|</span>통신판매업 신고번호: 제2012-경기성남-1188호</p>
+			<p>©Gabia Inc. All Rights Reserved.</p>
+		</div>
+		</footer>
+		<!-- //footer -->
+	</div>
+	<!-- //wrap -->
+	<script type="text/javascript" src="assets/js/gabia-ui.js"></script>
+</body>
+</html>

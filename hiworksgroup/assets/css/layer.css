@@ -21,7 +21,12 @@
 .box-line table {width:100%;}
 .box-line td {padding:6px 0;color:#676767;}
 .box-line.undertext {margin:10px 0 0 0;}
-.file-info {margin:20px 0;padding:0 0 0 12px;*zoom:1;}
+.box-line.move-copy {margin:0;padding:0;}
+.box-line.move-copy .scroll {height:140px;padding:0 10px;overflow-y:auto;}
+.box-line.move-copy li {line-height:34px;}
+.file-info {margin:20px 0 0 0;padding:0 0 0 12px;*zoom:1;}
 .file-info:after {display:block;clear:both;content:''}
 .file-info li {float:left;margin-left:25px;}
 .file-info li:first-child {margin-left:0;}
+.ly-subtitle {margin:20px 0 0;}
+.ico-blank {display:inline-block;width:14px;height:14px;}

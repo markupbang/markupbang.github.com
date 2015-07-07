@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script type="text/javascript" src="assets/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="assets/js/ui.js"></script>
+<script type="text/javascript" src="assets/js/jquery.nicescroll.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery.masonry.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery.placeholder.js"></script>
+
+
+
+<style type="text/css">
+/* reset */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,textarea,button{margin:0;padding:0}
+fieldset,img{border:0 none}
+dl,ul,ol,menu,li{list-style:none}
+blockquote, q{quotes: none}
+blockquote:before, blockquote:after,q:before, q:after{content:'';content:none}
+input,select,textarea,button{vertical-align:middle}
+button{border:0 none;background-color:transparent;cursor:pointer}
+body{background:#fff}
+body,th,td,input,select,textarea,button{font-size:14px;line-height:1.5;font-family:'맑은 고딕','Malgun Gothic','돋움',dotum,Helvetica,'Apple SD Gothic Neo',Sans-serif;color:#333}
+a{color:#333;text-decoration:none}
+/* a:active, a:hover {text-decoration:underline} */
+address,caption,cite,code,dfn,em,var{font-style:normal;font-weight:normal}
+legend{position:absolute;left:-9999px;top:0}
+caption{overflow:hidden;width:0;height:0;font-size:0;line-height:0}
+
+/* common */
+.hide{display:none}
+.show{display:block}
+.blind{display:block;overflow:hidden;position:absolute;left:-9999px;width:1px;height:1px;font-size:0;line-height:0;text-indent:-9999px}
+.modal{position:fixed;left:50%;top:50%;z-index:1010;background:white}
+.dim{display:none;position:fixed;top:0;left:0;z-index:1000;width:100%;height:100%;margin:0;padding:0;background:#000;opacity:0.5;filter:alpha(opacity=50);-webkit-transition-duration:.3s;transition-timing-function:cubic-bezier(.645, .045, .355, 1);}
+.txtPoint{color:#3ebb6b}
+.txtColor-v1{color:#333}
+.txtColor-v2{color:#676767}
+.txtColor-v3{color:#999}
+.txtColor-v4{color:#05a54d}
+.user-photo{width:44px;height:44px;border-radius:50px;vertical-align:middle}
+.after{display:block;clear:both;content:''}
+
+.mt5{margin-top:5px}
+.mr4{margin-right:4px}
+.mr15{margin-right:15px}
+.ml2{margin-left:2px}
+.ml4{margin-left:4px}
+.ml5{margin-left:5px}
+.ml10{margin-left:10px}
+.va-m{vertical-align:middle}
+.ta-r{text-align:right}
+.ta-c{text-align:center}
+
+/* button */
+button.small,button.big{color:#fff}
+button.small{padding:3px 16px 5px 15px;background:#b8b8b8}
+button.small.accent{background:#3ebb6b}
+button.big{padding:5px 20px 8px 19px;background:#b8b8b8}
+button.big.accent{background:#3ebb6b}
+button.small:hover,button.big:hover{background:#999}
+button.small.accent:hover,button.big.accent:hover{background:#05a54d}
+.spr-image{display:inline-block}
+.spr-image.arrowB{width:20px;height:20px;background-position:-1px -27px}
+.spr-image.arrowB:hover{background-position:-1px -69px}
+.spr-image.arrowB-v2{width:10px;height:7px;background-position:-1px -116px}
+.spr-image.userSearch{width:20px;height:23px;background-position:-37px -227px}
+.spr-image.userSearch:hover{background-position:-37px -288px}
+.spr-image.fileUpload{width:13px;height:23px;background-position:-23px -227px}
+.spr-image.fileUpload:hover{background-position:-23px -288px}
+.spr-image.ico-ppt{width:24px;height:24px;background-position:-1px -129px}
+.spr-image.ico-word{width:24px;height:24px;background-position:-1px -154px}
+.spr-image.ico-excel{width:24px;height:24px;background-position:-1px -179px}
+.spr-image.ico-folder{width:24px;height:24px;background-position:-1px -204px}
+.spr-image.fileDel{width:7px;height:7px;background-position:-26px -194px}
+.spr-image.ico-soon{width:17px;height:17px;background-position:-62px -209px}
+.spr-image.ico-calendar{width:26px;height:23px;background-position:-78px -77px}
+.spr-image.ico-check{width:14px;height:12px;background-position:-68px -348px}
+.spr-image.ico-check:hover,.spr-image.ico-check.active{width:14px;height:12px;background-position:-68px -370px}
+.spr-image.ico-share{width:12px;height:13px;background-position:-97px -347px}
+.spr-image.ico-share:hover{width:12px;height:13px;background-position:-97px -369px}
+.spr-image.ico-viewMore{width:16px;height:12px;background-position:-123px -348px}
+.spr-image.ico-viewMore:hover{width:16px;height:12px;background-position:-123px -370px}
+.spr-image.ico-comment{width:14px;height:13px;background-position:-211px -348px}
+.spr-image.ico-comment:hover{width:14px;height:13px;background-position:-211px -370px}
+.spr-image.fileMoreview{width:9px;height:11px;background-position:-272px -348px}
+.spr-image.fileMoreview:hover{width:9px;height:11px;background-position:-272px -370px}
+.spr-image.ico-list{width:12px;height:12px;background-position:-26px -155px}
+.spr-image.ico-album{width:12px;height:12px;background-position:-39px -155px}
+.spr-image.ico-filter{width:14px;height:12px;background-position:-52px -155px}
+.spr-image.ico-groupOn{width:6px;height:6px;vertical-align:middle;background-position:-38px -194px}
+
+
+
+.spr_img{background:url(http://markupbang.github.io/tmp/assets/images/img-sprite.png) 0 0 no-repeat;}
+
+.ly_pop{position:fixed; left:50%; top:50%; padding:22px 30px 30px; width:438px; background:#fff; border:1px solid #999999; z-index:1010; display:none}
+.ly_pop .ly_footer button{transition:.2s ease-in}
+.ly_pop .ly_title{color:#05a54d;font-size:18px; margin-bottom:15px}
+.ly_pop .ly_body{font-size:14px}
+.ly_pop .ly_close{position:absolute; top:14px; right:14px; width:21px; height:20px; background-position:0 -229px}
+.ly_pop .ly_footer{text-align:center;margin-top:28px}
+
+</style>
+</head>
+<body>
+<h1>IE ^^;;;;;</h1>
+
+<div class="dim" id="dim"></div>
+<button id="btn_ex" class="btn">button</button>
+<div class="ly_pop" id="ly_pop">
+    <div class="ly_title">그룹 가입</div>
+    <div class="ly_body">홍길동님이 <strong>UI 2팀</strong> 그룹에 초대했습니다.<br>그룹에 가입하시겠습니까?</div>
+    <div class="ly_footer">
+        <button class="small" style="width:78px; height:34px">취소</button>
+        <button class="small accent" style="width:78px; height:34px">확인</button>
+    </div>
+    <button id="hide_popup_btn" class="ly_close spr_img" title="레이어 닫기"><span class="blind">레이어 닫기</span></button>
+</div>
+
+
+<script type="text/javascript">
+
+$(function() {
+	$('#btn_ex').click(function(){
+		popup ($('#ly_pop'));		
+	});
+})
+
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,538 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1100">
+<link rel="stylesheet" type="text/css" href="assets/css/common.css">
+<link rel="stylesheet" type="text/css" href="assets/css/ui.css">
+<link rel="shortcut icon" href="assets/images/favicon.ico">
+<script type="text/javascript" src="assets/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="assets/js/placeholder.min.js"></script>
+<title>도메인 관리</title>
+</head>
+<body>
+	<!-- accessibility -->
+    <div id="accessibility">
+        <a href="#container">본문내용 바로가기</a>
+    </div>
+    <!-- //accessibility -->
+	
+	<!-- wrap -->
+	<div id="wrap">
+		<!-- header -->
+		<header>
+		<div id="header">
+
+			<!-- login -->
+			<div class="login-wrap">
+				<div class="login-box">
+					<button type="button" id="login" title="로그인" onclick="d_common.loadModalLayer('/login/login_form/layer')">로그인</button>
+					<a href="/member/member_register" class="on">회원가입</a><!-- 활성상태의 경우 class="on" 추가 -->
+					<a href="">고객센터</a>	
+				</div>
+			</div>
+			<!-- //login -->
+			
+			<div class="header-wrap">
+				<h1 id="logo">
+					<a href="#"><img src="assets/images/g-logo.png" alt="Domainca"></a>
+				</h1>		
+
+				<div class="gnb">
+					<ul>
+						<li><a href="register.html">도메인 등록</a></li>
+						<li><a href="transfer-domain.html">기관 이전</a></li>
+						<li><a href="reservation-domain.html">도메인 예약</a></li>
+						<li><a class="active">도메인 관리</a></li>
+						<li class="end"><a href="account-management.html">계정 관리</a></li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+		</header>
+		<!-- //header -->
+		
+		<!-- content -->
+		<div id="container">
+			<div id="location" class="location-domain">
+				<div class="location-wrap">
+					<p><strong>도메인 관리</strong> &#62; 보유 도메인</p>
+					<button class="help" title="도움말">&#63;<span class="hide">도움말</span></button>
+				</div>
+			</div>
+			
+			<div class="contents clear_fix">
+
+				<!-- lnb -->
+				<section>
+					<div id="lnb">
+						<ul class="menu">
+							<li class="active"><a href="" class="on">보유도메인 (22)</a></li>
+							<li><a href="">예약 도메인 (5)</a></li>  
+							<li><a href="">타기관 도메인 (5)</a></li> 
+							<li><a href="">삭제 도메인 (3)</a></li>  
+						</ul>
+						<div id="lnbCategory" class="category">
+							<div class="heading">
+								<p class="state"><span class="arrow">▼</span>카테고리</p>
+								<div class="align">
+									<button class="sprImg add" title="카테고리 추가" onclick="alert('카테고리 추가')"><span class="hide">카테고리 추가</span></button>
+									<a href="" class="sprImg set" title="카테고리 설정"><span class="hide">카테고리 설정</span></a>
+								</div>
+							</div>
+							<ul>
+								<li><span>ㄴ</span> <a href="" class="on">카테고리 1 (0)</a></li>
+								<li><span>ㄴ</span> <a href="">카테고리 2 (0)</a></li>
+							</ul>
+							<p class="empty-category">카테고리가 없습니다.<br><span class="help-addicon">+</span>아이콘을 클릭해<br>카테고리를 추가하세요.</p>
+						</div>
+					</div>
+				</section>
+				<!-- //lnb -->
+
+				<!-- contents -->
+				<section>
+				<div id="sub-content">	
+					<div class="dSearch-result">
+						<div class="clear_fix">
+							<ul class="function-btn" data-ui="dropdown">
+								<li><a href="#">연장</a></li>
+								<li><a href="#">네임서버</a></li>
+								<li>
+									<a data-dropdown="head">소유자/관리자 <span class="arrowB">▼</span></a>
+									<ul class="inner-menu owner hide">
+										<li><a href="#">소유자 정보 변경</a></li>
+										<li><a href="#">관리자 정보 변경</a></li>
+										<li><a href="#">소유권 이전</a></li>
+									</ul>
+								</li>
+								<li>
+									<a data-dropdown="head">포워딩/파킹 <span class="arrowB">▼</span></a>
+									<ul class="inner-menu owner hide">
+										<li><a href="#">포워딩</a></li>
+										<li><a href="#">파킹</a></li>
+									</ul>
+								</li>
+								<li>
+									<a data-dropdown="head">보안 <span class="arrowB">▼</span></a>
+										<ul class="inner-menu owner hide">
+										<li><a href="#">등록 정보 숨김</a></li>
+										<li><a href="#">Transfer Lock</a></li>
+										<li><a href="#">이중 잠금</a></li>
+									</ul>
+								</li>
+							</ul>
+							<div class="transfer-search-header">
+								<label style="position:relative">
+									<input placeholder="도메인을 입력하세요" name="search" id="search" type="text" title="검색" class="" style="width:180px">
+									<a href="#"><span class="transfer-search"></span></a>
+								</label>
+								<div class="layer-wrap">
+									<button class="btn-ncolor small" style="width:70px" onclick="$('#pop-detail-search').layer();">상세</button>
+									<!-- 상세검색 -->
+									<div id="pop-detail-search" class="modal_window hide">
+										<div class="modal_header">상세 검색</div>
+										<div class="modal_body scroll">
+											<table class="onlinepw">
+												<caption>회원 가입 본인인증 정보입력</caption>
+												<colgroup><col style="width:150px"/><col/></colgroup>
+												<tbody>
+													<tr>
+														<span>멀티입력</span>
+														<label>
+														<textarea id="detailSearchTxtarea" class="" name="domainList" onfocus="if(this.value==this.defaultValue) {this.value=''; this.className='focus'}" onblur="if(this.value=='') {this.value=this.defaultValue; this.className=''}" title="도메인명을 입력하세요.">1줄에 1개씩 입력. 20개까지 입력 가능</textarea>
+														</label>
+													</tr>
+													<tr>
+														<th scope="row">TLD 종류</th>
+														<td>
+															<div class="select-wrap period" style="width:247px">
+																<label>
+																<select name="" title="TLD 종류 선택" style="width:265px">
+																	<option value="">전체</option>
+																	<option value="">com</option>
+																	<option value="">net</option>
+																	<option value="">kr</option>
+																</select>
+																</label>
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<th scope="row">등록대행자</th>
+														<td>
+															<div class="select-wrap period" style="width:247px">
+																<label>
+																<select name="" title="등록대행자 선택" style="width:265px">
+																	<option value="">전체</option>
+																	<option value="">가비아</option>
+																</select>
+																</label>
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<th scope="row">날짜 기준</th>
+														<td>
+															<div class="select-wrap period" style="width:100px">
+																<label>
+																<select name="" title="날짜 기준 선택" style="width:150px">
+																	<option value="">삭제일</option>
+																	<option value="">만기일</option>
+																	<option value="">등록일</option>
+																</select>
+																</label>
+															</div>
+															<label style="position:relative">
+																<input style="width:150px" placeholder="2015 - 02 - 24" name="search" id="search" type="text" title="검색" class="">
+																<a href="#"><span class="transfer-calandar"></span></a>
+															</label>
+															&nbsp;&mdash;&nbsp;
+															<label style="position:relative">
+																<input style="width:150px" placeholder="2015 - 02 - 24" name="search" id="search" type="text" title="검색" class="">
+																<a href="#"><span class="transfer-calandar"></span></a>
+															</label>
+														</td>
+													</tr>
+													<tr>
+														<th scope="row">상태 기준</th>
+														<td>
+															<div class="select-wrap period" style="width:247px">
+																<label>
+																<select name="" title="상태 기준 선택" style="width:265px">
+																	<option value="">전체</option>
+																	<option value="">기관 이전 가능</option>
+																	<option value="">이전 가능 기간 아님</option>
+																	<option value="">기관 이전 진행 중</option>
+																</select>
+																</label>
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<th scope="row">소유자명</th>
+														<td><label><input type="text" placeholder="예) 홍길동" title="소유자명"/></label></td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<div class="modal_footer">
+											<p class="btn-wrap">
+												<button type="button" class="btn-color big">검색</button>
+											</p>
+										</div>
+										<button type="button" class="modal_close sprImg" title="레이어 닫기" data-layer="hide"><span class="blind">레이어 닫기</span></button>
+									</div>
+									<!-- //상세검색 -->
+								</div>
+								<div class="select-wrap termSelect mr0" style="width:80px">
+									<label>
+										<select name="select_email_domain" title="메일선택" style="width:100px">
+											<option value="">20개</option>
+											<option value="">50개</option>
+											<option value="">100개</option>
+											<option value="">200개</option>
+										</select>
+									</label>
+								</div>
+							</div>
+						</div>
+							
+						<div class="tableStyle-v1">
+							<table>
+								<caption>검색 결과</caption>
+								<colgroup><col style="width:6%"/><col style="width:36%"/><col/><col/><col/><col/><col/><col/><col/ ></colgroup>
+								<thead>
+									<tr>
+										<th scope="col"><label><input type="checkbox"/></label></th>
+										<th scope="col">도메인 <button class="arrow smoky">▼</button></th>
+										<th scope="col">등록일 <button class="arrow smoky">▼</button></th>
+										<th scope="col">만기일 <button class="arrow smoky">▼</button></th>
+										<th scope="col" colspan="5" class="txt-center">
+											<div class="tt-wrapper">
+												<span class="tt-link">사용서비스</span>
+												<div class="tt-content useService" style="width:120px;left:0;top:25px">
+													<dl class="clear_fix">
+														<dt><span class="sprImg lock"></span></dt>
+														<dd> 이중 잠금</dd>
+														<dt><span class="sprImg info-hdn"></span></dt>
+														<dd>등록 정보 숨김</dd>
+														<dt><span class="txt-icon">F</span></dt>
+														<dd>포워딩</dd>
+														<dt><span class="txt-icon">P</span></dt>
+														<dd>파킹</dd>
+														<dt><span class="txt-icon">N</span></dt>
+														<dd>DNS 레코드</dd>
+													</dl>
+												</div>
+											</div>
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr class="last">
+										<td colspan="9" class="align_center">보유 도메인이 없습니다<button class="btn-ncolor small spaceL">도메인 등록 ▶</button></td>
+									</tr>
+									<tr>
+										<td><label><input type="checkbox" title="분쟁/이용 제한 도메인 선택"/></label></td>
+										<td class="txt-domain">www.domaindomaindomaindomaindomainomaindomaindomain.com <button id="popup-window" class="sprImg search-info" onclick="window.open('pop-info','_blank','toolbar=yes,scrollbars=yes,resizable=yes,width=760 height=700');" title="도메인 정보 조회"><span class="blind">도메인 정보 조회</span></button></td>
+										<td>2013-06-10</td>
+										<td>2014-08-30 <span class="txt-point-v2">(364)</span></td>
+										<td class="sp"><span title="이중 잠금" class="sprImg lock"><span class="hide">이중 잠금</span></span></td>
+										<td class="sp"><span title="등록 정보 숨김" class="sprImg info-hdn"><span class="hide">등록 정보 숨김</span></span></td>
+										<td class="sp"><span title="포워딩" class="txt-icon">F</span></td>
+										<td class="sp"><span title="파킹" class="txt-icon">P</span></td>
+										<td class="sp"><span title="DNS 레코드" class="txt-icon">N</span></td>
+									</tr>
+									<tr>
+										<td><label><input type="checkbox" title="분쟁/이용 제한 도메인 선택"/></label></td>
+										<td class="txt-domain">domain.com <button class="sprImg search-info" title="도메인 정보 조회"><span class="blind">도메인 정보 조회</span></button></td>
+										<td>2013-06-10</td>
+										<td>2014-08-30 <span class="txt-point-v2">(364)</span></td>
+										<td class="sp"><span title="이중 잠금" class="sprImg lock"><span class="hide">이중 잠금</span></span></td>
+										<td class="sp"><span title="등록 정보 숨김" class="sprImg info-hdn"><span class="hide">등록 정보 숨김</span></span></td>
+										<td class="sp"><span title="포워딩" class="txt-icon">F</span></td>
+										<td class="sp"><span title="파킹" class="txt-icon">P</span></td>
+										<td class="sp"><span title="DNS 레코드" class="txt-icon">N</span></td>
+									</tr>
+									<tr>
+										<td><label><input type="checkbox" title="분쟁/이용 제한 도메인 선택"/></label></td>
+										<td class="txt-domain">domain.com <button class="ml15 sprImg search-info" title="도메인 정보 조회"><span class="blind">도메인 정보 조회</span></button></td>
+										<td>2013-06-10</td>
+										<td>2014-08-30 <span class="txt-point-v2">(364)</span></td>
+										<td class="sp"><span title="이중 잠금" class="sprImg lock"><span class="hide">이중 잠금</span></span></td>
+										<td class="sp"><span title="등록 정보 숨김" class="sprImg info-hdn"><span class="hide">등록 정보 숨김</span></span></td>
+										<td class="sp"><span title="포워딩" class="txt-icon">F</span></td>
+										<td class="sp"><span title="파킹" class="txt-icon">P</span></td>
+										<td class="sp"><span title="DNS 레코드" class="txt-icon">N</span></td>
+									</tr>
+									<tr>
+										<td><label><input type="checkbox" title="분쟁/이용 제한 도메인 선택"/></label></td>
+										<td class="txt-domain">domain.com <button class="sprImg search-info" title="도메인 정보 조회"><span class="blind">도메인 정보 조회</span></button></td>
+										<td>2013-06-10</td>
+										<td>2014-08-30 <span class="txt-point-v2">(364)</span></td>
+										<td class="sp"><span title="이중 잠금" class="sprImg lock"><span class="hide">이중 잠금</span></span></td>
+										<td class="sp"><span title="등록 정보 숨김" class="sprImg info-hdn"><span class="hide">등록 정보 숨김</span></span></td>
+										<td class="sp"><span title="포워딩" class="txt-icon">F</span></td>
+										<td class="sp"><span title="파킹" class="txt-icon">P</span></td>
+										<td class="sp"><span title="DNS 레코드" class="txt-icon">N</span></td>
+									</tr>
+									<tr>
+										<td><label><input type="checkbox" title="분쟁/이용 제한 도메인 선택"/></label></td>
+										<td class="txt-domain">domain.com <button class="sprImg search-info" title="도메인 정보 조회"><span class="blind">도메인 정보 조회</span></button></td>
+										<td>2013-06-10</td>
+										<td>2014-08-30 <span class="txt-point-v2">(364)</span></td>
+										<td class="sp"><span title="이중 잠금" class="sprImg lock"><span class="hide">이중 잠금</span></span></td>
+										<td class="sp"><span title="등록 정보 숨김" class="sprImg info-hdn"><span class="hide">등록 정보 숨김</span></span></td>
+										<td class="sp"><span title="포워딩" class="txt-icon">F</span></td>
+										<td class="sp"><span title="파킹" class="txt-icon">P</span></td>
+										<td class="sp"><span title="DNS 레코드" class="txt-icon">N</span></td>
+									</tr>
+									<tr>
+										<td><label><input type="checkbox" title="분쟁/이용 제한 도메인 선택"/></label></td>
+										<td class="txt-domain">domain.com <button class="sprImg search-info" title="도메인 정보 조회"><span class="blind">도메인 정보 조회</span></button></td>
+										<td>2013-06-10</td>
+										<td>2014-08-30 <span class="txt-point-v2">(364)</span></td>
+										<td class="sp"><span title="이중 잠금" class="sprImg lock"><span class="hide">이중 잠금</span></span></td>
+										<td class="sp"><span title="등록 정보 숨김" class="sprImg info-hdn"><span class="hide">등록 정보 숨김</span></span></td>
+										<td class="sp"><span title="포워딩" class="txt-icon">F</span></td>
+										<td class="sp"><span title="파킹" class="txt-icon">P</span></td>
+										<td class="sp"><span title="DNS 레코드" class="txt-icon">N</span></td>
+									</tr>
+									<tr>
+										<td><label><input type="checkbox" title="분쟁/이용 제한 도메인 선택"/></label></td>
+										<td class="txt-domain">domain.com <button class="sprImg search-info" title="도메인 정보 조회"><span class="blind">도메인 정보 조회</span></button></td>
+										<td>2013-06-10</td>
+										<td>2014-08-30 <span class="txt-point-v2">(364)</span></td>
+										<td class="sp"><span title="이중 잠금" class="sprImg lock"><span class="hide">이중 잠금</span></span></td>
+										<td class="sp"><span title="등록 정보 숨김" class="sprImg info-hdn"><span class="hide">등록 정보 숨김</span></span></td>
+										<td class="sp"><span title="포워딩" class="txt-icon">F</span></td>
+										<td class="sp"><span title="파킹" class="txt-icon">P</span></td>
+										<td class="sp"><span title="DNS 레코드" class="txt-icon">N</span></td>
+									</tr>
+									<tr>
+										<td><label><input type="checkbox" title="분쟁/이용 제한 도메인 선택"/></label></td>
+										<td class="txt-domain">domain.com <button class="sprImg search-info" title="도메인 정보 조회"><span class="blind">도메인 정보 조회</span></button></td>
+										<td>2013-06-10</td>
+										<td>2014-08-30 <span class="txt-point-v2">(364)</span></td>
+										<td class="sp"><span title="이중 잠금" class="sprImg lock"><span class="hide">이중 잠금</span></span></td>
+										<td class="sp"><span title="등록 정보 숨김" class="sprImg info-hdn"><span class="hide">등록 정보 숨김</span></span></td>
+										<td class="sp"><span title="포워딩" class="txt-icon">F</span></td>
+										<td class="sp"><span title="파킹" class="txt-icon">P</span></td>
+										<td class="sp"><span title="DNS 레코드" class="txt-icon">N</span></td>
+									</tr>
+									<tr class="last">
+										<td><label><input type="checkbox" title="분쟁/이용 제한 도메인 선택"/></label></td>
+										<td class="txt-domain">domain.com <button class="sprImg search-info" title="도메인 정보 조회"><span class="blind">도메인 정보 조회</span></button></td>
+										<td>2013-06-10</td>
+										<td>2014-08-30 <span class="txt-point-v2">(364)</span></td>
+										<td class="sp"><span title="이중 잠금" class="sprImg lock"><span class="hide">이중 잠금</span></span></td>
+										<td class="sp"><span title="등록 정보 숨김" class="sprImg info-hdn"><span class="hide">등록 정보 숨김</span></span></td>
+										<td class="sp"><span title="포워딩" class="txt-icon">F</span></td>
+										<td class="sp"><span title="파킹" class="txt-icon">P</span></td>
+										<td class="sp"><span title="DNS 레코드" class="txt-icon">N</span></td>
+									</tr>
+								</tbody>
+							</table>
+							<div class="clear_fix tableTop-space">
+								<div class="select-wrap" style="width:140px">
+									<label>
+										<select title="메일선택" style="width:160px">
+											<option value="">카테고리 선택</option>
+										</select>
+									</label>
+								</div>
+								<button class="btn-ncolor small" style="width:70px;height:35px">이동</button>
+								<button class="btn-ncolor small f_r" style="width:150px;height:35px">엑셀 다운로드</button>
+							</div>
+							<div class="paging tableTop-space">
+								<span class="inner_paging">
+									<button class="btn_paging btn_first disabled" disabled="disabled" title="맨 앞으로 가기"><span class="sp_paging">맨 앞</span></button>
+									<button class="btn_paging btn_prev disabled" disabled="disabled" title="이전"><span class="sp_paging">이전</span></button>
+									<em class="link_page"><span class="blind">현제 페이지</span>1</em>
+									<button title="2페이지 이동" class="link_page">2</button>
+									<button title="3페이지 이동" class="link_page">3</button>
+									<button title="4페이지 이동" class="link_page">4</button>
+									<button title="5페이지 이동" class="link_page">5</button>
+									<button title="6페이지 이동" class="link_page">6</button>
+									<button title="7페이지 이동" class="link_page">7</button>
+									<button title="8페이지 이동" class="link_page">8</button>
+									<button title="9페이지 이동" class="link_page">9</button>
+									<button title="10페이지 이동" class="link_page">10</button>
+									<button class="btn_paging btn_next disabled" disabled="disabled" title="다음"><span class="sp_paging">다음</span></button>
+									<button class="btn_paging btn_last disabled" disabled="disabled" title="맨 뒤로 가기"><span class="sp_paging">맨 뒤</span></button>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				</section>
+				<!-- //contents -->
+			</div>
+		</div>
+		<!-- //content -->
+
+		<!-- help content -->
+		<div id="help-area" class="hide">
+
+			<!-- content -->
+			<div id="container">
+				<div id="location" class="location-domain">
+					<div class="location-wrap">
+						<p><strong>도메인 관리</strong> &#62; 보유 도메인 &#62; 도움말</p>
+						<button class="help" title="도움말 닫기">&#63;<span class="hide">도움말 닫기</span></button>
+					</div>
+				</div>
+
+				<!-- contents -->
+				<section>
+				<div class="contents">
+					<div class="manage-help clear_fix">
+						<ul class="list-line">
+							<li>‘보유 도메인’에서는 도메인카에서 등록한 도메인 리스트를 확인하고 관리할 수 있습니다.</li>
+							<li>오른쪽 위에 있는 검색 기능으로 원하는 도메인을 찾을 수 있습니다. 상세 검색을 이용하면 조건을 지정할 수 있어 더욱 간편합니다.</li>
+							<li>도메인 정보 변경 또는 부가서비스 설정을 하려면, 리스트 상단의 기능 버튼을 클릭하세요. 해당 도메인을 선택하면 버튼이 활성화됩니다.<br>&nbsp;&nbsp;(기능 설정은 한 번에 최대 50개까지 할 수 있습니다.)<br>&nbsp;&nbsp;<span class="txt-point-v2">※ 분쟁/이용 제한에 걸렸거나 만기일이 지난 도메인은 정보 변경 또는 부가서비스를 이용할 수 없습니다.</span></li>
+							<li>각 도메인명을 클릭하면, ‘개별 도메인 설정’ 페이지로 이동합니다. 호스트 및 DNS 레코드 설정은 해당 페이지에서 설정할 수 있습니다.</li>
+							<li>각 기능에 대한 안내는 아래를 참고하세요.</li>
+						</ul>
+						<div class="help-content">
+							<ul class="con-link">
+								<li><a href="#renewal">연장</a></li>
+								<li><a href="#user">소유자/관리자</a></li>
+								<li><a href="#forwarding">포워딩/파킹</a></li>
+								<li><a href="#security">보안</a></li>
+								<li><a href="#ctg-move">카테고리 이동</a></li>
+								<li><a href="#ex-down">엑셀 다운로드</a></li>
+							</ul>
+							<div class="scroll-frame">
+								<div id="renewal" class="help-cnt-wrap">
+									<h3 class="help-title">연장</h3>
+									<ul class="help-list list-line">
+										<li>도메인 만기일을 연장할 수 있습니다.</li>
+										<li>연장이 불가능한 경우: 분쟁/이용 제한에 걸려있는 경우, 도메인이 이미 삭제된 경우<br>&nbsp;&nbsp;※ 삭제된 도메인은 ‘삭제 도메인’에서 확인할 수 있습니다. 일부 도메인은 복구 신청을 하면, 다시 도메인을 사용할 수 있습니다.</li>
+									</ul>
+								</div>
+								<div id="user" class="help-cnt-wrap">
+									<h3 class="help-title">소유자/관리자</h3>
+									<ul class="help-list list-line">
+										<li>소유자 정보 변경, 관리자 정보 변경, 소유권 이전을 할 수 있습니다.</li>
+										<li>소유자 정보 변경이 불가능한 경우: 만기일이 지난 경우, 이중 잠금이 걸려있는 경우, 분쟁/이용제한에 걸려있는 경우</li>
+										<li>관리자 정보 변경이 불가능한 경우: 만기일이 지난 경우, 분쟁/이용제한에 걸려있는 경우</li>
+										<li>소유권 이전이 불가능한 경우: 만기일이 지난 경우, 이중 잠금이 걸려있는 경우, 분쟁/이용제한에 걸려있는 경우, 소유자 본인인증이 불가능한 경우<br>&nbsp;&nbsp;<span class="txt-point-v2">※ .cn 도메인의 소유자 정보 변경/소유권 이전은 메일 문의를 통해 진행할 수 있습니다. 관리자 정보 변경은 사이트에서 설정할 수 있습니다.</span></li>
+									</ul>
+								</div>
+								<div id="forwarding" class="help-cnt-wrap">
+									<h3 class="help-title">포워딩/파킹</h3>
+									<ul class="help-list list-line">
+										<li>도메인을 다른 도메인으로 연결(포워딩) 또는 임시 페이지로 연결(파킹)할 수 있습니다.</li>
+										<li>포워딩 설정이 불가능한 경우: 만기일이 지난 경우, 파킹/레코드 설정을 이용하고 있는 경우, 도메인카 네임서버가 아닌 경우, 분쟁/이용제한에<br>&nbsp;&nbsp;걸려있는 경우</li>
+										<li>파킹 설정이 불가능한 경우: 만기일이 지난 경우, 포워딩/레코드 설정을 이용하고 있는 경우, 도메인카 네임서버가 아닌 경우, 분쟁/이용제한에<br>&nbsp;&nbsp;걸려있는 경우</li>
+									</ul>
+								</div>
+								<div id="security" class="help-cnt-wrap">
+									<h3 class="help-title">보안</h3>
+									<h4 class="help-title-L2">1. 등록 정보 숨김</h4>
+									<ul class="help-list list-line">
+										<li>공개 정보인 도메인 등록 정보를 도메인카 관리 정보로 대체 표시하여, 원하지 않는 정보 공개를 막는 서비스입니다.</li>
+										<li>등록 정보 숨김 설정이 불가능한 경우: 만기일이 지난 경우, 분쟁/이용제한에 걸려있는 경우, .cn 도메인이나 일부 New gTLD 도메인인 경우</li>
+									</ul>
+									<h4 class="help-title-L2">2. 이중 잠금</h4>
+									<ul class="help-list list-line">
+										<li>도메인의 불법적인 소유권 이전, 기관 이전, 네임서버 정보 변경, 소유자 정보 변경, 호스트 관리 정보 변경, 등록 취소를 막기 위한 보안 서비스입니다.</li>
+										<li>이중 잠금 설정이 불가능한 경우: 만기일이 지난 경우, 분쟁/이용제한에 걸려있는 경우</li>
+									</ul>
+									<h4 class="help-title-L2">3. Transfer Lock</h4>
+									<ul class="help-list list-line">
+										<li>도메인의 불법적인 기관 이전을 막기 위한 보안 서비스입니다.</li>
+										<li>Transfer Lock 설정이 불가능한 경우: 만기일이 지난 경우, 분쟁/이용제한에 걸려있는 경우, .co / .cn / New gTLD 도메인인 경우</li>
+									</ul>
+								</div>
+								<div id="ctg-move" class="help-cnt-wrap">
+									<h3 class="help-title">카테고리 이동</h3>
+									<ul class="help-list list-line">
+										<li>도메인을 용도/기준에 맞게 나누어 편리하게 관리할 수 있습니다.</li>
+										<li>도메인을 선택한 후, 왼쪽 아래의 ‘카테고리’를 선택하고 <span class="btn-ncolor small noHover">이동</span> 버튼을 클릭하면 도메인이 해당 카테고리로 이동합니다.</li>
+										<li>리스트 좌측 ‘카테고리’ 영역의 <span class="help-addicon">+</span> 아이콘을 클릭하면 새로운 카테고리를 만들 수 있습니다.</li>
+									</ul>
+								</div>
+								<div id="ex-down" class="help-cnt-wrap">
+									<h3 class="help-title">엑셀 다운로드</h3>
+									<ul class="help-list list-line">
+										<li>리스트 오른쪽 아래의 <span class="btn-ncolor small noHover">엑셀 다운로드</span> 버튼을 클릭하면, 도메인 리스트를 엑셀로 받아볼 수 있습니다.</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				</section>
+				<!-- //contents -->
+
+			</div>
+			<!-- //content -->		
+		</div>
+		<!-- //help content -->
+
+		<!-- footer -->
+		<footer>
+		<div id="footer">
+			<ul>
+				<li><a href="">회사소개</a>|</li>
+				<li><a href="">약관</a>|</li>
+				<li><a href="">개인정보 취급방침</a>|</li>
+				<li><a href="">이메일주소무단수집거부</a>|</li>
+				<li><a href="">분쟁해결정책</a></li>
+			</ul>
+			<p class="info">㈜가비아<span>|</span>대표이사: 김홍국<span>|</span>소재지: 경기도 성남시 분당구 대왕판교로 660(삼평동) 유스페이스1 B동 4층<br>사업자등록번호: 214-86-39239<span>|</span>통신판매업 신고번호: 제2012-경기성남-1188호</p>
+			<p>©Gabia Inc. All Rights Reserved.</p>
+		</div>
+		</footer>
+		<!-- //footer -->
+	</div>
+	<!-- //wrap -->
+	<script type="text/javascript" src="assets/js/gabia-ui.js"></script>
+</body>
+</html>

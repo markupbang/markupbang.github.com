@@ -1,0 +1,1106 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1100">
+<link rel="stylesheet" type="text/css" href="assets/css/common.css">
+<link rel="stylesheet" type="text/css" href="assets/css/ui.css">
+<link rel="shortcut icon" href="assets/images/favicon.ico">
+<script type="text/javascript" src="assets/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="assets/js/placeholder.min.js"></script>
+<title>계정 관리</title>
+</head>
+<body>
+	<!-- accessibility -->
+    <div id="accessibility">
+        <a href="#container">본문내용 바로가기</a>
+    </div>
+    <!-- //accessibility -->
+	
+	<!-- wrap -->
+	<div id="wrap">
+		<!-- header -->
+		<header>
+		<div id="header">
+
+			<!-- login -->
+			<div class="login-wrap">
+				<div class="login-box">
+					<button type="button" id="login" title="로그인" onclick="d_common.loadModalLayer('/login/login_form/layer')">로그인</button>
+					<a href="/member/member_register" class="on">회원가입</a><!-- 활성상태의 경우 class="on" 추가 -->
+					<a href="">고객센터</a>	
+				</div>
+			</div>
+			<!-- //login -->
+			
+			<div class="header-wrap">
+				<h1 id="logo">
+					<a href="#"><img src="assets/images/g-logo.png" alt="Domainca"></a>
+				</h1>		
+
+				<div class="gnb">
+					<ul>
+						<li><a href="register.html">도메인 등록</a></li>
+						<li><a href="transfer-domain.html">기관 이전</a></li>
+						<li><a href="reservation-domain.html">도메인 예약</a></li>
+						<li><a href="manage.html">도메인 관리</a></li>
+						<li class="end"><a class="active">계정 관리</a></li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+		</header>
+		<!-- //header -->
+		
+		<!-- content -->
+		<div id="container">
+			<div id="location">
+				<div class="location-wrap">
+					<p><strong>계정 관리</strong> &#62; <span id="locationInput">도메인 연장</span></p>			
+				</div>
+			</div>
+			<!-- contents -->
+			<section>
+			<div class="contents">	
+				<div class="myAdmin">
+					<ul class="tab v3" data-tab="tab">
+						<li class="active"><button type="button" class="locationSubmit" data-tab="#elongation">도메인 연장</button></li>
+						<li><button type="button" class="locationSubmit" data-tab="#payments">결제 관리</button></li>
+						<li><button type="button" class="locationSubmit" data-tab="#myAdmin">My 정보 관리</button></li>
+					</ul>					
+	
+					<form>
+						<!-- 도메인 연장 -->
+						<div id="elongation">
+							<fieldset>
+								<legend class="blind">도메인 연장</legend>
+								<div class="tab-info">
+									<div class="tt-wrapper">
+										<span class="tt-link big txt-point">전체 도메인 %00%개</span>
+										<div class="tt-content" style="width:540px;left:-20px;top:30px">
+											<p class="tt-title"><strong>도메인 연장/삭제 정책</strong></p>
+											<ul>
+												<li>- KR, 한국 도메인은 삭제되면 복구 신청할 수 없습니다.</li>
+												<li>- COM, NET, ORG 등 주요 도메인은 연장 기간이 지나도 삭제 복구 신청을 할 수 있습니다.</li>
+												<li>- 연장/삭제 정책은 도메인 종류마다 다르므로, 연장 안내 메일의 ‘삭제 예정일’을<br>&nbsp;&nbsp;반드시 확인하시기 바랍니다.</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="clear_fix toolbox">
+									<ul class="radio-btn mt10">
+										<li><input type="radio" name="continuation" id="domain-expiration" checked="checked" title="한달 내 만료 도메인"/> <label for="domain-expiration">한달 내 만료 도메인</label></li>
+										<li><input type="radio" name="continuation" id="del-schedule" title="삭제 예정 도메인"/> <label for="del-schedule">삭제 예정 도메인</label></li>
+									</ul>
+									<div class="transfer-search-header">
+										<input placeholder="ex)" name="search" id="search" type="text" title="검색" style="width:140px"/><label for="search"><button class="transfer-searchBtn">검색</button></label>
+										<button class="btn-ncolor small mr0 smoky" style="width:70px">상세</button>
+									</div>
+									
+									<div class="tableStyle-v1">
+										<table>
+											<caption>신청 정보 입력</caption>
+											<colgroup><col style="width:4%"/><col style="width:32%"/><col/><col/><col/><col/></colgroup>
+											<thead>
+											<tr>
+												<th scope="col"><label><input type="checkbox"/></label></th>
+												<th scope="col">도메인명 <button class="arrow smoky">▼</button></th>
+												<th scope="col">만기일 <button class="arrow smoky">▼</button></th>
+												<th scope="col">  
+													<div class="select-wrap period">
+														<label>
+															<select name="" title="기간선택">
+																<option value="">기간선택</option>
+																<option value="">1년</option>
+																<option value="">2년</option>
+															</select>
+														</label>
+													</div>
+												</th>
+												<th scope="col">금액 <button class="arrow smoky">▼</button></th>
+												<th scope="col">결제</th>
+											</tr>
+											</thead>
+											<tbody>
+											<tr>
+												<td><label><input type="checkbox"/></label></td>
+												<td>domaindomaindomaindomaindomaindomaindomaindomaindomaindomaindomain.com</td>
+												<td class="txt-point-v2">2015-4-20</td>
+												<td>
+													<div class="select-wrap period">
+														<label>
+															<select name="" title="기간선택">
+																<option value="">1년</option>
+																<option value="">2년</option>
+															</select>
+														</label>
+													</div>
+												</td>
+												<td class="txt-point">87,670 원</td>
+												<td><button class="btn-ncolor small" style="width:82px">연장</button></td>
+											</tr>
+											<tr>
+												<td>
+													<div class="tt-wrapper">
+														<span class="tt-link noline"><label><input type="checkbox" disabled="disabled"/></label></span>
+														<div class="tt-content v2" style="width:280px;left:-15px;top:35px">
+															<span class="arrow" style=""></span>
+															삭제 복구 도메인은 연장 프로세스가 달라 다른 도메인과 함께 연장할 수 없습니다.
+															분쟁 도메인은 연장할 수 없습니다.
+														</div>
+													</div>
+												</td>
+												<td>domain.com</td>
+												<td>2015-4-20</td>
+												<td>
+													<div class="select-wrap period">
+														<label>
+															<select name="" title="기간선택">
+																<option value="">1년</option>
+																<option value="">2년</option>
+															</select>
+														</label>
+													</div>
+												</td>
+												<td class="txt-point">87,670 원</td>
+												<td><button class="btn-ncolor small" style="width:82px">연장</button></td>
+											</tr>
+											<tr class="last">
+												<td><label><input type="checkbox"/></label></td>
+												<td>domain.com</td>
+												<td>2015-4-20</td>
+												<td>
+													<div class="select-wrap period">
+														<label>
+															<select name="" title="기간선택">
+																<option value="">1년</option>
+																<option value="">2년</option>
+															</select>
+														</label>
+													</div>
+												</td>
+												<td class="txt-point">87,670 원</td>
+												<td><button class="btn-ncolor small">삭제 복구</button></td>
+											</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</fieldset>
+
+							<div class="my-result-btm">
+								<div class="my-result-inner">
+									<span class="title">도메인 연장</span>
+									<span class="my-result-count"><span class="txt-point">4개</span> 도메인 선택</span>
+									<span class="price-txt">결제 예상 금액(VAT 별도)</span>
+									<span class="price">600,000원</span>
+									<button type="button" class="btn-color big">결제</button>
+								</div>
+							</div>
+
+						</div>
+						<!-- //도메인 연장 -->
+					</form>
+					
+					<form>
+						<!-- 결제 관리 -->
+						<div id="payments" class="hide">
+							<fieldset>
+								<legend class="blind">결제 관리</legend>
+								<div class="tab-info">
+									<ul class="tab v2" data-tab="tab">
+										<li class="active"><button type="button" data-tab="#mycase1">결제/미결제/환불</button></li>
+										<li><button type="button" data-tab="#mycase2">세금계산서 %00%</button></li>
+										<li><button type="button" data-tab="#mycase3">현금영수증 %00%</button></li>
+										<li><button type="button" data-tab="#mycase4">예치금 %00%</button></li>
+									</ul>
+								</div>
+
+								<!-- 결제 미결제 환불 -->
+								<div id="mycase1">	
+									<div class="clear_fix toolbox">
+										<ul class="radio-btn">
+											<li>
+												<div class="tt-wrapper">
+													<span class="tt-link noline"><input type="radio" name="payment-choice" id="complete" title="결제 완료 %00%"/> <label for="complete"><span>결제 완료 %00%</span></label></span>
+													<div class="tt-content" style="width:540px;left:0px;top:20px">
+														<ul>
+															<li>1. 결제한 내역에 대해 증빙 서류를 발급할 수 있습니다.</li>
+															<li>&nbsp;&nbsp;- 신용카드: 매출전표 발급(신청 여부에 상관없이 해당 페이지에서 출력 가능)</li>
+															<li>&nbsp;&nbsp;- 계좌 이체, 가상 계좌: 세금계산서 또는 현금영수증 발급</li>
+															<li>2. 세금계산서를 신청한 경우 현금영수증은 발급할 수 없습니다. </li>
+															<li>3. 현금영수증은 국세청에 자동 통보되므로 따로 출력하여 보관하지 않아도 됩니다.</li>
+															<li>4. 현금영수증은 반드시 결제 시점에 발급해야 합니다.</li>
+															<li>5. 최근 1년 이내에 결제한 건에 대해서만 증빙 서류를 발급할 수 있습니다. </li>
+														</ul>
+													</div>
+												</div>
+											</li>
+											<li><input type="radio" name="payment-choice" id="uutstanding" title="미결제 %00%"/> <label for="uutstanding">미결제 %00%</label></li>
+											<li><input type="radio" name="payment-choice" id="refunds" title="환불%00%"/> <label for="refunds">환불%00%</label></li>
+										</ul>
+										<div class="transfer-search-header">
+											<label style="position:relative">
+												<input placeholder="2015-02-24" name="search2" id="search2" type="text" style="width:130px" title="검색"/>
+												<button class="transfer-calandar" title="날짜 선택"><span class="hide">날짜 선택</span></button>
+											</label> ~
+											<label style="position:relative" class="mr10">
+												<input placeholder="2015-05-10" name="search3" id="search3" type="text" style="width:130px" title="검색"/>
+												<button class="transfer-calandar" title="날짜 선택"><span class="hide">날짜 선택</span></button>
+											</label>
+											<input placeholder="ex)" name="search" id="search4" type="text" title="검색" style="width:140px"/><label for="search4"><button class="transfer-searchBtn">검색</button></label>
+										</div>
+										
+										<!-- 미결제 -->
+										<div class="tableStyle-v1">
+											<table>
+												<caption>신청 정보 입력</caption>
+												<colgroup><col style="width:4%"/><col style="width:40%"/><col/><col/><col/><col/></colgroup>
+												<thead>
+												<tr>
+													<th scope="col"><label><input type="checkbox"/></label></th>
+													<th scope="col">도메인명 <button class="arrow smoky">▼</button></th>
+													<th scope="col">항목 <button class="arrow smoky">▼</button></th>
+													<th scope="col">신청일  <button class="arrow smoky">▼</button></th>
+													<th scope="col">결제 금액 <button class="arrow smoky">▼</button></th>
+													<th scope="col">조회/관리</th>
+												</tr>
+												</thead>
+												<tbody>
+												<tr>
+													<td><label><input type="checkbox" checked="checked"/></label></td>
+													<td>domain.com 외 10개</td>
+													<td>도메인 연장</td>
+													<td>Yyyy-mm-dd</td>
+													<td>%결제금액% <button class="spaceL sprImg search-info f_r" title="도메인 정보 조회"><span class="blind">상세 조회</span></button></td>
+													<td><button class="btn-color small">결제</button> <button class="btn-ncolor small">신청 취소</button></td>
+												</tr>
+												<tr>
+													<td><label><input type="checkbox" checked="checked"/></label></td>
+													<td>domain.com 외 10개</td>
+													<td>도메인 연장</td>
+													<td>Yyyy-mm-dd</td>
+													<td>%결제금액% <button class="spaceL sprImg search-info f_r" title="도메인 정보 조회"><span class="blind">상세 조회</span></button></td>
+													<td><button class="btn-color small">결제</button> <button class="btn-ncolor small">신청 취소</button></td>
+												</tr>
+												<tr>
+													<td><label><input type="checkbox" checked="checked"/></label></td>
+													<td>domain.com 외 10개</td>
+													<td>도메인 연장</td>
+													<td>Yyyy-mm-dd</td>
+													<td>%결제금액% <button class="spaceL sprImg search-info f_r" title="도메인 정보 조회"><span class="blind">상세 조회</span></button></td>
+													<td><button class="btn-color small">결제</button> <button class="btn-ncolor small">신청 취소</button></td>
+												</tr>
+												<tr>
+													<td><label><input type="checkbox" checked="checked"/></label></td>
+													<td>domain.com 외 10개</td>
+													<td>도메인 연장</td>
+													<td>Yyyy-mm-dd</td>
+													<td>%결제금액% <button class="spaceL sprImg search-info f_r" title="도메인 정보 조회"><span class="blind">상세 조회</span></button></td>
+													<td><button class="btn-color small">결제</button> <button class="btn-ncolor small">신청 취소</button></td>
+												</tr>
+												<tr class="last">
+													<td><label><input type="checkbox" checked="checked"/></label></td>
+													<td>domain.com 외 10개</td>
+													<td>도메인 연장</td>
+													<td>Yyyy-mm-dd</td>
+													<td>%결제금액% <button class="spaceL sprImg search-info f_r" title="도메인 정보 조회"><span class="blind">상세 조회</span></button></td>
+													<td><button class="btn-color small">결제</button> <button class="btn-ncolor small">신청 취소</button></td>
+												</tr>
+												</tbody>
+											</table>
+										</div>
+										<!-- //미결제 -->
+
+									</div>				
+								</div>
+								<!-- //결제 미결제 환불 -->
+
+								<!-- 세금계산서 -->
+								<div id="mycase2" class="hide">
+									<div class="clear_fix toolbox">
+										<div class="tipbox">
+											<div class="tt-wrapper">
+												<strong class="tt-link"><span class="txt-point">YYYY년 MM월 DD일</span> %00%월 세금계산서 발급 신청 마감</strong>
+												<div class="tt-content" style="width:700px;left:0px;top:30px">
+													<ul>
+														<li><strong>1. 세금계산서 발급 안내</strong></li>
+														<li>&nbsp;&nbsp;- 세금계산서는 ‘신청 가능’ 상태의 결제 내역을 주문번호 별로 발급합니다.</li>
+														<li>&nbsp;&nbsp;- 서비스 종류에 따라 신청 가능 기간이 다르고, 신청 후 발급되기까지 시간이 다소 소요될 수 있습니다.</li>
+														<li>&nbsp;&nbsp;- 해당 월에 발생한 결제 내역은 반드시 다음 달 8일까지 세금계산서를 발급해야 합니다.</li>
+														<li>&nbsp;&nbsp;- ‘발급 대기’ 상태는 담당자가 세금계산서 발급을 준비하고 있는 상태로, 신청 내용을 수정하거나 취소할 수 있습니다.</li>
+														<li>&nbsp;&nbsp;- ‘발급 완료’ 상태에서 세금계산서 내용을 수정해야 한다면, [재발급] 버튼을 클릭하여 처리해 주시면 됩니다.</li>
+														<li>&nbsp;&nbsp;- ‘발급 완료’ 상태에서 세금계산서 발급 내용을 출력할 수 있습니다.</li>
+														<li>&nbsp;&nbsp;- 2005년 4월부터 개정된 부가가치세법에 따라 신용카드 매출전표가 세금계산서를 대체합니다.</li>
+														<li class="pt20"><strong>2. 세금계산서 수령 방법</strong></li>
+														<li>&nbsp;&nbsp;- 세금계산서는 전자서명 체계에 기반하여 ‘하이웍스 전자세금계산서 서비스(하이웍스빌)’를 통해 발급됩니다.</li>
+														<li>&nbsp;&nbsp;- 부가가치세법에 따라,  도메인 등록 후   전자세금계산서가 고객의 메일로 발송됩니다.</li>
+														<li>&nbsp;&nbsp;- 메일에서 [전자세금계산서 문서 확인] 버튼을 클릭한 후 보안 절차를 거쳐 세금계산서 발급 내역을 확인합니다.</li>
+														<li class="pt20"><strong>3. 세금계산서 관련 문의</strong></li>
+														<li>&nbsp;&nbsp;- 도메인 : %추후제공%</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+										<div class="transfer-search-header">
+											<div class="select-wrap period">
+												<label>
+													<select name="" title="상태 선택">
+														<option value="">전체</option>
+														<option value="">발급 가능</option>
+														<option value="">발급 예정</option>
+														<option value="">발급 완료</option>
+													</select>
+												</label>
+											</div>
+											<label style="position:relative">
+												<input placeholder="2015-02-24" name="search5" id="search5" type="text" style="width:130px" title="검색"/>
+												<button class="transfer-calandar" title="날짜 선택"><span class="hide">날짜 선택</span></button>
+											</label> ~
+											<label style="position:relative" class="mr10">
+												<input placeholder="2015-05-10" name="search6" id="search6" type="text" style="width:130px" title="검색"/>
+												<button class="transfer-calandar" title="날짜 선택"><span class="hide">날짜 선택</span></button>
+											</label>
+											<input placeholder="ex)" name="search" id="search7" type="text" title="검색" style="width:140px"/><label for="search7"><button class="transfer-searchBtn">검색</button></label>
+										</div>
+
+										<div class="tableStyle-v1">
+											<table>
+												<caption>세금계산서 정보</caption>
+												<colgroup><col style="width:4%"/><col style="width:26%"/><col/><col/><col/><col/><col/></colgroup>
+												<thead>
+												<tr>
+													<th scope="col"><label><input type="checkbox"/></label></th>
+													<th scope="col">도메인명 <button class="arrow smoky">▼</button></th>
+													<th scope="col">결제 방법 <button class="arrow smoky">▼</button></th>
+													<th scope="col">결제일 <button class="arrow smoky">▼</button></th>
+													<th scope="col">결제 금액 <button class="arrow smoky">▼</button></th>
+													<th scope="col">발급 현황 <button class="arrow smoky">▼</button></th>
+													<th scope="col">세금계산서</th>
+												</tr>
+												</thead>
+												<tbody>
+												<tr>
+													<td><label><input type="checkbox" checked="checked"/></label></td>
+													<td>domain.com 외 10개</td>
+													<td>가상 계좌</td>
+													<td>Yyyy-mm-dd</td>
+													<td>1,105,000원</td>
+													<td>신청 가능</td>
+													<td><button class="btn-color small" style="width:107px">신청</button></td>
+												</tr>
+												<tr>
+													<td><label><input type="checkbox"/></label></td>
+													<td>%domain%</td>
+													<td>가상 계좌</td>
+													<td>Yyyy-mm-dd</td>
+													<td>200,000원</td>
+													<td>발급 예정</td>
+													<td><button class="btn-color small">수정</button> <button class="btn-ncolor small">취소</button></td>
+												</tr>
+												<tr>
+													<td><label><input type="checkbox" checked="checked"/></label></td>
+													<td>domain.com 외 10개</td>
+													<td>예치금</td>
+													<td>Yyyy-mm-dd</td>
+													<td>%금액%원</td>
+													<td>발급 예정</td>
+													<td><button class="btn-color small">수정</button> <button class="btn-ncolor small">취소</button></td>
+												</tr>
+												<tr>
+													<td><label><input type="checkbox"/></label></td>
+													<td>%도메인%</td>
+													<td>%결제 방법%</td>
+													<td>Yyyy-mm-dd</td>
+													<td>%금액%원</td>
+													<td>발급 예정</td>
+													<td><button class="btn-color small" style="width:107px">재발급/출력</button></td>
+												</tr>
+												<tr class="last">
+													<td><label><input type="checkbox"/></label></td>
+													<td>%도메인%</td>
+													<td>%결제 방법%</td>
+													<td>Yyyy-mm-dd</td>
+													<td>%금액%원</td>
+													<td>발급 예정</td>
+													<td><button class="btn-color small" style="width:107px">재발급/출력</button></td>
+												</tr>
+												</tbody>
+											</table>
+											<p class="mt10"><button class="btn-color small">세금계산서 신청</button><button class="btn-ncolor small spaceL">내용 수정</button><button class="btn-ncolor small spaceL">신청 취소</button></p>
+										</div>
+									</div>
+								</div>
+								<!-- //세금계산서 -->
+								
+								<!-- 현금영수증 -->
+								<div id="mycase3" class="hide">
+									<div class="clear_fix toolbox">
+										<div class="tipbox">
+											<div class="tt-wrapper">
+												<strong class="tt-link">현금영수증 %00%건</strong>
+												<div class="tt-content" style="width:700px;left:0px;top:30px">
+													<ul>
+														<li>1. 결제한 방법에 따라 증빙 서류를 다르게 발급합니다.</li>
+														<li>&nbsp;&nbsp;- 카드 결제 : 카드 매출전표</li>
+														<li>&nbsp;&nbsp;- 계좌 이체, 가상 계좌 결제 : 현금영수증 또는 세금계산서</li>
+														<li>2. 세금계산서를 미리 신청한 경우, 현금영수증을 발급할 수 없습니다.</li>
+														<li>3. 현금영수증은 국세청에 자동 통보되므로 영수증을 따로 출력하여 보관하지 않아도 됩니다.</li>
+														<li>4. 현금영수증은 반드시 결제 시점에 발급해야 합니다.</li>
+														<li>5. 최근 1년 이내에 결제한 건에 대해서만 발급할 수 있습니다.</li>
+														<li>6. 기타 결제 수단과 예치금을 동시에 사용하여 결제하면, 예치금 사용 금액에 대한 현금영수증은 별도로 발급됩니다.</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+										<div class="transfer-search-header">
+											<label style="position:relative">
+												<input placeholder="2015-02-24" name="search8" id="search8" type="text" style="width:130px" title="검색"/>
+												<button class="transfer-calandar" title="날짜 선택"><span class="hide">날짜 선택</span></button>
+											</label> ~
+											<label style="position:relative" class="mr10">
+												<input placeholder="2015-05-10" name="search9" id="search9" type="text" style="width:130px" title="검색"/>
+												<button class="transfer-calandar" title="날짜 선택"><span class="hide">날짜 선택</span></button>
+											</label>
+											<input placeholder="ex)" name="search" id="search10" type="text" title="검색" style="width:140px"/><label for="search10"><button class="transfer-searchBtn">검색</button></label>
+										</div>
+
+										<div class="tableStyle-v1">
+											<table>
+												<caption>결제 정보</caption>
+												<colgroup><col style="width:26%"/><col/><col/><col/><col/><col/></colgroup>
+												<thead>
+												<tr>
+													<th scope="col">도메인명 <button class="arrow smoky">▼</button></th>
+													<th scope="col">항목 <button class="arrow smoky">▼</button></th>
+													<th scope="col">결제 방법 <button class="arrow smoky">▼</button></th>
+													<th scope="col">결제일 <button class="arrow smoky">▼</button></th>
+													<th scope="col">결제 금액 <button class="arrow smoky">▼</button></th>
+													<th scope="col">현금영수증</th>
+												</tr>
+												</thead>
+												<tbody>
+												<tr>
+													<td>blog.naver.com</td>
+													<td>도메인 연장</td>
+													<td>포인트</td>
+													<td>2104. 00. 00</td>
+													<td>200,000원</td>
+													<td><button class="btn-color small" style="width:107px">출력</button></td>
+												</tr>
+												<tr>
+													<td>%도메인%</td>
+													<td>서비스</td>
+													<td>가상 계좌</td>
+													<td>2104. 00. 00</td>
+													<td>%금액%원</td>
+													<td><button class="btn-color small" style="width:107px">출력</button></td>
+												</tr>
+												<tr>
+													<td>%도메인%</td>
+													<td>서비스</td>
+													<td>가상 계좌</td>
+													<td>2104. 00. 00</td>
+													<td>%금액%원</td>
+													<td><button class="btn-color small" style="width:107px">출력</button></td>
+												</tr>
+												<tr>
+													<td>%도메인%</td>
+													<td>서비스</td>
+													<td>가상 계좌</td>
+													<td>2104. 00. 00</td>
+													<td>%금액%원</td>
+													<td><button class="btn-color small" style="width:107px">출력</button></td>
+												</tr>
+												<tr>
+													<td>%도메인%</td>
+													<td>서비스</td>
+													<td>가상 계좌</td>
+													<td>2104. 00. 00</td>
+													<td>%금액%원</td>
+													<td><button class="btn-color small" style="width:107px">출력</button></td>
+												</tr>
+												<tr class="last">
+													<td>blog.naver.com</td>
+													<td>도메인 연장</td>
+													<td>포인트</td>
+													<td>2104. 00. 00</td>
+													<td>200,000원</td>
+													<td><button class="btn-color small" style="width:107px">출력</button></td>
+												</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+								<!-- //현금영수증 -->
+
+								<!-- 예치금 -->
+								<div id="mycase4" class="hide">
+									<div class="clear_fix toolbox">
+										<div class="tipbox">
+											<div class="tt-wrapper">
+												<strong class="tt-link">예치금  00건</strong>
+												<div class="tt-content" style="width:600px;left:0px;top:30px">
+													<ul>
+														<li>1. 예치금은 도메인 예약 등록 또는 연장 할 때, 현금처럼 사용할 수 있습니다.</li>
+														<li>2. 예치금은 1,000원부터 충전할 수 있습니다.</li>
+														<li>3. 도메인 예약 등록 시, 예치금 잔액이 최소 22,000원 이상 있어야 합니다. </li>
+														<li>4. 세금계산서는 충전한 금액이 아닌, 예치금으로 결제한 서비스 내역에 대해서만 발급할 수 있습니다.</li>
+														<li>5. 충전 금액은 신용카드 매출전표를 지출 증빙용으로 사용할 수 없습니다. </li>
+														<li>6. 예치금으로 결제한 서비스를 취소 및 환불하는 경우, 다시 예치금으로 반환됩니다.</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+										<div class="transfer-search-header">
+											<button class="btn-color normal" style="padding-right:15px;padding-left:15px">충전</button>
+											<button class="btn-ncolor normal spaceL" style="padding:0 15px">환불</button>
+											<div class="select-wrap period">
+												<label>
+													<select name="" title="상태 선택">
+														<option value="">전체</option>
+														<option value="">도메인 등록</option>
+														<option value="">도메인 연장</option>
+														<option value="">기관 이전</option>
+														<option value="">Who 정보보호</option>
+														<option value="">도메인 복구</option>
+														<option value="">도메인 삭제</option>
+													</select>
+												</label>
+											</div>
+											<div class="select-wrap period">
+												<label>
+													<select name="" title="상태 선택">
+														<option value="">전체</option>
+														<option value="">충전</option>
+														<option value="">사용</option>
+														<option value="">반환  </option>
+														<option value="">환불</option>
+														<option value="">대체 충전</option>
+													</select>
+												</label>
+											</div>
+											<label style="position:relative">
+												<input placeholder="2015-02-24" name="search11" id="search11" type="text" style="width:130px" title="검색"/>
+												<button class="transfer-calandar" title="날짜 선택"><span class="hide">날짜 선택</span></button>
+											</label> ~
+											<label style="position:relative" class="mr10">
+												<input placeholder="2015-05-10" name="search12" id="search12" type="text" style="width:130px" title="검색"/>
+												<button class="transfer-calandar" title="날짜 선택"><span class="hide">날짜 선택</span></button>
+											</label>
+											<input placeholder="ex)" name="search" id="search13" type="text" title="검색" style="width:140px"/><label for="search13"><button class="transfer-searchBtn">검색</button></label>
+										</div>
+
+										<div class="tableStyle-v1">
+											<table>
+												<caption>예치금 정보</caption>
+												<colgroup><col/><col/><col style="width:30%"/><col/><col/><col/></colgroup>
+												<thead>
+												<tr>
+													<th scope="col">구분</th>
+													<th scope="col">사용 내역 <button class="arrow smoky">▼</button></th>
+													<th scope="col">주문번호 <button class="arrow smoky">▼</button></th>
+													<th scope="col">일자 <button class="arrow smoky">▼</button></th>
+													<th scope="col">금액 <button class="arrow smoky">▼</button></th>
+													<th scope="col">잔액 <button class="arrow smoky">▼</button></th>
+												</tr>
+												</thead>
+												<tbody>
+												<tr>
+													<td>반환</td>
+													<td>예약 등록</td>
+													<td>%%%</td>
+													<td>Yyyy-mm-dd</td>
+													<td>5,000원</td>
+													<td><span class="txt-point">14,000 원</span></td>
+												</tr>
+												<tr>
+													<td>사용</td>
+													<td>예치금 충전</td>
+													<td>%%%</td>
+													<td>Yyyy-mm-dd</td>
+													<td><span class="txt-point-v2">-10,000원</span></td>
+													<td><span class="txt-point">19,000 원</span></td>
+												</tr>
+												<tr>
+													<td>충전</td>
+													<td>도메인 등록</td>
+													<td>%%%</td>
+													<td>Yyyy-mm-dd</td>
+													<td>5,000원</td>
+													<td><span class="txt-point">14,000 원</span></td>
+												</tr>
+												<tr>
+													<td>환불</td>
+													<td>예치금</td>
+													<td>%%%</td>
+													<td>Yyyy-mm-dd</td>
+													<td>5,000원</td>
+													<td><span class="txt-point">14,000 원</span></td>
+												</tr>
+												<tr class="last">
+													<td>반환</td>
+													<td>예약 등록</td>
+													<td>%%%</td>
+													<td>Yyyy-mm-dd</td>
+													<td>5,000원</td>
+													<td><span class="txt-point">14,000 원</span></td>
+												</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+								<!-- //예치금 -->
+								
+							</fieldset>
+						</div>
+						<!-- //결제 관리 -->
+					</form>
+	
+					<form>
+						<!-- My 정보 관리 -->
+						<div id="myAdmin" class="hide">
+							<fieldset>
+								<legend class="blind"> My 정보 관리</legend>
+								<div class="tab-info">
+									<ul class="tab v2" data-tab="tab">
+										<li class="active"><button type="button" data-tab="#mycase5">회원정보</button></li>
+										<li class="tt-wrapper">
+											<button type="button" data-tab="#mycase6" class="tt-link" style="border-bottom:1px dotted">서비스 담당자</button>
+											<div class="tt-content" style="width:450px;left:20px;top:36px">
+												<ul class="list-type">
+													<li>서비스 담당자를 추가해 놓으면, 서비스 신청 시 소유자,<br>&nbsp;&nbsp;관리자 정보를 가져와 입력할 수 있습니다.</li>
+													<li>[담당자 등록] 버튼을 클릭하여 담당자를 추가할 수 있습니다.</li>
+													<li>목록에서 [수정] 버튼을 클릭하면, 해당 담당자 정보를 수정할 수 있습니다.</li>
+													<li>목록에서 [삭제] 버튼을 클릭하면, 해당 담당자 정보를 삭제할 수 있습니다.</li>
+												</ul>
+											</div>
+										</li>
+										<li class="tt-wrapper">
+											<button type="button" data-tab="#mycase7" class="tt-link" style="border-bottom:1px dotted">세금계산서 정보</button>
+											<div class="tt-content" style="width:480px;left:20px;top:36px">
+												<ul class="list-type">
+													<li>세금계산서 정보를 추가해 놓으면, 서비스 결제 시 세금계산서<br>&nbsp;&nbsp;정보를 가져와 입력할 수 있습니다.</li>
+													<li>[정보 등록] 버튼을 클릭하여 세금계산서 정보를 추가할 수 있습니다.</li>
+													<li>목록에서 [수정] 버튼을 클릭하면, 해당 세금계산서 정보를 수정할 수 있습니다.</li>
+													<li>목록에서 [삭제] 버튼을 클릭하면, 해당 세금계산서 정보를 삭제할 수 있습니다.</li>
+												</ul>
+											</div>
+										</li>
+										<li><button type="button" data-tab="#mycase8">회원 탈퇴</button></li>
+									</ul>
+								</div>
+
+								<!-- 회원정보 -->
+								<div id="mycase5">	
+									<div class="clear_fix toolbox">
+										<div class="tableStyle-v4 tableTop-space">
+											<div class="table-title">%아이디% (이름)</div>
+											<table>
+												<caption>회원정보</caption>
+												<colgroup><col style="width:160px"/><col/></colgroup>
+												<tbody>
+													<tr>
+														<th scope="row">현재 비밀번호</th> 
+														<td><label><input id="user-pw" type="password" title="현재 비밀번호"/></label></td>
+													</tr>
+													<tr>
+														<th scope="row">
+															<div class="tt-wrapper">
+																<span class="tt-link">새 비밀번호</span>
+																<div class="tt-content" style="width:570px;left:20px;top:36px">
+																	<ul class="list-type">
+																		<li>비밀번호는 숫자, 알파벳, 특수문자의 조합으로 구성해야 합니다. (예: domainca0000)</li>
+																		<li>알파벳 대/소문자를 구분하여 8자리 이상 16자리 이하로 구성해야 합니다.</li>
+																		<li>아이디와 같은 비밀번호는 사용할 수 없습니다.</li>
+																		<li>주민등록번호, 생일, 전화번호 등과 같이 추측이 가능한 번호나, 같은 숫자/문자의 반복은<br>&nbsp;&nbsp;비밀번호 유출 위험이 있으므로 피해주시기 바랍니다.</li>
+																	</ul>
+																</div>
+															</div>
+														</th> 
+														<td><label><input id="user-pw2" type="password" title="새 비밀번호"/></label> <span class="spaceL txt-point-v2"><strong class="icon-point">!</strong> 숫자,알파벳,특수문자와의 조합으로 기재해 주십시오.</span></td>
+													</tr>
+													<tr>
+														<th scope="row">새 비밀번호 확인</th> 
+														<td><label><input id="user-pw3" type="text" title="새 비밀번호 확인"/></label> <span class="spaceL txt-point">사용할 수 있는 비밀번호입니다.</span></td>
+													</tr>
+													<tr>
+														<th scope="row">이메일</th>
+														<td class="mail-confirm">
+															<label><input name="email" id="email" type="text" placeholder="예) domainca" title="이메일"/></label><span class="mail-space"> @</span> 
+															<div class="select-wrap emailSelect">
+																<label>
+																<select name="select_email_domain" title="메일선택">
+																	<option value="">선택</option>
+																	<option value="custom">직접입력</option>
+																	<option value="naver.com">naver.com</option>
+																	<option value="hanmail.net">hanmail.net</option>
+																	<option value="nate.com">nate.com</option>
+																	<option value="gmail.com">gmail.com</option>
+																	<option value="hotmail.com">hotmail.com</option>
+																	<option value="lycos.co.kr">lycos.co.kr</option>
+																	<option value="empal.com">empal.com</option>
+																	<option value="dreamwiz.com">dreamwiz.com</option>
+																	<option value="korea.com">korea.com</option>
+																</select>
+																</label>
+															</div>
+															<label><input name="email2" id="email2" type="text" placeholder="gabia.com" title="이메일"/></label><button type="button" class="btn-ncolor normal spaceL">인증하기</button>
+															<div class="label-space">
+																<div class="tt-wrapper">
+																	<label class="tt-link noline"><input name="ad_type" type="checkbox" checked="" value="0"/> <span>이메일 광고 수신</span></label>
+																	<div class="tt-content" style="width:530px;left:0;top:17px">
+																		<ul class="list-type">
+																			<li>광고 수신 거부 시, 해당 이메일 및 휴대전화로 광고성 메일과 문자를 발송하지 않습니다.</li>
+																			<li>단, 도메인 서비스의 연장 안내 및 긴급 공지 관련 내용은 광고로 구분하지 않으며,<br>&nbsp;&nbsp;안내가 필요한 경우 발송합니다.</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</td>
+													</tr>
+													<tr class="cp-confirm end">
+														<th scope="row">휴대전화</th>
+														<td class="cp-choice">
+															<div class="select-wrap cpSelect">
+																<label>
+																<select title="국가 번호 선택" id="cp_confirm">
+																	<option value="+82 South Korea">+82 South Korea</option>
+																</select>
+																</label>
+															</div>
+															<label><input type="text" placeholder="예) 01012341234" title="전화번호입력"/></label><button type="button" class="btn-ncolor normal spaceL">인증하기</button>
+															<span class="ml10 txt-point">대쉬(-)없이 전체 번호를 입력하세요.</span>
+															<div class="label-space">
+																<div class="tt-wrapper">
+																	<label class="tt-link noline"><input type="checkbox"> <span>SMS 광고 수신</span></label>
+																	<div class="tt-content" style="width:530px;left:0;top:17px">
+																		<ul class="list-type">
+																			<li>광고 수신 거부 시, 해당 이메일 및 휴대전화로 광고성 메일과 문자를 발송하지 않습니다.</li>
+																			<li>단, 도메인 서비스의 연장 안내 및 긴급 공지 관련 내용은 광고로 구분하지 않으며,<br>&nbsp;&nbsp;안내가 필요한 경우 발송합니다.</li>
+																		</ul>
+																	</div>
+																	<span class="ml10 txt-point">해외의 경우, 휴대전화 인증이 불가능하므로 본인 인증을 '이메일'로 선택해 주세요.</span>
+																</div>
+															</div>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+
+										<!-- 추가정보 -->
+										<div class="tableStyle-v4 spaceTop">
+											<div class="table-title tt-wrapper pl0">
+												<span class="tt-link">추가 정보</span>
+												<div class="tt-content" style="width:460px;left:0;top:26px">
+													<ul class="list-type">
+														<li>선택 입력 사항입니다.<br>&nbsp;&nbsp;정보를 입력해 놓으면, 도메인을 신청할 때마다 매번 입력하지 않아도 됩니다.</li>
+													</ul>
+												</div>
+											</div>
+											<table>
+												<caption>추가회원정보</caption>
+												<colgroup><col style="width:160px"/><col/></colgroup>
+												<tbody>
+													<tr>
+														<th scope="row">이름(영문)</th> 
+														<td><label><input id="user-nameE" type="text" placeholder="Eun Cho" title="소유자명(영문)"/></label></td>
+													</tr>
+													<tr>
+														<th scope="row">우편번호</th>
+														<td class="zip-code">
+															<label><input name="zip-code" id="zip-code" type="text" placeholder="예) 463400" title="우편번호" style="width:162px"></label><button type="button" class="spaceL btn-ncolor normal">검색</button><span class="spaceL txt-point">직접 입력 시, 대쉬(-)없이 전체 번호를 입력하세요.</span>
+														</td>
+													</tr>
+													<tr class="address">
+														<th scope="row">주소(지번)</th>
+														<td><label><input name="adr-k" id="adr-k" type="text" placeholder="경기도 성남시 분당구 삼평동 660" title="지번"/></label></td>
+													</tr>
+													<tr class="address">
+														<th scope="row">주소(영문)</th>
+														<td><label><input name="adr-e" id="adr-e" type="text" placeholder="660, Daewangpangyo-ro, Bundang-gu, Seongnam-si, Gyeonggi-do" title="영문주소"/></label></td>
+													</tr>
+													<tr class="cp-confirm end">
+														<th scope="row">전화번호</th>
+														<td class="cp-choice">
+															<div class="select-wrap cpSelect">
+																<label>
+																<select title="국가 번호 선택">
+																	<option value="+82 South Korea">+82 South Korea</option>
+																</select>
+																</label>
+															</div>
+															<label><input type="text" placeholder="예) 01012341234" title="전화번호입력"/></label><span class="spaceL txt-point">대쉬(-)없이 지역번호까지 입력하세요.</span>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<!-- //추가정보 -->
+										
+										<div class="btn-wrap">
+											<button type="button" class="btn-color big">확인</button><button type="button" class="btn-ncolor big">취소</button>
+										</div>
+									</div>				
+								</div>
+								<!-- //회원정보 -->
+
+								<!-- 서비스 담당자 -->
+								<div id="mycase6" class="hide">
+									<div class="clear_fix toolbox">
+										<div class="tipbox">
+											<button class="btn-color normal f_l">담당자 등록</button>
+										</div>
+										<div class="transfer-search-header">
+											<input placeholder="ex)" name="search" id="search14" type="text" title="검색" style="width:140px"/><label for="search14"><button class="transfer-searchBtn">검색</button></label>
+											<button class="btn-ncolor small smoky" style="width:70px;margin-right:0">상세</button>
+										</div>
+
+										<div class="tableStyle-v1">
+											<table>
+												<caption>서비스 담당자 정보</caption>
+												<colgroup><col style="width:26%"/><col style="width:14%"/><col style="width:15%"/><co style="width:15%"/><col style="width:15%"/><col/></colgroup>
+												<thead>
+												<tr>
+													<th scope="col">별칭</th>
+													<th scope="col">담당자명</th>
+													<th scope="col">이메일</th>
+													<th scope="col">전화번호</th>
+													<th scope="col">휴대전화</th>
+													<th scope="col">관리</th>
+												</tr>
+												</thead>
+												<tbody>
+												<tr>
+													<td>회원정보</td>
+													<td>강정연</td>
+													<td>kjy@gabia.com</td>
+													<td>010-111-2222</td>
+													<td>000-010-2222</td>
+													<td><button class="btn-ncolor small">수정</button><button class="btn-ncolor small spaceL">삭제</button></td>
+												</tr>
+												<tr>
+													<td>회원정보</td>
+													<td>강정연</td>
+													<td>kjy@gabia.com</td>
+													<td>010-111-2222</td>
+													<td>000-010-2222</td>
+													<td><button class="btn-ncolor small">수정</button><button class="btn-ncolor small spaceL">삭제</button></td>
+												</tr>
+												<tr>
+													<td>회원정보</td>
+													<td>강정연</td>
+													<td>kjy@gabia.com</td>
+													<td>010-111-2222</td>
+													<td>000-010-2222</td>
+													<td><button class="btn-ncolor small">수정</button><button class="btn-ncolor small spaceL">삭제</button></td>
+												</tr>
+												<tr>
+													<td>회원정보</td>
+													<td>강정연</td>
+													<td>kjy@gabia.com</td>
+													<td>010-111-2222</td>
+													<td>000-010-2222</td>
+													<td><button class="btn-ncolor small">수정</button><button class="btn-ncolor small spaceL">삭제</button></td>
+												</tr>
+												<tr>
+													<td>회원정보</td>
+													<td>강정연</td>
+													<td>kjy@gabia.com</td>
+													<td>010-111-2222</td>
+													<td>000-010-2222</td>
+													<td><button class="btn-ncolor small">수정</button><button class="btn-ncolor small spaceL">삭제</button></td>
+												</tr>
+												<tr class="last">
+													<td>회원정보</td>
+													<td>강정연</td>
+													<td>kjy@gabia.com</td>
+													<td>010-111-2222</td>
+													<td>000-010-2222</td>
+													<td><button class="btn-ncolor small">수정</button><button class="btn-ncolor small spaceL">삭제</button></td>
+												</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+								<!-- //서비스 담당자 -->
+								
+								<!-- 세금계산서 정보 -->
+								<div id="mycase7" class="hide">
+									<div class="clear_fix toolbox">
+										<div class="tipbox">
+											<button class="btn-color normal f_l">세금계산서 정보 등록</button>
+										</div>
+										<div class="transfer-search-header">
+											<input placeholder="ex)" name="search" id="search15" type="text" title="검색" style="width:140px"/><label for="search15"><button class="transfer-searchBtn">검색</button></label>
+											<button class="btn-ncolor small smoky" style="margin-right:0;width:70px">상세</button>
+										</div>
+
+										<div class="tableStyle-v1">
+											<table>
+												<caption>세금계산서 정보</caption>
+												<colgroup><col style="width:24%"/><col style="width:13%"/><col style="width:13%"/><col style="width:18%"/><col style="width:15%"/><col/></colgroup>
+												<thead>
+												<tr>
+													<th scope="col">별칭</th>
+													<th scope="col">회사명</th>
+													<th scope="col">대표자명</th>
+													<th scope="col">사업자등록번호</th>
+													<th scope="col">담당자</th>
+													<th scope="col">관리</th>
+												</tr>
+												</thead>
+												<tbody>
+												<tr>
+													<td>호스팅</td>
+													<td>가비아</td>
+													<td>김홍국</td>
+													<td>214-86-39239</td>
+													<td>임미래</td>
+													<td><button class="btn-ncolor small">수정</button><button class="btn-ncolor small spaceL">삭제</button></td>
+												</tr>
+												<tr>
+													<td>호스팅</td>
+													<td>가비아</td>
+													<td>김홍국</td>
+													<td>214-86-39239</td>
+													<td>임미래</td>
+													<td><button class="btn-ncolor small">수정</button><button class="btn-ncolor small spaceL">삭제</button></td>
+												</tr>
+												<tr>
+													<td>호스팅</td>
+													<td>가비아</td>
+													<td>김홍국</td>
+													<td>214-86-39239</td>
+													<td>임미래</td>
+													<td><button class="btn-ncolor small">수정</button><button class="btn-ncolor small spaceL">삭제</button></td>
+												</tr>
+												<tr>
+													<td>호스팅</td>
+													<td>가비아</td>
+													<td>김홍국</td>
+													<td>214-86-39239</td>
+													<td>임미래</td>
+													<td><button class="btn-ncolor small">수정</button><button class="btn-ncolor small spaceL">삭제</button></td>
+												</tr>
+												<tr class="last">
+													<td>호스팅</td>
+													<td>가비아</td>
+													<td>김홍국</td>
+													<td>214-86-39239</td>
+													<td>임미래</td>
+													<td><button class="btn-ncolor small">수정</button><button class="btn-ncolor small spaceL">삭제</button></td>
+												</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+								<!-- //세금계산서 정보 -->
+
+								<!-- 회원 탈퇴 -->
+								<div id="mycase8" class="toolbox hide">
+									<div class="member-secession">
+										<p class="title">비밀번호 재확인</p>
+										<p>정보를 안전하게 보호하기 위해 비밀번호를 다시 한 번 확인합니다.</p>
+										<div class="form-input">
+											<span>비밀번호</span>
+											<label><input id="user-pw4" type="password" title="비밀번호"></label><button class="btn-color normal">확인</button>
+										</div>
+									</div>
+
+									<!-- 비밀번호 입력 후 -->
+									<div class="tableStyle-v4 tableTop-space">
+										<table>
+											<caption>탈퇴정보</caption>
+											<colgroup><col style="width:160px"/><col/></colgroup>
+											<tbody>
+												<tr class="onlytxt">
+													<th scope="row">탈퇴할 아이디</th> 
+													<td>%ID%</td>
+												</tr>
+												<tr>
+													<th scope="row">본인 인증</th> 
+													<td>%이름% <button class="btn-color normal ml50">본인 인증</button><span class="ml10 txt-point">인증 완료</span></td>
+												</tr>
+												<tr>
+													<th scope="row">탈퇴 사유</th> 
+													<td>
+														<div class="select-wrap" style="width:210px">
+															<label>
+																<select title="탈퇴 사유" style="width:230px">
+																	<option>서비스 이용 안 함</option>
+																	<option>운영 중인 사이트 중단/폐쇄</option>
+																	<option>아이디 변경</option>
+																	<option>사이트 이용 불만</option>
+																	<option>서비스 불만</option>
+																	<option>상담 직원의 불친절</option>
+																	<option>기타</option>
+																</select>
+															</label>
+														</div>
+													</td>
+												</tr>
+												<tr class="cp-confirm end">
+													<th scope="row">고객 의견</th>
+													<td>
+														<label><textarea id="detailSearchTxtarea" class="mt0" style="width:824px;height:137px" name="domainList" onfocus="if(this.value==this.defaultValue) {this.value=''; this.className='focus'}" onblur="if(this.value=='') {this.value=this.defaultValue; this.className=''}" title="도메인카에 남기고 싶은 의견을 입력해 주세요">도메인카에 남기고 싶은 의견을 입력해 주세요.
+고객께서 주신 소중한 의견을 참고하여 더 나은 서비스를 제공하겠습니다.</textarea></label>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+										<div class="btn-wrap">
+											<button type="button" class="btn-color big">확인</button><button type="button" class="btn-ncolor big">취소</button>
+										</div>
+										<!-- /비밀번호 입력 후 -->
+
+									</div>
+								</div>
+								<!-- //회원 탈퇴 -->
+							</fieldset>
+						</div>
+						<!-- //My 정보 관리 -->
+					</form>
+				</div>
+			</div>
+			</section>
+			<!-- //contents -->
+
+		</div>
+		<!-- //content -->
+
+		<!-- footer -->
+		<footer>
+		<div id="footer">
+			<ul>
+				<li><a href="">회사소개</a>|</li>
+				<li><a href="">약관</a>|</li>
+				<li><a href="">개인정보 취급방침</a>|</li>
+				<li><a href="">이메일주소무단수집거부</a>|</li>
+				<li><a href="">분쟁해결정책</a></li>
+			</ul>
+			<p class="info">㈜가비아<span>|</span>대표이사: 김홍국<span>|</span>소재지: 경기도 성남시 분당구 대왕판교로 660(삼평동) 유스페이스1 B동 4층<br>사업자등록번호: 214-86-39239<span>|</span>통신판매업 신고번호: 제2012-경기성남-1188호</p>
+			<p>©Gabia Inc. All Rights Reserved.</p>
+		</div>
+		</footer>
+		<!-- //footer -->
+	</div>
+
+	<!-- //wrap -->
+	<script type="text/javascript" src="assets/js/gabia-ui.js"></script>
+	<script type="text/javascript">
+		$('.locationSubmit').click(function(){
+			var txtLocation = $(this).text();
+			$('#locationInput').text(txtLocation);
+		});
+	</script>
+</body>
+</html>

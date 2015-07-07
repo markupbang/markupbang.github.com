@@ -1,0 +1,294 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1100">
+<link rel="stylesheet" type="text/css" href="assets/css/common.css">
+<link rel="stylesheet" type="text/css" href="assets/css/ui.css">
+<link rel="shortcut icon" href="assets/images/favicon.ico">
+<script type="text/javascript" src="assets/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="assets/js/placeholder.min.js"></script>
+<title>도메인 등록</title>
+</head>
+<body>
+	<!-- accessibility -->
+    <div id="accessibility">
+        <a href="#container">본문내용 바로가기</a>
+    </div>
+    <!-- //accessibility -->
+	
+	<!-- wrap -->
+	<div id="wrap">
+		<!-- header -->
+		<header>
+		<div id="header">
+
+			<!-- login -->
+			<div class="login-wrap">
+				<div class="login-box">
+					<button type="button" id="login" title="로그인" onclick="d_common.loadModalLayer('/login/login_form/layer')">로그인</button>
+					<a href="/member/member_register" class="on">회원가입</a><!-- 활성상태의 경우 class="on" 추가 -->
+					<a href="">고객센터</a>	
+				</div>
+			</div>
+			<!-- //login -->
+			
+			<div class="header-wrap">
+				<h1 id="logo">
+					<a href="#"><img src="assets/images/g-logo.png" alt="Domainca"></a>
+				</h1>		
+
+				<div class="gnb">
+					<ul>
+						<li><a class="active">도메인 등록</a></li>
+						<li><a href="transfer-domain.html">기관 이전</a></li>
+						<li><a href="reservation-domain.html">도메인 예약</a></li>
+						<li><a href="manage.html">도메인 관리</a></li>
+						<li class="end"><a href="account-management.html">계정 관리</a></li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+		</header>
+		<!-- //header -->
+		
+		<!-- content -->
+		<div id="container">
+			<div id="location" class="location-domain">
+				<div class="location-wrap">
+					<p><strong>도메인 등록</strong>도메인 검색 과 등록을 빠르게!</p>
+					<button class="help" title="도움말">&#63;<span class="hide">도움말</span></button>
+				</div>
+			</div>
+			
+			<section>
+			<form>
+				<fieldset>
+					<div class="domain-search">
+						<div class="search-area" id="searchReduction">
+							<p class="txt-ment">저렴하고 간편한 도메인 등록</p>
+							<div class="btn-bench">
+								<span class="txt-www">www.</span>
+								<label>
+								<input id="singleSearch" type="text" placeholder="원하는 도메인을 입력하세요. 예)domainca.com, domainca">
+								<textarea id="multiSearch" class="hide" id="domainList" name="domainList" title="도메인명을 입력하세요." onfocus="if(this.value==this.defaultValue) {this.value=''; this.className='focus'}" onblur="if(this.value=='') {this.value=this.defaultValue; this.className=''}">
+※ 1줄에 1개씩, 한번에 최대 20개까지 검색 가능
+예) domainca.com
+      domaincalove.com
+      domainone.com
+      domainca.kr</textarea>
+								</label>
+								<a href="javascript:void(0);" class="input-change toggle-search-btn">복수 검색 ▼</a>
+								<button class="btn-color big">검색</button>
+								<button class="btn-dgcolor big">빠른 등록</button>
+							</div>
+						</div>
+						
+					</div>
+				</fieldset>
+			</form>
+			</section>
+
+			<!-- contents -->
+			<section>
+			<div class="contents">	
+				<div class="dSearch-result">
+					<div class="tableStyle-v1 bbn">
+						<table>
+							<caption>ccTLD 선택</caption>
+							<colgroup><col style="width:180px"/><col style="width:180px"/><col style="width:180px"/><col style="width:180px"/><col style="width:180px"/><col/></colgroup>
+							<thead>
+								<tr>
+									<th scope="col">
+										<div class="tt-wrapper">
+											<span class="tt-link">ccTLD 선택</span>
+											<div class="tt-content" style="width:400px;left:75px">
+												<p class="tt-title"><strong>ccTLD 안내</strong></p>
+												ccTLD(Country Code Top level domain)는 도메인 종류의 하나로 ‘국가 도메인’을 말합니다.
+											</div>
+										</div>
+									</th>
+									<th scope="col" class="choice" colspan="5"><label><input type="checkbox" title="전체 선택"> 전체 선택</label></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><label><input type="checkbox" title="tv"> .tv</label></td>
+									<td><label><input type="checkbox" title="cc"> .cc</label></td>
+									<td><label><input type="checkbox" title="me"> .me</label></td>
+									<td><label><input type="checkbox" title="ce"> .ce</label></td>
+									<td><label><input type="checkbox" title="so"> .so</label></td>
+									<td></td>
+								</tr>
+							</tbody>
+						</table>
+						<table>
+							<caption>New gTLD 선택</caption>
+							<colgroup><col style="width:180px"/><col style="width:180px"/><col style="width:180px"/><col style="width:180px"/><col style="width:180px"/><col/></colgroup>
+							<thead>
+								<tr>
+									<th scope="col">
+										<div class="tt-wrapper">
+											<span class="tt-link">New gTLD 선택</span>
+											<div class="tt-content" style="width:410px;left:104px">
+												<p class="tt-title"><strong>New gTLD(신규 도메인 등록) 안내</strong></p>
+												신규 도메인의 일반 등록은 .com / .net / .kr 등 일반적인 도메인 등록 방식과 같습니다.
+											</div>
+										</div>
+									</th>
+									<th scope="col" class="choice" colspan="5"><label><input type="checkbox" title="전체 선택"> 전체 선택</label></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr><td colspan="6"><strong>주요 신규 도메인</strong></td></tr>
+								<tr>
+									<td><label><input type="checkbox" title="academy"> .academy</label></td>
+									<td><label><input type="checkbox" title="academy"> .academy</label></td>
+									<td><label><input type="checkbox" title="academy"> .academy</label></td>
+									<td><label><input type="checkbox" title="academy"> .academy</label></td>
+									<td><label><input type="checkbox" title="academy"> .academy</label></td>
+									<td><label><input type="checkbox" title="academy"> .academy</label></td>
+								</tr>
+								<tr>
+									<td><label><input type="checkbox" title="center"> .center</label></td>
+									<td><label><input type="checkbox" title="center"> .center</label></td>
+									<td><label><input type="checkbox" title="center"> .center</label></td>
+									<td><label><input type="checkbox" title="center"> .center</label></td>
+									<td><label><input type="checkbox" title="center"> .center</label></td>
+									<td><label><input type="checkbox" title="center"> .center</label></td>
+								</tr>
+								<tr>
+									<td><label><input type="checkbox" title="gallery"> .gallery</label></td>
+									<td><label><input type="checkbox" title="gallery"> .gallery</label></td>
+									<td><label><input type="checkbox" title="gallery"> .gallery</label></td>
+									<td><label><input type="checkbox" title="gallery"> .gallery</label></td>
+									<td><label><input type="checkbox" title="gallery"> .gallery</label></td>
+									<td><label><input type="checkbox" title="gallery"> .gallery</label></td>
+								</tr>
+							</tbody>
+						</table>
+						<table>
+							<caption>New gTLD 선택</caption>
+							<colgroup><col style="width:180px"/><col style="width:180px"/><col style="width:180px"/><col style="width:180px"/><col style="width:180px"/><col/></colgroup>
+							<tbody>
+								<tr>
+									<td><label><input type="checkbox" title="center"> .center</label></td>
+									<td><label><input type="checkbox" title="center"> .center</label></td>
+									<td><label><input type="checkbox" title="center"> .center</label></td>
+									<td><label><input type="checkbox" title="center"> .center</label></td>
+									<td><label><input type="checkbox" title="center"> .center</label></td>
+									<td><label><input type="checkbox" title="center"> .center</label></td>
+								</tr>
+								<tr>
+									<td class="last"><label><input type="checkbox" title="gallery"> .gallery</label></td>
+									<td class="last"><label><input type="checkbox" title="gallery"> .gallery</label></td>
+									<td class="last"><label><input type="checkbox" title="gallery"> .gallery</label></td>
+									<td class="last"><label><input type="checkbox" title="gallery"> .gallery</label></td>
+									<td class="last"><label><input type="checkbox" title="gallery"> .gallery</label></td>
+									<td class="last"><label><input type="checkbox" title="gallery"> .gallery</label></td>
+
+								</tr>
+								<tr>
+									<td><label><input type="checkbox" title="academy"> .academy</label></td>
+									<td><label><input type="checkbox" title="academy"> .academy</label></td>
+									<td><label><input type="checkbox" title="academy"> .academy</label></td>
+									<td><label><input type="checkbox" title="academy"> .academy</label></td>
+									<td><label><input type="checkbox" title="academy"> .academy</label></td>
+									<td><label><input type="checkbox" title="academy"> .academy</label></td>
+								</tr>
+								<tr>
+									<td><label><input type="checkbox" title="center"> .center</label></td>
+									<td><label><input type="checkbox" title="center"> .center</label></td>
+									<td><label><input type="checkbox" title="center"> .center</label></td>
+									<td><label><input type="checkbox" title="center"> .center</label></td>
+									<td><label><input type="checkbox" title="academy"> .academy</label></td>
+									<td><label><input type="checkbox" title="academy"> .academy</label></td>
+								</tr>
+								<tr>
+									<td class="last"><label><input type="checkbox" title="gallery"> .gallery</label></td>
+									<td class="last"><label><input type="checkbox" title="gallery"> .gallery</label></td>
+									<td class="last"><label><input type="checkbox" title="gallery"> .gallery</label></td>
+									<td class="last"><label><input type="checkbox" title="gallery"> .gallery</label></td>
+									<td class="last"><label><input type="checkbox" title="gallery"> .gallery</label></td>
+									<td class="last"><label><input type="checkbox" title="gallery"> .gallery</label></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<p class="more-domain"><button class="btn-color normal">더 많은 도메인 보기</button></p>
+					<p class="more-tld"><button class="btn-ncolor normal">TLD 등록 일정 보기</button></p>
+				</div>
+			</div>
+			</section>
+			<!-- //contents -->
+
+		</div>
+		<!-- //content -->
+		
+		<!-- help content -->
+		<div id="help-area" class="hide">
+			<!-- content -->
+			<div id="container">
+				<div id="location" class="location-domain">
+					<div class="location-wrap">
+						<p><strong>도메인 등록</strong> &gt; 도움말</p>
+						<button class="help" title="도움말 닫기">&#63;<span class="hide">도움말 닫기</span></button>
+					</div>
+				</div>
+
+				<!-- contents -->
+				<section>
+				<div class="contents">	
+					<div class="help-register">
+						<div class="help-cnt-wrap">
+							<h3 class="help-title">도메인 등록 안내</h3>
+							<ul class="help-list">
+								<li>&ndash; 도메인 명은 알파벳,숫자,하이픈(&ndash;) 조합으로 구성합니다(단,하이픈으로 시작하거나 끝날 수 없음).</li>
+								<li>&ndash; 한글 도메인은 [.com / .net / .org / .kr / .한국]으로만 등록할 수 있습니다.</li>
+								<li>&ndash; 영문(또는 숫자/문자) 도메인은 3~63자까지, 한글 도메인은 1~17자까지 구성할 수 있습니다.</li>
+								<li>&ndash; 한국 도메인은 한글을 1자 이상 반드시 포함해야 합니다.</li>
+							</ul>
+						</div>
+						
+						<div class="help-cnt-wrap">
+							<h3 class="help-title">연장/삭제/복구 정책</h3>
+							<ul class="help-list">
+								<li>&ndash; 만기일 이전에 도메인을 연장하지 않으면, 사용이 중지됩니다.</li>
+								<li>&ndash; 도메인 종류에 따라 연장/삭제 정책이 다르므로, 연장 안내 메일의 ‘삭제 예정일’을 반드시 확인하시기 바랍니다.</li>
+								<li>&ndash; .com / .net / .org 등 주요 국제 도메인 및 일부 세계국가 도메인은 삭제되더라도 복구 신청을 할 수 있습니다.</li>
+							</ul>
+						</div>
+				</div>
+				</section>
+				<!-- //contents -->
+
+			</div>
+			<!-- //content -->		
+		</div>
+		<!-- //help content -->
+
+
+		<!-- footer -->
+		<footer>
+		<div id="footer">
+			<ul>
+				<li><a href="">회사소개</a>|</li>
+				<li><a href="">약관</a>|</li>
+				<li><a href="">개인정보 취급방침</a>|</li>
+				<li><a href="">이메일주소무단수집거부</a>|</li>
+				<li><a href="">분쟁해결정책</a></li>
+			</ul>
+			<p class="info">㈜가비아<span>|</span>대표이사: 김홍국<span>|</span>소재지: 경기도 성남시 분당구 대왕판교로 660(삼평동) 유스페이스1 B동 4층<br>사업자등록번호: 214-86-39239<span>|</span>통신판매업 신고번호: 제2012-경기성남-1188호</p>
+			<p>©Gabia Inc. All Rights Reserved.</p>
+		</div>
+		</footer>
+		<!-- //footer -->
+
+	</div>
+	<!-- //wrap -->
+	<script type="text/javascript" src="assets/js/gabia-ui.js"></script>
+</body>
+</html>
