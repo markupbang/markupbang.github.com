@@ -37,7 +37,7 @@
   #global-nav .menu-area ul,#global-nav .menu-area ul li,#global-nav .menu-area .btn-member {float:left;}
   #global-nav .menu-area li a {display:inline-block;padding:6px 40px 10px 0;font-size:1.125em;}
   #global-nav .menu-area .btn-member {float:left;}
-  #global-nav .menu-area .btn-member a {width:100px;padding: 9px 0 11px;font-size: 0.875em;text-align:center;}
+  #global-nav .menu-area .btn-member a {width:100px;padding:10px 0;font-size:0.875em;text-align:center;}
   #global-nav .menu-area .btn-member a:first-child {margin-right:6px;}
 }
 /* //pc */
