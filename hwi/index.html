@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+<title>하이웍스 소개</title>
+</head>
+<body>
+<div id="wrap">
+	<header>
+	<div id="header">
+		<h1 class="logo-area"><a href=""><img src="http://gabia-frontend-dev.com/hw/assets/images/logo.svg" alt="hiworks" width="" height= ""></a></h1>
+		<a class="skip-nav" href="#main-content">콘텐츠로 건너뛰기</a>
+		<div id="global-nav">
+			<a href="javascript:void(0);">
+				<div class="hamburger" id="hamburger"><span><p></p><p></p><p></p></span></div>
+			</a>
+			<div class="menu-area">
+				<ul>
+					<li><a href="">기능소개</a></li>
+					<li><a href="">고객지원</a></li>
+				</ul>
+				<div class="btn-member">
+					<a href="" class="btn-login">로그인</a>
+					<a href="" class="btn-join">회원가입</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	</header>
+</div>
+<script type="text/javascript">
+var hamburger = document.getElementById('hamburger');
+hamburger.addEventListener('click', hamburgerClick);
+
+function hamburgerClick(e) {
+    hamburger.classList.toggle('on');
+    var ws = $('.hamburger').hasClass('on');
+    if(ws) {
+		$('.menu-area').addClass('on');
+    } else {
+		$('.menu-area').removeClass('on');
+    };
+}
+
+
+</script>
+</body>
+</html>
