@@ -16,7 +16,7 @@
 /* ----- query ----- */
 /* mobile + tablet */
 @media screen and (max-width: 1023px) { 
-  #header {height:45px}
+  #header {height:45px;background:#fff;}
   #header .logo-area a img {width:72px;height:16px;margin-left:25px;}
   #header .hamburger {position:absolute;top:2px;right:15px;width:50px;height:40px;}
   #header .menu-area {position:relative;z-index:1000;display:none;width:100%;border-top:1px solid #e7e7e7;border-bottom:1px solid #e7e7e7;background:#fff;}
@@ -29,7 +29,7 @@
 
 /* pc */
 @media only screen and (min-width: 1024px) {
-  #header {height:90px;padding:0 65px;}
+  #header {height:90px;padding:25px 65px 0;}
   #header .logo-area {float:left;}
   #header .logo-area a img {width:144px;height:32px;}
   #global-nav {float:right;}
