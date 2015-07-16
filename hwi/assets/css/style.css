@@ -8,7 +8,7 @@
 .skip-nav {height: 1px;left:-10000px;overflow:hidden;position:absolute;top:auto;}
 .logo-area a img{display:inline-block;}
 .menu-area li a {color:#333;}
-.menu-area .btn-member a {display:inline-block;color:#666;letter-spacing:-1px;border:1px solid #a8a8a8;}
+.menu-area .btn-member a {display:inline-block;color:#666;border:1px solid #a8a8a8;}
 /* //nav */
 
 /* ----- //common ----- */
