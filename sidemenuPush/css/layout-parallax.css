@@ -152,7 +152,7 @@ a:active {
 
 #footer {
   overflow: hidden;
-  main-width: 1140px;
+  min-width: 1140px;
   margin-top: 126px;
   padding-left: 222px;
   clear: both;
