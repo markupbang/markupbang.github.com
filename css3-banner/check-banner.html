@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<style type="text/css">
+		*{margin:0;padding:0;}
+		li{list-style:none}
+		img{border:none}
+		.bannerWrap{position:relative;width:300px;height:100px;border:10px solid #ddd}
+		input{display:none}
+		label{position:relative;left:190px;top:5px;float:left;width:20px;height:20px;margin-left:5px;cursor:pointer;text-align:center;background:#ddd;z-index:1000;}
+		.bannerImg{position:absolute;width:300px;height:100px;overflow:hidden}
+		.bannerImg li{position:absolute;top:0;left:300px}
+
+		input:nth-of-type(1):checked ~ label:nth-of-type(1),
+		input:nth-of-type(2):checked ~ label:nth-of-type(2),
+		input:nth-of-type(3):checked ~ label:nth-of-type(3),
+		input:nth-of-type(4):checked ~ label:nth-of-type(4){color:#fff;background:#000}
+
+		input:nth-of-type(1):checked ~.bannerImg li:nth-of-type(1),
+		input:nth-of-type(2):checked ~.bannerImg li:nth-of-type(2),
+		input:nth-of-type(3):checked ~.bannerImg li:nth-of-type(3),
+		input:nth-of-type(4):checked ~.bannerImg li:nth-of-type(4){
+			-webkit-animation:none;animation:none;/*밖으로 보내기*/
+			-webkit-transition:left 0.5s ease-in-out;transition:left 0.5s ease-in-out;left:0;
+			z-index:10;
+		}
+
+		/* 기존 이미지 왼쪽으로 사라지게 하기*/
+		input:checked ~.bannerImg li{-webkit-animation:slideOut 0.5s ease-in-out none;animation:slideOut 0.5s ease-in-out none}
+		/* 애니메이션 정의 */
+		@keyframes slideOut{
+			0%{left:0px}
+			100%{left:-300px}
+		}
+	</style>
+</head>
+<body>
+	<section class="bannerWrap">
+		<input id="banner1" name="bRadio" type="radio" checked="">
+		<label for="banner1" title="1st banner">1</label>
+		<input id="banner2" name="bRadio" type="radio">
+		<label for="banner2" title="2st banner">2</label>
+		<input id="banner3" name="bRadio" type="radio">
+		<label for="banner3" title="3st banner">3</label>
+		<input id="banner4" name="bRadio" type="radio">
+		<label for="banner4" title="4st banner">4</label>
+		<ul class="bannerImg">
+			<li><a href="#none"><img src="http://markupbang.com/blog/wp-content/uploads/2015/11/banner1.png"></a></li>
+			<li><a href="#none"><img src="http://markupbang.com/blog/wp-content/uploads/2015/11/banner2.png"></a></li>
+			<li><a href="#none"><img src="http://markupbang.com/blog/wp-content/uploads/2015/11/banner3.png"></a></li>
+			<li><a href="#none"><img src="http://markupbang.com/blog/wp-content/uploads/2015/11/banner4.png"></a></li>
+		</ul>
+
+	</section>
+</body>
+</html>
