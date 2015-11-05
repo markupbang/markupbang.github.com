@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<style type="text/css">
+		*{margin:0;padding:0}
+		body{background:#212121}
+		li{list-style:none}
+		.container{position:relative;width:500px;height:500px;margin:0 auto;padding-top:300px}
+		.cirMenu li{opacity:0;position:absolute;right:250px;-webkit-transform-origin:100% 50%}/* li를 한곳으로 모은 후 회전중심을 변경 */
+		.cirMenu div{padding-right:100px}
+		.cirMenu a{display:block;color:#666;text-decoration:none}
+		.cirMenu a:hover{color:#fff;font-weight:bold}
+	</style>
+	<script type="text/javascript" src="jquery-1.11.0.min.js"></script>
+</head>
+<body>
+	<section class="wrap">
+		<div class="container">
+			<ul class="cirMenu">
+				<li><div><a href="#none">cicle-menu1</a></div></li>
+				<li><div><a href="#none">cicle-menu2</a></div></li>
+				<li><div><a href="#none">cicle-menu3</a></div></li>
+				<li><div><a href="#none">cicle-menu4</a></div></li>
+				<li><div><a href="#none">cicle-menu5</a></div></li>
+				<li><div><a href="#none">cicle-menu6</a></div></li>
+				<li><div><a href="#none">cicle-menu7</a></div></li>
+				<li><div><a href="#none">cicle-menu8</a></div></li>
+				<li><div><a href="#none">cicle-menu9</a></div></li>
+				<li><div><a href="#none">cicle-menu10</a></div></li>
+				<li><div><a href="#none">cicle-menu11</a></div></li>
+				<li><div><a href="#none">cicle-menu12</a></div></li>
+				<li><div><a href="#none">cicle-menu13</a></div></li>
+				<li><div><a href="#none">cicle-menu14</a></div></li>
+				<li><div><a href="#none">cicle-menu15</a></div></li>
+				<li><div><a href="#none">cicle-menu16</a></div></li>
+				<li><div><a href="#none">cicle-menu17</a></div></li>
+				<li><div><a href="#none">cicle-menu18</a></div></li>
+				<li><div><a href="#none">cicle-menu19</a></div></li>
+				<li><div><a href="#none">cicle-menu20</a></div></li>
+			</ul>
+		</div>
+
+	</section>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+
+			var $li = $('.cirMenu li'),
+				/* 리스트의 총 갯수를 360으로 나누어 개당 회전시킬 각도를 계산 */
+				degValue = 360/$li.length;
+
+			$.each($li, function(index, value){
+
+				/* 위에서 구한 값에 index값을 곱하여 텍스트 객체에 rotate 적용 */
+				var deg = Math.round(degValue*index);
+				$this = $(this);
+				$this.css('transform','rotate('+deg+'deg)');
+
+				/* 90~270도 사이의 텍스트들은 rotate속성을 이용해 반전*/
+				if(deg > 90 && deg < 270){
+					$this.find('a').css('transform','rotate('+180+'deg)');
+				}
+
+				/* 등장 모션 */
+				$this.delay(35*index).animate({'opacity':1}, 1000);
+
+			});
+
+		});
+	</script>
+</body>
+</html>
