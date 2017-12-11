@@ -1,10 +1,9 @@
 ---
 title: Atom Packages
 date: 2017-08-11 15:07:19
-tags:
-    - Atom Packages
+desc: Atom's useful packages
+category: Tools
 ---
-# Atom Packages
 
 아톰에서 유용하게 사용하고 있는 패키지들을 소개해요.
 
@@ -76,5 +75,5 @@ Atom 안에서 터미널 띄움
 파일타입별 아이콘 표시
 
 ## [sync-settings](https://atom.io/packages/sync-settings)
-Atom의 설정파일을 gist에 백업하거나 복원한다.
+Atom의 설정파일을 gist에 백업하거나 복원!
 gist 설정이 귀찮긴 하지만 한번해놓으면 좋다.
