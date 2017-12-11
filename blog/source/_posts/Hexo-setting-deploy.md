@@ -4,8 +4,8 @@ date: 2017-12-11 14:48:53
 category:
 ---
 
-Hexo로 Github 블로그를 만들었지만 포스팅을 자주 하지 않다보니 배포 과정을 매번 잊어버려서 정리해야겠다 싶어 포스팅 한다.
-포스팅 하는김에 블로그 설정과 배포까지의 과정을 적어본다.
+Hexo로 Github 블로그를 만들었지만 포스팅을 자주 하지 않다보니 배포 과정을 매번 잊어버려서 정리해두면 좋을것 같아 포스팅 한다.
+포스팅 하는김에 블로그의 생성, 설정과 배포까지의 과정을 적어본다.
 
 깃허브 페이지는 지킬(Jekyll)과 헥소(Hexo)가 많이 사용되며 지킬이 대표적으로 사용된다. 지킬을 살펴보니 Ruby로 구동되고 Hexo는 NodeJs로 구동되었다.
 Ruby는 레거시의 느낌이라 나는 NodeJs로 구동되는 Hexo로 블로그를 만들기로 하였다.
@@ -16,7 +16,7 @@ Ruby는 레거시의 느낌이라 나는 NodeJs로 구동되는 Hexo로 블로�
 ## Github Pages로 Hosting과 웹페이지 만들기
 
 #### Github Repository 생성하기
-Github 가입 후 Repositiry를 생성한다.
+Github 가입 후 Repository를 생성한다.
 
 1. New Repository, Repository 이름은 Username.github.io로 생성
 2. Username은 Github 가입시의 사용자의 Username을 입력
@@ -34,7 +34,7 @@ Terminal 사용에 익숙치 않다면 [https://pages.github.com](https://pages.
 #### Hello World
 root 디렉토리에 index.html을 생성하고 Hello World를 찍어보자.
 ````bash
-	cd username.github.io
+	cd Username.github.io
 	echo "Hello World" > index.html
 ````
 
@@ -47,7 +47,7 @@ root 디렉토리에 index.html을 생성하고 Hello World를 찍어보자.
 ````
 
 #### and you're done!
-브라우저에서 정상적으로 https://username.github.io 에 접속되는지 확인 한다.
+브라우저에서 정상적으로 https://Username.github.io 에 접속되는지 확인 한다.
 
 ## Hexo
 Hexo는 Jekyll와 함께 대표적으로 정적 페이지를 쉽게 만들 수 있도록 도와주는 서비스이다. Hexo의 경우에는 npm을 통해 쉽게 설치가 가능하고 한 줄의 Command Line을 통해 Github에 바로 배포 할 수 있으며, Jekyll과 마찬가지로 다양한 플러그인과 테마를 지원하고 있다.
@@ -82,7 +82,7 @@ Hexo로 생성한 블로그는 Github에 업로드해야지만 블로그에 접�
 	## Docs: https://hexo.io/docs/deployment.html
 	deploy:
 	  type: git
-	  repo: https://github.com/username/username.github.io.git
+	  repo: https://github.com/Username/Username.github.io.git
  ````
 
 #### 로컬에서 테스트
@@ -123,7 +123,7 @@ Generate와 Deploy를 동시에 실행 할 수도 있다.
 	hexo deplay --generate
 ````
 
-배포가 완료되면 브라우저에서 username.github.io로 접속해 정상적으로 배포가 되었는지 확인한다.
+배포가 완료되면 브라우저에서 Username.github.io로 접속해 정상적으로 배포가 되었는지 확인한다.
 
 #### Clean
 간혹 정상적으로 배포가 되었음에도 페이지가 업데이트 되지 않는 현상이 있는데, 이 경우에는 페이지를 clean후에 배포하면 해결된다.
